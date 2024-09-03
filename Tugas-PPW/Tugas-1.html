@@ -499,11 +499,13 @@ document.write(`
             <span class="n">isi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
 
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Scraped: </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-            <span class="n">article_response</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
         <span class="k">except</span> <span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Request failed for article </span><span class="si">{</span><span class="n">link</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">continue</span>
+
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">article_response</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>  <span class="c1"># Menambahkan jeda waktu 1-3 detik antara permintaan artikel</span>
 
@@ -562,25 +564,16 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Scraped: 10 Game Offline Seru 2024 untuk HP, Gratis dan Tanpa Perlu Kuota
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Scraped: Bangga! Indonesia Juara FIFAe World Cup 2024 Football Manager
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Scraped: Game Forsaken World 2 Segera Rilis, Ini Cara Daftarnya
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Scraped: World Cyber Games 2024 Festival Digelar, Ada Apa Saja?
-</pre></div>
-</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-1-dfab7fd73600&gt;</span> in <span class="ni">&lt;cell line: 89&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span>         <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_url</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span>         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fetching URL: </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">96</span>         <span class="n">get_data</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">category</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">97</span>         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>  <span class="c1"># Menambahkan jeda waktu 2-5 detik antara permintaan halaman</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span> 
+<span class="nn">&lt;ipython-input-1-fe7cb973631e&gt;</span> in <span class="ni">&lt;cell line: 91&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span>         <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_url</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span>         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fetching URL: </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">98</span>         <span class="n">get_data</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">category</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>  <span class="c1"># Menambahkan jeda waktu 2-5 detik antara permintaan halaman</span>
+<span class="g g-Whitespace">    </span><span class="mi">100</span> 
 
-<span class="nn">&lt;ipython-input-1-dfab7fd73600&gt;</span> in <span class="ni">get_data</span><span class="nt">(url, kategori)</span>
+<span class="nn">&lt;ipython-input-1-fe7cb973631e&gt;</span> in <span class="ni">get_data</span><span class="nt">(url, kategori)</span>
 <span class="g g-Whitespace">     </span><span class="mi">53</span>         <span class="k">try</span><span class="p">:</span>
 <span class="g g-Whitespace">     </span><span class="mi">54</span>             <span class="n">link</span> <span class="o">=</span> <span class="n">article</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
 <span class="ne">---&gt; </span><span class="mi">55</span>             <span class="n">article_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
@@ -699,7 +692,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-db933ee0-0f88-47e8-a753-241d7941b371" class="colab-df-container">
+  <div id="df-8634ecb3-b216-4c8c-ae3d-293e5408eb70" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -790,7 +783,7 @@ document.write(`
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-db933ee0-0f88-47e8-a753-241d7941b371')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-8634ecb3-b216-4c8c-ae3d-293e5408eb70')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -842,12 +835,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-db933ee0-0f88-47e8-a753-241d7941b371 button.colab-df-convert');
+        document.querySelector('#df-8634ecb3-b216-4c8c-ae3d-293e5408eb70 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-db933ee0-0f88-47e8-a753-241d7941b371');
+        const element = document.querySelector('#df-8634ecb3-b216-4c8c-ae3d-293e5408eb70');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -867,8 +860,8 @@ document.write(`
   </div>
 
 
-<div id="df-c52151d6-84cd-4032-bae4-c2c1b8c30003">
-  <button class="colab-df-quickchart" onclick="quickchart('df-c52151d6-84cd-4032-bae4-c2c1b8c30003')"
+<div id="df-e3612809-dc94-400f-bc0e-64c05025751d">
+  <button class="colab-df-quickchart" onclick="quickchart('df-e3612809-dc94-400f-bc0e-64c05025751d')"
             title="Suggest charts"
             style="display:none;">
 
@@ -987,14 +980,14 @@ document.write(`
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-c52151d6-84cd-4032-bae4-c2c1b8c30003 button');
+        document.querySelector('#df-e3612809-dc94-400f-bc0e-64c05025751d button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
 
-  <div id="id_bc4234d4-0749-4a8f-aa2c-8c9fdc227652">
+  <div id="id_868030d4-baa2-4627-8070-891ba8ec2925">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -1038,7 +1031,7 @@ document.write(`
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_bc4234d4-0749-4a8f-aa2c-8c9fdc227652 button.colab-df-generate');
+        document.querySelector('#id_868030d4-baa2-4627-8070-891ba8ec2925 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
