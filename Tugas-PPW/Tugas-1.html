@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Adz Dzikry Pradana Putra-210411100093 &#8212; Penambangan Web A</title>
+    <title>Tugas 1 : Crawling Berita &#8212; Penambangan Web A</title>
   
   
   
@@ -179,8 +179,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Adz Dzikry Pradana Putra-210411100093</a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 1 : Crawling Berita</a></li>
 </ul>
 
     </div>
@@ -397,7 +396,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Adz Dzikry Pradana Putra-210411100093</h1>
+    <h1>Tugas 1 : Crawling Berita</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -407,19 +406,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Adz Dzikry Pradana Putra-210411100093</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-web-a">Penambangan Web A</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl">1. Import library yang dibutuhkan untuk melakukan web crawl</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-variable-kosomg-yang-berfungsi-untuk-menyimpan-data-yang-diambil-dari-berita">2. Membuat Variable kosomg yang berfungsi untuk menyimpan data yang diambil dari berita</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-memfilter-konten-dari-elemen-elemen-html-pada-berita-yang-tidak-diinginkan-contoh-kasus-seperti-iklan-daftar-isi-gambar-link-sisipan-dll">3. Membuat fungsi untuk memfilter konten dari elemen-elemen HTML pada berita yang tidak diinginkan , Contoh kasus seperti iklan, daftar isi, gambar , link sisipan, dll</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com-fungsi-ini-mengambil-data-berupa-judul-berita-tanggal-publikasi-isi-berita-dan-kategori-berita-yang-terdapat-di-halaman-tersebut">4. Membuat fungsi untuk melakukan crawling data pada situs web Detik.com. Fungsi ini mengambil data berupa judul berita, tanggal publikasi, isi berita dan kategori berita yang terdapat di halaman tersebut.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl">5. Inisialisasi URL dan Kategori yang Akan Di-Crawl</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl">6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menyimpan-hasil-crawl-ke-csv-lalu-menampilkan-hasil-crawl-menggunakan-dataframe">7. Menyimpan hasil Crawl ke CSV , lalu menampilkan hasil Crawl menggunakan Dataframe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adz-dzikry-pradana-putra-210411100093">Adz Dzikry Pradana Putra - 210411100093</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-web-a">Penambangan Web A</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl">1. Import library yang dibutuhkan untuk melakukan web crawl</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-variable-kosomg-yang-berfungsi-untuk-menyimpan-data-yang-diambil-dari-berita">2. Membuat Variable kosomg yang berfungsi untuk menyimpan data yang diambil dari berita</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-memfilter-konten-dari-elemen-elemen-html-pada-berita-yang-tidak-diinginkan-contoh-kasus-seperti-iklan-daftar-isi-gambar-link-sisipan-dll">3. Membuat fungsi untuk memfilter konten dari elemen-elemen HTML pada berita yang tidak diinginkan , Contoh kasus seperti iklan, daftar isi, gambar , link sisipan, dll</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com-fungsi-ini-mengambil-data-berupa-judul-berita-tanggal-publikasi-isi-berita-dan-kategori-berita-yang-terdapat-di-halaman-tersebut">4. Membuat fungsi untuk melakukan crawling data pada situs web Detik.com. Fungsi ini mengambil data berupa judul berita, tanggal publikasi, isi berita dan kategori berita yang terdapat di halaman tersebut.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl">5. Inisialisasi URL dan Kategori yang Akan Di-Crawl</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl">6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menyimpan-hasil-crawl-ke-csv-lalu-menampilkan-hasil-crawl-menggunakan-dataframe">7. Menyimpan hasil Crawl ke CSV , lalu menampilkan hasil Crawl menggunakan Dataframe</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -430,13 +428,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="adz-dzikry-pradana-putra-210411100093">
-<h1>Adz Dzikry Pradana Putra-210411100093<a class="headerlink" href="#adz-dzikry-pradana-putra-210411100093" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-1-crawling-berita">
+<h1>Tugas 1 : Crawling Berita<a class="headerlink" href="#tugas-1-crawling-berita" title="Link to this heading">#</a></h1>
+<section id="adz-dzikry-pradana-putra-210411100093">
+<h2>Adz Dzikry Pradana Putra - 210411100093<a class="headerlink" href="#adz-dzikry-pradana-putra-210411100093" title="Link to this heading">#</a></h2>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="penambangan-web-a">
-<h1>Penambangan Web A<a class="headerlink" href="#penambangan-web-a" title="Link to this heading">#</a></h1>
+<section id="penambangan-web-a">
+<h2>Penambangan Web A<a class="headerlink" href="#penambangan-web-a" title="Link to this heading">#</a></h2>
 <section id="import-library-yang-dibutuhkan-untuk-melakukan-web-crawl">
-<h2>1. Import library yang dibutuhkan untuk melakukan web crawl<a class="headerlink" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl" title="Link to this heading">#</a></h2>
+<h3>1. Import library yang dibutuhkan untuk melakukan web crawl<a class="headerlink" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Menggunakan BeautifulSoup, konten HTML dari halaman web diurai untuk mencari elemen artikel yang relevan.</p></li>
 <li><p>Menggunakan pandas Library digunakan untuk membuat dan mengelola DataFrame.</p></li>
@@ -453,7 +453,7 @@ document.write(`
 </div>
 </section>
 <section id="membuat-variable-kosomg-yang-berfungsi-untuk-menyimpan-data-yang-diambil-dari-berita">
-<h2>2. Membuat Variable kosomg yang berfungsi untuk menyimpan data yang diambil dari berita<a class="headerlink" href="#membuat-variable-kosomg-yang-berfungsi-untuk-menyimpan-data-yang-diambil-dari-berita" title="Link to this heading">#</a></h2>
+<h3>2. Membuat Variable kosomg yang berfungsi untuk menyimpan data yang diambil dari berita<a class="headerlink" href="#membuat-variable-kosomg-yang-berfungsi-untuk-menyimpan-data-yang-diambil-dari-berita" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mendefinisikan list untuk menyimpan data yang diambil</span>
@@ -468,7 +468,7 @@ document.write(`
 </div>
 </section>
 <section id="membuat-fungsi-untuk-memfilter-konten-dari-elemen-elemen-html-pada-berita-yang-tidak-diinginkan-contoh-kasus-seperti-iklan-daftar-isi-gambar-link-sisipan-dll">
-<h2>3. Membuat fungsi untuk memfilter konten dari elemen-elemen HTML pada berita yang tidak diinginkan , Contoh kasus seperti iklan, daftar isi, gambar , link sisipan, dll<a class="headerlink" href="#membuat-fungsi-untuk-memfilter-konten-dari-elemen-elemen-html-pada-berita-yang-tidak-diinginkan-contoh-kasus-seperti-iklan-daftar-isi-gambar-link-sisipan-dll" title="Link to this heading">#</a></h2>
+<h3>3. Membuat fungsi untuk memfilter konten dari elemen-elemen HTML pada berita yang tidak diinginkan , Contoh kasus seperti iklan, daftar isi, gambar , link sisipan, dll<a class="headerlink" href="#membuat-fungsi-untuk-memfilter-konten-dari-elemen-elemen-html-pada-berita-yang-tidak-diinginkan-contoh-kasus-seperti-iklan-daftar-isi-gambar-link-sisipan-dll" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fungsi untuk membersihkan konten dari elemen-elemen yang tidak diinginkan</span>
@@ -506,7 +506,7 @@ document.write(`
 </div>
 </section>
 <section id="membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com-fungsi-ini-mengambil-data-berupa-judul-berita-tanggal-publikasi-isi-berita-dan-kategori-berita-yang-terdapat-di-halaman-tersebut">
-<h2>4. Membuat fungsi untuk melakukan crawling data pada situs web <a class="reference external" href="http://Detik.com">Detik.com</a>. Fungsi ini mengambil data berupa judul berita, tanggal publikasi, isi berita dan kategori berita yang terdapat di halaman tersebut.<a class="headerlink" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com-fungsi-ini-mengambil-data-berupa-judul-berita-tanggal-publikasi-isi-berita-dan-kategori-berita-yang-terdapat-di-halaman-tersebut" title="Link to this heading">#</a></h2>
+<h3>4. Membuat fungsi untuk melakukan crawling data pada situs web <a class="reference external" href="http://Detik.com">Detik.com</a>. Fungsi ini mengambil data berupa judul berita, tanggal publikasi, isi berita dan kategori berita yang terdapat di halaman tersebut.<a class="headerlink" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com-fungsi-ini-mengambil-data-berupa-judul-berita-tanggal-publikasi-isi-berita-dan-kategori-berita-yang-terdapat-di-halaman-tersebut" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>mencari semua elemen-elemen yang mengandung isi penting pada artikel seperti elemen yang berisi judul, tanggal, isi dan kategori berita</p></li>
 <li><p>Judul, tanggal, dan isi artikel yang valid kemudian disimpan ke dalam list judul, tanggal, isi dan kategori berita.</p></li>
@@ -561,7 +561,7 @@ document.write(`
 </div>
 </section>
 <section id="inisialisasi-url-dan-kategori-yang-akan-di-crawl">
-<h2>5. Inisialisasi URL dan Kategori yang Akan Di-Crawl<a class="headerlink" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl" title="Link to this heading">#</a></h2>
+<h3>5. Inisialisasi URL dan Kategori yang Akan Di-Crawl<a class="headerlink" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>max_article = variable ini digunakan sebagai batas maksimum berita yang akan diambil</p></li>
 </ul>
@@ -578,7 +578,7 @@ document.write(`
 </div>
 </section>
 <section id="melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl">
-<h2>6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl<a class="headerlink" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl" title="Link to this heading">#</a></h2>
+<h3>6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl<a class="headerlink" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melakukan iterasi untuk setiap url dan kategori</span>
@@ -632,7 +632,7 @@ document.write(`
 </div>
 </section>
 <section id="menyimpan-hasil-crawl-ke-csv-lalu-menampilkan-hasil-crawl-menggunakan-dataframe">
-<h2>7. Menyimpan hasil Crawl ke CSV , lalu menampilkan hasil Crawl menggunakan Dataframe<a class="headerlink" href="#menyimpan-hasil-crawl-ke-csv-lalu-menampilkan-hasil-crawl-menggunakan-dataframe" title="Link to this heading">#</a></h2>
+<h3>7. Menyimpan hasil Crawl ke CSV , lalu menampilkan hasil Crawl menggunakan Dataframe<a class="headerlink" href="#menyimpan-hasil-crawl-ke-csv-lalu-menampilkan-hasil-crawl-menggunakan-dataframe" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat dataframe dari list data</span>
@@ -647,7 +647,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-dcff99c0-e5c1-407e-ae4d-8f979fe0d470" class="colab-df-container">
+  <div id="df-8091cd96-85a2-4ab5-bcf2-e3930d3cedfa" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -749,7 +749,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-dcff99c0-e5c1-407e-ae4d-8f979fe0d470')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-8091cd96-85a2-4ab5-bcf2-e3930d3cedfa')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -801,12 +801,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-dcff99c0-e5c1-407e-ae4d-8f979fe0d470 button.colab-df-convert');
+        document.querySelector('#df-8091cd96-85a2-4ab5-bcf2-e3930d3cedfa button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-dcff99c0-e5c1-407e-ae4d-8f979fe0d470');
+        const element = document.querySelector('#df-8091cd96-85a2-4ab5-bcf2-e3930d3cedfa');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -829,6 +829,7 @@ document.write(`
   </div>
   </div></div>
 </div>
+</section>
 </section>
 </section>
 
@@ -887,19 +888,18 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Adz Dzikry Pradana Putra-210411100093</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-web-a">Penambangan Web A</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl">1. Import library yang dibutuhkan untuk melakukan web crawl</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-variable-kosomg-yang-berfungsi-untuk-menyimpan-data-yang-diambil-dari-berita">2. Membuat Variable kosomg yang berfungsi untuk menyimpan data yang diambil dari berita</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-memfilter-konten-dari-elemen-elemen-html-pada-berita-yang-tidak-diinginkan-contoh-kasus-seperti-iklan-daftar-isi-gambar-link-sisipan-dll">3. Membuat fungsi untuk memfilter konten dari elemen-elemen HTML pada berita yang tidak diinginkan , Contoh kasus seperti iklan, daftar isi, gambar , link sisipan, dll</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com-fungsi-ini-mengambil-data-berupa-judul-berita-tanggal-publikasi-isi-berita-dan-kategori-berita-yang-terdapat-di-halaman-tersebut">4. Membuat fungsi untuk melakukan crawling data pada situs web Detik.com. Fungsi ini mengambil data berupa judul berita, tanggal publikasi, isi berita dan kategori berita yang terdapat di halaman tersebut.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl">5. Inisialisasi URL dan Kategori yang Akan Di-Crawl</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl">6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menyimpan-hasil-crawl-ke-csv-lalu-menampilkan-hasil-crawl-menggunakan-dataframe">7. Menyimpan hasil Crawl ke CSV , lalu menampilkan hasil Crawl menggunakan Dataframe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adz-dzikry-pradana-putra-210411100093">Adz Dzikry Pradana Putra - 210411100093</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-web-a">Penambangan Web A</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl">1. Import library yang dibutuhkan untuk melakukan web crawl</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-variable-kosomg-yang-berfungsi-untuk-menyimpan-data-yang-diambil-dari-berita">2. Membuat Variable kosomg yang berfungsi untuk menyimpan data yang diambil dari berita</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-memfilter-konten-dari-elemen-elemen-html-pada-berita-yang-tidak-diinginkan-contoh-kasus-seperti-iklan-daftar-isi-gambar-link-sisipan-dll">3. Membuat fungsi untuk memfilter konten dari elemen-elemen HTML pada berita yang tidak diinginkan , Contoh kasus seperti iklan, daftar isi, gambar , link sisipan, dll</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com-fungsi-ini-mengambil-data-berupa-judul-berita-tanggal-publikasi-isi-berita-dan-kategori-berita-yang-terdapat-di-halaman-tersebut">4. Membuat fungsi untuk melakukan crawling data pada situs web Detik.com. Fungsi ini mengambil data berupa judul berita, tanggal publikasi, isi berita dan kategori berita yang terdapat di halaman tersebut.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl">5. Inisialisasi URL dan Kategori yang Akan Di-Crawl</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl">6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menyimpan-hasil-crawl-ke-csv-lalu-menampilkan-hasil-crawl-menggunakan-dataframe">7. Menyimpan hasil Crawl ke CSV , lalu menampilkan hasil Crawl menggunakan Dataframe</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
