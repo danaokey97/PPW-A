@@ -409,12 +409,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adz-dzikry-pradana-putra-210411100093">Adz Dzikry Pradana Putra - 210411100093</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-web-a">Penambangan Web A</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl">1. Import library yang dibutuhkan untuk melakukan web crawl</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-variable-kosomg-yang-berfungsi-untuk-menyimpan-data-yang-diambil-dari-berita">2. Membuat Variable kosomg yang berfungsi untuk menyimpan data yang diambil dari berita</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-memfilter-konten-dari-elemen-elemen-html-pada-berita-yang-tidak-diinginkan-contoh-kasus-seperti-iklan-daftar-isi-gambar-link-sisipan-dll">3. Membuat fungsi untuk memfilter konten dari elemen-elemen HTML pada berita yang tidak diinginkan , Contoh kasus seperti iklan, daftar isi, gambar , link sisipan, dll</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com-fungsi-ini-mengambil-data-berupa-judul-berita-tanggal-publikasi-isi-berita-dan-kategori-berita-yang-terdapat-di-halaman-tersebut">4. Membuat fungsi untuk melakukan crawling data pada situs web Detik.com. Fungsi ini mengambil data berupa judul berita, tanggal publikasi, isi berita dan kategori berita yang terdapat di halaman tersebut.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-data">2. Inisialisasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-filter-konten">3. Membuat fungsi filter konten</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com">4. Membuat fungsi untuk melakukan crawling data pada situs web Detik.com.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl">5. Inisialisasi URL dan Kategori yang Akan Di-Crawl</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl">6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menyimpan-hasil-crawl-ke-csv-lalu-menampilkan-hasil-crawl-menggunakan-dataframe">7. Menyimpan hasil Crawl ke CSV , lalu menampilkan hasil Crawl menggunakan Dataframe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-hasil-crawl-dengan-dataframe">7. Menampilkan Hasil Crawl dengan dataframe</a></li>
 </ul>
 </li>
 </ul>
@@ -452,8 +452,9 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="membuat-variable-kosomg-yang-berfungsi-untuk-menyimpan-data-yang-diambil-dari-berita">
-<h3>2. Membuat Variable kosomg yang berfungsi untuk menyimpan data yang diambil dari berita<a class="headerlink" href="#membuat-variable-kosomg-yang-berfungsi-untuk-menyimpan-data-yang-diambil-dari-berita" title="Link to this heading">#</a></h3>
+<section id="inisialisasi-data">
+<h3>2. Inisialisasi Data<a class="headerlink" href="#inisialisasi-data" title="Link to this heading">#</a></h3>
+<p>Membuat Variable kosong yang berfungsi untuk menyimpan data yang diambil dari berita</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mendefinisikan list untuk menyimpan data yang diambil</span>
@@ -467,8 +468,9 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="membuat-fungsi-untuk-memfilter-konten-dari-elemen-elemen-html-pada-berita-yang-tidak-diinginkan-contoh-kasus-seperti-iklan-daftar-isi-gambar-link-sisipan-dll">
-<h3>3. Membuat fungsi untuk memfilter konten dari elemen-elemen HTML pada berita yang tidak diinginkan , Contoh kasus seperti iklan, daftar isi, gambar , link sisipan, dll<a class="headerlink" href="#membuat-fungsi-untuk-memfilter-konten-dari-elemen-elemen-html-pada-berita-yang-tidak-diinginkan-contoh-kasus-seperti-iklan-daftar-isi-gambar-link-sisipan-dll" title="Link to this heading">#</a></h3>
+<section id="membuat-fungsi-filter-konten">
+<h3>3. Membuat fungsi filter konten<a class="headerlink" href="#membuat-fungsi-filter-konten" title="Link to this heading">#</a></h3>
+<p>Berfungsi untuk Mem-filter dari elemen-elemen HTML pada berita yang tidak diinginkan , Contoh kasus seperti iklan, daftar isi, gambar , link sisipan, dll</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fungsi untuk membersihkan konten dari elemen-elemen yang tidak diinginkan</span>
@@ -505,8 +507,9 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com-fungsi-ini-mengambil-data-berupa-judul-berita-tanggal-publikasi-isi-berita-dan-kategori-berita-yang-terdapat-di-halaman-tersebut">
-<h3>4. Membuat fungsi untuk melakukan crawling data pada situs web <a class="reference external" href="http://Detik.com">Detik.com</a>. Fungsi ini mengambil data berupa judul berita, tanggal publikasi, isi berita dan kategori berita yang terdapat di halaman tersebut.<a class="headerlink" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com-fungsi-ini-mengambil-data-berupa-judul-berita-tanggal-publikasi-isi-berita-dan-kategori-berita-yang-terdapat-di-halaman-tersebut" title="Link to this heading">#</a></h3>
+<section id="membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com">
+<h3>4. Membuat fungsi untuk melakukan crawling data pada situs web <a class="reference external" href="http://Detik.com">Detik.com</a>.<a class="headerlink" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com" title="Link to this heading">#</a></h3>
+<p>Fungsi ini mengambil data berupa judul berita, tanggal publikasi, isi berita dan kategori berita yang terdapat di halaman tersebut.</p>
 <ul class="simple">
 <li><p>mencari semua elemen-elemen yang mengandung isi penting pada artikel seperti elemen yang berisi judul, tanggal, isi dan kategori berita</p></li>
 <li><p>Judul, tanggal, dan isi artikel yang valid kemudian disimpan ke dalam list judul, tanggal, isi dan kategori berita.</p></li>
@@ -598,41 +601,42 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cara Main Game Memori Google, Kenali Juga Manfaatnya untuk Otak
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nimo Umumkan Kolaborasi dengan Tencent di Gamescom 2024, Mau Apa?
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 Game Offline Android Terbaik 2024, Dijamin Seru Banget
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cara Bikin Nama FF Kosong dengan Spasi, Mudah Sekali
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>King Indo Gokil! Santai Banget Lawan Jerman di FIFAe World Cup 2024
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>500+ Nama FF Seram Buat Gamer Cowok, Bikin Lawan Gentar
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Concord Game Baru Sony Dinilai Gagal, Pemainnya Dikit Banget
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PS5 Pro Bakal Rilis Bulan Depan, Harganya Berapa?
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3 Game Gratis PS Plus di PS4 dan PS5, Ada Little Nightmares II
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mod Black Myth: Wukong, Gamer Bisa Pakai Son Goku dari Dragon Ball Z
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cheat GTA San Andreas Bahasa Indonesia di PS4, PS5, PC, dan Android
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TimelessStar.com Hadirkan Kursi Performance, Cocok untuk Gaming dan Kerja!
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Daftar Game PS4, PS5, Xbox, Nintendo Switch, dan PC RIlis September 2024
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>250+ Nama Squad ML Keren dan Tidak Pasaran
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil dan Klasemen FFWS SEA 2024 Fall Week 3: Buriram Salip RRQ Kazu
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kode Redeem Free Fire (FF) 26 Agustus 2024, Klaim Hadiahnya
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 Game Offline Seru 2024 untuk HP, Gratis dan Tanpa Perlu Kuota
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>500+ Nama FF Keren dan Rumit, Buruan Keburu Dipakai Orang
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bangga! Indonesia Juara FIFAe World Cup 2024 Football Manager
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Game Open World Infinity Nikki Debut di Gamescom 2024
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="menyimpan-hasil-crawl-ke-csv-lalu-menampilkan-hasil-crawl-menggunakan-dataframe">
-<h3>7. Menyimpan hasil Crawl ke CSV , lalu menampilkan hasil Crawl menggunakan Dataframe<a class="headerlink" href="#menyimpan-hasil-crawl-ke-csv-lalu-menampilkan-hasil-crawl-menggunakan-dataframe" title="Link to this heading">#</a></h3>
+<section id="menampilkan-hasil-crawl-dengan-dataframe">
+<h3>7. Menampilkan Hasil Crawl dengan dataframe<a class="headerlink" href="#menampilkan-hasil-crawl-dengan-dataframe" title="Link to this heading">#</a></h3>
+<p>Menyimpan hasil Crawl ke CSV , lalu menampilkan hasil Crawl menggunakan Dataframe</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat dataframe dari list data</span>
@@ -647,7 +651,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-8091cd96-85a2-4ab5-bcf2-e3930d3cedfa" class="colab-df-container">
+  <div id="df-62dc315c-0788-4553-b506-dc81e3c8020b" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -675,72 +679,72 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>Cara Main Game Memori Google, Kenali Juga Manf...</td>
-      <td>Jakarta - Kalian udah pernah coba main game me...</td>
-      <td>Rabu, 04 Sep 2024 13:33 WIB</td>
+      <td>Nimo Umumkan Kolaborasi dengan Tencent di Game...</td>
+      <td>Jakarta - Platform live streaming game Nimo me...</td>
+      <td>Rabu, 28 Agu 2024 11:30 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>10 Game Offline Android Terbaik 2024, Dijamin ...</td>
-      <td>Jakarta - Mencari game offline Android terbaik...</td>
-      <td>Rabu, 04 Sep 2024 11:15 WIB</td>
+      <td>Cara Bikin Nama FF Kosong dengan Spasi, Mudah ...</td>
+      <td>Jakarta - Bikin nama Free Fire (FF) kosong den...</td>
+      <td>Rabu, 28 Agu 2024 06:15 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>King Indo Gokil! Santai Banget Lawan Jerman di...</td>
-      <td>Jakarta - Ada pemandangan menarik saat Indones...</td>
-      <td>Selasa, 03 Sep 2024 20:03 WIB</td>
+      <td>500+ Nama FF Seram Buat Gamer Cowok, Bikin Law...</td>
+      <td>Jakarta - Sepertinya punya nama Free Fire (FF)...</td>
+      <td>Selasa, 27 Agu 2024 20:15 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Concord Game Baru Sony Dinilai Gagal, Pemainny...</td>
-      <td>Jakarta - Sony sepertinya harus putar otak, su...</td>
-      <td>Selasa, 03 Sep 2024 14:00 WIB</td>
+      <td>PS5 Pro Bakal Rilis Bulan Depan, Harganya Berapa?</td>
+      <td>Jakarta - Rumor peluncuran PlayStation 5 Pro s...</td>
+      <td>Selasa, 27 Agu 2024 19:15 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>3 Game Gratis PS Plus di PS4 dan PS5, Ada Litt...</td>
-      <td>Jakarta - Sony PlayStation akhirnya mengungkap...</td>
-      <td>Selasa, 03 Sep 2024 10:05 WIB</td>
+      <td>Mod Black Myth: Wukong, Gamer Bisa Pakai Son G...</td>
+      <td>Jakarta - Bukan The Destined One, sekarang kar...</td>
+      <td>Selasa, 27 Agu 2024 15:15 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Cheat GTA San Andreas Bahasa Indonesia di PS4,...</td>
-      <td>Jakarta - Ini dia Cheat GTA San Andreas Bahasa...</td>
-      <td>Selasa, 03 Sep 2024 08:39 WIB</td>
+      <td>TimelessStar.com Hadirkan Kursi Performance, C...</td>
+      <td>Jakarta - Penggemar e-sports dan game seharusn...</td>
+      <td>Selasa, 27 Agu 2024 12:00 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Daftar Game PS4, PS5, Xbox, Nintendo Switch, d...</td>
-      <td>Jakarta - Sudah masuk September nih, kira-kira...</td>
-      <td>Selasa, 03 Sep 2024 07:37 WIB</td>
+      <td>250+ Nama Squad ML Keren dan Tidak Pasaran</td>
+      <td>Jakarta - Setelah berhasil menentukan nickname...</td>
+      <td>Senin, 26 Agu 2024 22:00 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>Hasil dan Klasemen FFWS SEA 2024 Fall Week 3: ...</td>
-      <td>Jakarta - Pekan ketiga babak knockout stage FF...</td>
-      <td>Senin, 02 Sep 2024 16:10 WIB</td>
+      <td>Kode Redeem Free Fire (FF) 26 Agustus 2024, Kl...</td>
+      <td>Jakarta - Ternyata ada kode redeem Free Fire (...</td>
+      <td>Senin, 26 Agu 2024 19:30 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>10 Game Offline Seru 2024 untuk HP, Gratis dan...</td>
-      <td>Jakarta - Game offline selalu jadi pilihan fav...</td>
-      <td>Senin, 02 Sep 2024 13:19 WIB</td>
+      <td>500+ Nama FF Keren dan Rumit, Buruan Keburu Di...</td>
+      <td>Jakarta - Apakah detikers sedang kebingungan m...</td>
+      <td>Senin, 26 Agu 2024 18:00 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>Bangga! Indonesia Juara FIFAe World Cup 2024 F...</td>
-      <td>Jakarta - Indonesia menjadi juara dunia FIFAe ...</td>
-      <td>Senin, 02 Sep 2024 09:45 WIB</td>
+      <td>Game Open World Infinity Nikki Debut di Gamesc...</td>
+      <td>Jakarta - Infinity Nikki, game terbaru dari se...</td>
+      <td>Senin, 26 Agu 2024 17:45 WIB</td>
       <td>Games</td>
     </tr>
   </tbody>
@@ -749,7 +753,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-8091cd96-85a2-4ab5-bcf2-e3930d3cedfa')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-62dc315c-0788-4553-b506-dc81e3c8020b')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -801,12 +805,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-8091cd96-85a2-4ab5-bcf2-e3930d3cedfa button.colab-df-convert');
+        document.querySelector('#df-62dc315c-0788-4553-b506-dc81e3c8020b button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-8091cd96-85a2-4ab5-bcf2-e3930d3cedfa');
+        const element = document.querySelector('#df-62dc315c-0788-4553-b506-dc81e3c8020b');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -891,12 +895,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adz-dzikry-pradana-putra-210411100093">Adz Dzikry Pradana Putra - 210411100093</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-web-a">Penambangan Web A</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl">1. Import library yang dibutuhkan untuk melakukan web crawl</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-variable-kosomg-yang-berfungsi-untuk-menyimpan-data-yang-diambil-dari-berita">2. Membuat Variable kosomg yang berfungsi untuk menyimpan data yang diambil dari berita</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-memfilter-konten-dari-elemen-elemen-html-pada-berita-yang-tidak-diinginkan-contoh-kasus-seperti-iklan-daftar-isi-gambar-link-sisipan-dll">3. Membuat fungsi untuk memfilter konten dari elemen-elemen HTML pada berita yang tidak diinginkan , Contoh kasus seperti iklan, daftar isi, gambar , link sisipan, dll</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com-fungsi-ini-mengambil-data-berupa-judul-berita-tanggal-publikasi-isi-berita-dan-kategori-berita-yang-terdapat-di-halaman-tersebut">4. Membuat fungsi untuk melakukan crawling data pada situs web Detik.com. Fungsi ini mengambil data berupa judul berita, tanggal publikasi, isi berita dan kategori berita yang terdapat di halaman tersebut.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-data">2. Inisialisasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-filter-konten">3. Membuat fungsi filter konten</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com">4. Membuat fungsi untuk melakukan crawling data pada situs web Detik.com.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl">5. Inisialisasi URL dan Kategori yang Akan Di-Crawl</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl">6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menyimpan-hasil-crawl-ke-csv-lalu-menampilkan-hasil-crawl-menggunakan-dataframe">7. Menyimpan hasil Crawl ke CSV , lalu menampilkan hasil Crawl menggunakan Dataframe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-hasil-crawl-dengan-dataframe">7. Menampilkan Hasil Crawl dengan dataframe</a></li>
 </ul>
 </li>
 </ul>
