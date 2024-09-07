@@ -60,7 +60,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas-PPW/Tugas-1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Penambangan Web A" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,6 +122,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -178,8 +179,8 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 1 : Crawling Berita</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tugas-2.html"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></a></li>
 </ul>
 
     </div>
@@ -529,7 +530,7 @@ document.write(`
     <span class="n">articles</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;article&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;list-content__item&quot;</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">article</span> <span class="ow">in</span> <span class="n">articles</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">judul</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">max_articles</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">([</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">kategori_list</span> <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="n">kategori</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="n">max_articles</span><span class="p">:</span>
             <span class="k">return</span>
 
         <span class="k">try</span><span class="p">:</span>
@@ -555,9 +556,6 @@ document.write(`
         <span class="n">isi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
         <span class="n">url_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
         <span class="n">kategori_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kategori</span><span class="p">)</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Menambahkan jeda waktu 1 detik antara permintaan artikel</span>
 </pre></div>
 </div>
 </div>
@@ -571,8 +569,8 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat list url dan kategori yang akan di-crawl</span>
-<span class="n">base_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;https://inet.detik.com/games/indeks&quot;</span><span class="p">]</span>
-<span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Games&quot;</span><span class="p">]</span>
+<span class="n">base_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;https://inet.detik.com/games/indeks&quot;</span><span class="p">,</span><span class="s2">&quot;https://sport.detik.com/sepakbola/indeks&quot;</span><span class="p">]</span>
+<span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Games&quot;</span><span class="p">,</span><span class="s2">&quot;Sepak Bola&quot;</span><span class="p">]</span>
 
 <span class="n">max_articles</span> <span class="o">=</span> <span class="mi">10</span>
 </pre></div>
@@ -586,49 +584,12 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melakukan iterasi untuk setiap url dan kategori</span>
 <span class="k">for</span> <span class="n">base_url</span><span class="p">,</span> <span class="n">category</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">base_urls</span><span class="p">,</span> <span class="n">categories</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">judul</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">max_articles</span><span class="p">:</span>
-        <span class="k">break</span>
-
-    <span class="c1"># Looping untuk beralih halaman</span>
-    <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">judul</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">max_articles</span><span class="p">:</span>
-            <span class="k">break</span>
-
+    <span class="n">page</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">([</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">kategori_list</span> <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="n">category</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">max_articles</span><span class="p">:</span>
         <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_url</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="n">get_data</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">max_articles</span><span class="p">)</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Menambahkan jeda waktu 2 detik antara permintaan halaman</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nimo Umumkan Kolaborasi dengan Tencent di Gamescom 2024, Mau Apa?
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cara Bikin Nama FF Kosong dengan Spasi, Mudah Sekali
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>500+ Nama FF Seram Buat Gamer Cowok, Bikin Lawan Gentar
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PS5 Pro Bakal Rilis Bulan Depan, Harganya Berapa?
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mod Black Myth: Wukong, Gamer Bisa Pakai Son Goku dari Dragon Ball Z
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TimelessStar.com Hadirkan Kursi Performance, Cocok untuk Gaming dan Kerja!
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>250+ Nama Squad ML Keren dan Tidak Pasaran
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kode Redeem Free Fire (FF) 26 Agustus 2024, Klaim Hadiahnya
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>500+ Nama FF Keren dan Rumit, Buruan Keburu Dipakai Orang
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Game Open World Infinity Nikki Debut di Gamescom 2024
+        <span class="n">page</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
@@ -640,10 +601,10 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat dataframe dari list data</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;judul&quot;</span><span class="p">:</span> <span class="n">judul</span><span class="p">,</span> <span class="s2">&quot;isi&quot;</span><span class="p">:</span> <span class="n">isi</span><span class="p">,</span> <span class="s2">&quot;tanggal&quot;</span><span class="p">:</span> <span class="n">tanggal</span><span class="p">,</span> <span class="s2">&quot;kategori&quot;</span><span class="p">:</span> <span class="n">kategori_list</span><span class="p">})</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;judul&quot;</span><span class="p">:</span> <span class="n">judul</span><span class="p">,</span> <span class="s2">&quot;isi&quot;</span><span class="p">:</span> <span class="n">isi</span><span class="p">,</span> <span class="s2">&quot;tanggal&quot;</span><span class="p">:</span> <span class="n">tanggal</span><span class="p">,</span> <span class="s2">&quot;kategori&quot;</span><span class="p">:</span> <span class="n">kategori_list</span><span class="p">})</span>
 
 <span class="c1"># Menyimpan dataframe ke file csv</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;data_berita_detik.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df1</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;data_berita_detik.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data_berita_detik.csv&quot;</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
@@ -651,7 +612,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-62dc315c-0788-4553-b506-dc81e3c8020b" class="colab-df-container">
+  <div id="df-772505db-142a-47ea-bbd8-ca77a82c3f03" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -679,73 +640,143 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>Nimo Umumkan Kolaborasi dengan Tencent di Game...</td>
-      <td>Jakarta - Platform live streaming game Nimo me...</td>
-      <td>Rabu, 28 Agu 2024 11:30 WIB</td>
+      <td>3 Cara Log Out Akun ML 2024 dan Beralih Akun Baru</td>
+      <td>Jakarta - Mobile Legends (ML) adalah salah sat...</td>
+      <td>Sabtu, 07 Sep 2024 19:41 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Cara Bikin Nama FF Kosong dengan Spasi, Mudah ...</td>
-      <td>Jakarta - Bikin nama Free Fire (FF) kosong den...</td>
-      <td>Rabu, 28 Agu 2024 06:15 WIB</td>
+      <td>Ada Apa dengan Indostars di FFWS SEA 2024 Fall...</td>
+      <td>Jakarta - Free Fire World Series (FFWS) Southe...</td>
+      <td>Sabtu, 07 Sep 2024 17:18 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>500+ Nama FF Seram Buat Gamer Cowok, Bikin Law...</td>
-      <td>Jakarta - Sepertinya punya nama Free Fire (FF)...</td>
-      <td>Selasa, 27 Agu 2024 20:15 WIB</td>
+      <td>NBA 2K25 Rilis di PS4, PS5, Xbox, dan PC, Segi...</td>
+      <td>Jakarta - 2K selaku penerbit dan Visual Concep...</td>
+      <td>Sabtu, 07 Sep 2024 16:14 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>PS5 Pro Bakal Rilis Bulan Depan, Harganya Berapa?</td>
-      <td>Jakarta - Rumor peluncuran PlayStation 5 Pro s...</td>
-      <td>Selasa, 27 Agu 2024 19:15 WIB</td>
+      <td>Film Adaptasi Game Minecraft Rilis Teaser Trai...</td>
+      <td>Jakarta - Warner Bros Pictures telah merilis t...</td>
+      <td>Sabtu, 07 Sep 2024 11:30 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Mod Black Myth: Wukong, Gamer Bisa Pakai Son G...</td>
-      <td>Jakarta - Bukan The Destined One, sekarang kar...</td>
-      <td>Selasa, 27 Agu 2024 15:15 WIB</td>
+      <td>Universitas Terbuka Gelar Turnamen Mobile Lege...</td>
+      <td>Jakarta - Universitas Terbuka (UT) menggelar M...</td>
+      <td>Jumat, 06 Sep 2024 22:14 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>TimelessStar.com Hadirkan Kursi Performance, C...</td>
-      <td>Jakarta - Penggemar e-sports dan game seharusn...</td>
-      <td>Selasa, 27 Agu 2024 12:00 WIB</td>
+      <td>Tips Jago Football Manager 2024 Ala Juara Duni...</td>
+      <td>Jakarta - Tahukah detikers, Indonesia sukses m...</td>
+      <td>Jumat, 06 Sep 2024 21:40 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>250+ Nama Squad ML Keren dan Tidak Pasaran</td>
-      <td>Jakarta - Setelah berhasil menentukan nickname...</td>
-      <td>Senin, 26 Agu 2024 22:00 WIB</td>
+      <td>10 Emulator Android Ringan 2024 untuk PC atau ...</td>
+      <td>Jakarta - Ternyata ada lho emulator Android ya...</td>
+      <td>Jumat, 06 Sep 2024 20:40 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>Kode Redeem Free Fire (FF) 26 Agustus 2024, Kl...</td>
-      <td>Jakarta - Ternyata ada kode redeem Free Fire (...</td>
-      <td>Senin, 26 Agu 2024 19:30 WIB</td>
+      <td>Iklan Game Hero Wars di X Sekarang Dikasih 'Pe...</td>
+      <td>Jakarta - Ketika gamer menonton YouTube atau m...</td>
+      <td>Jumat, 06 Sep 2024 17:40 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>500+ Nama FF Keren dan Rumit, Buruan Keburu Di...</td>
-      <td>Jakarta - Apakah detikers sedang kebingungan m...</td>
-      <td>Senin, 26 Agu 2024 18:00 WIB</td>
+      <td>7 Tim Indonesia Lolos Final 2024 PMSL SEA Fall...</td>
+      <td>Jakarta - Babak League Stage 2024 PMSL SEA Fal...</td>
+      <td>Jumat, 06 Sep 2024 15:06 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>Game Open World Infinity Nikki Debut di Gamesc...</td>
-      <td>Jakarta - Infinity Nikki, game terbaru dari se...</td>
-      <td>Senin, 26 Agu 2024 17:45 WIB</td>
+      <td>Jadwal MPL ID S14 Week 5 Hari Ini: Evos Glory ...</td>
+      <td>Jakarta - Jadwal MPL ID S14 pekan kelima disel...</td>
+      <td>Jumat, 06 Sep 2024 12:15 WIB</td>
       <td>Games</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Stefano Lilipaly Kenang Momen Dilatih Arne Slot</td>
+      <td>Jakarta - Stefano Lilipaly pernah merasakan di...</td>
+      <td>Minggu, 08 Sep 2024 04:10 WIB</td>
+      <td>Sepak Bola</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Jerman Vs Hungaria: Die Mannschaft Menang 5-0</td>
+      <td>Jakarta - Jerman bertemu Hungaria pada matchda...</td>
+      <td>Minggu, 08 Sep 2024 03:49 WIB</td>
+      <td>Sepak Bola</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Belanda Vs Bosnia dan Herzegovina: De Oranje M...</td>
+      <td>Rotterdam - Tujuh gol tercipta saat Timnas Bel...</td>
+      <td>Minggu, 08 Sep 2024 03:45 WIB</td>
+      <td>Sepak Bola</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Indonesia Vs Australia: Socceroos Diminta Horm...</td>
+      <td>Jakarta - Australia dituntut bangkit dalam lag...</td>
+      <td>Minggu, 08 Sep 2024 02:00 WIB</td>
+      <td>Sepak Bola</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Republik Irlandia Vs Inggris: Tiga Singa Menan...</td>
+      <td>Dublin - Timnas Inggris meraih kemenangan 2-0 ...</td>
+      <td>Minggu, 08 Sep 2024 01:00 WIB</td>
+      <td>Sepak Bola</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Diego Michiels Ungkap Perbedaan Gelombang Natu...</td>
+      <td>Jakarta - Pemain Borneo FC Samarinda , Diego M...</td>
+      <td>Minggu, 08 Sep 2024 00:29 WIB</td>
+      <td>Sepak Bola</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Salah Sadar Status di Liverpool, Belum Akan Pe...</td>
+      <td>Liverpool - Masa depan Mohamed Salah di Liverp...</td>
+      <td>Sabtu, 07 Sep 2024 23:12 WIB</td>
+      <td>Sepak Bola</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Rekor Timnas San Marino: 2 Kali Menang, 9 Seri...</td>
+      <td>Jakarta - San Marino, negara kecil peringkat t...</td>
+      <td>Sabtu, 07 Sep 2024 22:30 WIB</td>
+      <td>Sepak Bola</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Hentikan Kebiasaanmu Ini, Arne Slot</td>
+      <td>Liverpool - Arne Slot memulai eranya di Liverp...</td>
+      <td>Sabtu, 07 Sep 2024 22:00 WIB</td>
+      <td>Sepak Bola</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>MU Jaga Komunikasi dengan Thomas Tuchel</td>
+      <td>Manchester - Manchester United sejauh ini masi...</td>
+      <td>Sabtu, 07 Sep 2024 21:30 WIB</td>
+      <td>Sepak Bola</td>
     </tr>
   </tbody>
 </table>
@@ -753,7 +784,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-62dc315c-0788-4553-b506-dc81e3c8020b')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-772505db-142a-47ea-bbd8-ca77a82c3f03')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -805,12 +836,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-62dc315c-0788-4553-b506-dc81e3c8020b button.colab-df-convert');
+        document.querySelector('#df-772505db-142a-47ea-bbd8-ca77a82c3f03 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-62dc315c-0788-4553-b506-dc81e3c8020b');
+        const element = document.querySelector('#df-772505db-142a-47ea-bbd8-ca77a82c3f03');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -867,15 +898,6 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../intro.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Penambangan Web A</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
