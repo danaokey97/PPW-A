@@ -60,6 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas-PPW/Tugas-1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tugas 2 - Pre-Processing Data dan TF-IDF" href="Tugas-2.html" />
+    <link rel="prev" title="Penambangan Web A" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,7 +179,8 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 1 : Crawling Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-2.html"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></a></li>
 </ul>
 
@@ -407,17 +408,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adz-dzikry-pradana-putra-210411100093">Adz Dzikry Pradana Putra - 210411100093</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-web-a">Penambangan Web A</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl">1. Import library yang dibutuhkan untuk melakukan web crawl</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-data">2. Inisialisasi Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-filter-konten">3. Membuat fungsi filter konten</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com">4. Membuat fungsi untuk melakukan crawling data pada situs web Detik.com.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl">5. Inisialisasi URL dan Kategori yang Akan Di-Crawl</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl">6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-hasil-crawl-dengan-dataframe">7. Menampilkan Hasil Crawl dengan dataframe</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl">1. Import library yang dibutuhkan untuk melakukan web crawl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-data">2. Inisialisasi Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-filter-konten">3. Membuat fungsi filter konten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com">4. Membuat fungsi untuk melakukan crawling data pada situs web Detik.com.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl">5. Inisialisasi URL dan Kategori yang Akan Di-Crawl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl">6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-hasil-crawl-dengan-dataframe">7. Menampilkan Hasil Crawl dengan dataframe</a></li>
 </ul>
             </nav>
         </div>
@@ -431,13 +428,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-1-crawling-berita">
 <h1>Tugas 1 : Crawling Berita<a class="headerlink" href="#tugas-1-crawling-berita" title="Link to this heading">#</a></h1>
-<section id="adz-dzikry-pradana-putra-210411100093">
-<h2>Adz Dzikry Pradana Putra - 210411100093<a class="headerlink" href="#adz-dzikry-pradana-putra-210411100093" title="Link to this heading">#</a></h2>
-</section>
-<section id="penambangan-web-a">
-<h2>Penambangan Web A<a class="headerlink" href="#penambangan-web-a" title="Link to this heading">#</a></h2>
+<p><strong>Nama : Adz Dzikry Pradana Putra- 210411100093</strong></p>
+<p><strong>Penambangan Web A</strong></p>
 <section id="import-library-yang-dibutuhkan-untuk-melakukan-web-crawl">
-<h3>1. Import library yang dibutuhkan untuk melakukan web crawl<a class="headerlink" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl" title="Link to this heading">#</a></h3>
+<h2>1. Import library yang dibutuhkan untuk melakukan web crawl<a class="headerlink" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Menggunakan BeautifulSoup, konten HTML dari halaman web diurai untuk mencari elemen artikel yang relevan.</p></li>
 <li><p>Menggunakan pandas Library digunakan untuk membuat dan mengelola DataFrame.</p></li>
@@ -454,7 +448,7 @@ document.write(`
 </div>
 </section>
 <section id="inisialisasi-data">
-<h3>2. Inisialisasi Data<a class="headerlink" href="#inisialisasi-data" title="Link to this heading">#</a></h3>
+<h2>2. Inisialisasi Data<a class="headerlink" href="#inisialisasi-data" title="Link to this heading">#</a></h2>
 <p>Membuat Variable kosong yang berfungsi untuk menyimpan data yang diambil dari berita</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -470,7 +464,7 @@ document.write(`
 </div>
 </section>
 <section id="membuat-fungsi-filter-konten">
-<h3>3. Membuat fungsi filter konten<a class="headerlink" href="#membuat-fungsi-filter-konten" title="Link to this heading">#</a></h3>
+<h2>3. Membuat fungsi filter konten<a class="headerlink" href="#membuat-fungsi-filter-konten" title="Link to this heading">#</a></h2>
 <p>Berfungsi untuk Mem-filter dari elemen-elemen HTML pada berita yang tidak diinginkan , Contoh kasus seperti iklan, daftar isi, gambar , link sisipan, dll</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -509,7 +503,7 @@ document.write(`
 </div>
 </section>
 <section id="membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com">
-<h3>4. Membuat fungsi untuk melakukan crawling data pada situs web <a class="reference external" href="http://Detik.com">Detik.com</a>.<a class="headerlink" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com" title="Link to this heading">#</a></h3>
+<h2>4. Membuat fungsi untuk melakukan crawling data pada situs web <a class="reference external" href="http://Detik.com">Detik.com</a>.<a class="headerlink" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com" title="Link to this heading">#</a></h2>
 <p>Fungsi ini mengambil data berupa judul berita, tanggal publikasi, isi berita dan kategori berita yang terdapat di halaman tersebut.</p>
 <ul class="simple">
 <li><p>mencari semua elemen-elemen yang mengandung isi penting pada artikel seperti elemen yang berisi judul, tanggal, isi dan kategori berita</p></li>
@@ -562,7 +556,7 @@ document.write(`
 </div>
 </section>
 <section id="inisialisasi-url-dan-kategori-yang-akan-di-crawl">
-<h3>5. Inisialisasi URL dan Kategori yang Akan Di-Crawl<a class="headerlink" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl" title="Link to this heading">#</a></h3>
+<h2>5. Inisialisasi URL dan Kategori yang Akan Di-Crawl<a class="headerlink" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>max_article = variable ini digunakan sebagai batas maksimum berita yang akan diambil</p></li>
 </ul>
@@ -572,14 +566,14 @@ document.write(`
 <span class="n">base_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;https://inet.detik.com/games/indeks&quot;</span><span class="p">,</span><span class="s2">&quot;https://sport.detik.com/sepakbola/indeks&quot;</span><span class="p">]</span>
 <span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Games&quot;</span><span class="p">,</span><span class="s2">&quot;Sepak Bola&quot;</span><span class="p">]</span>
 
-<span class="n">max_articles</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">max_articles</span> <span class="o">=</span> <span class="mi">50</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl">
-<h3>6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl<a class="headerlink" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl" title="Link to this heading">#</a></h3>
+<h2>6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl<a class="headerlink" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melakukan iterasi untuk setiap url dan kategori</span>
@@ -596,7 +590,7 @@ document.write(`
 </div>
 </section>
 <section id="menampilkan-hasil-crawl-dengan-dataframe">
-<h3>7. Menampilkan Hasil Crawl dengan dataframe<a class="headerlink" href="#menampilkan-hasil-crawl-dengan-dataframe" title="Link to this heading">#</a></h3>
+<h2>7. Menampilkan Hasil Crawl dengan dataframe<a class="headerlink" href="#menampilkan-hasil-crawl-dengan-dataframe" title="Link to this heading">#</a></h2>
 <p>Menyimpan hasil Crawl ke CSV , lalu menampilkan hasil Crawl menggunakan Dataframe</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -612,7 +606,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-772505db-142a-47ea-bbd8-ca77a82c3f03" class="colab-df-container">
+  <div id="df-a24cca1f-8c91-43c3-ba7c-b7aba93ff4ae" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -674,117 +668,55 @@ document.write(`
       <td>Games</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>Tips Jago Football Manager 2024 Ala Juara Duni...</td>
-      <td>Jakarta - Tahukah detikers, Indonesia sukses m...</td>
-      <td>Jumat, 06 Sep 2024 21:40 WIB</td>
-      <td>Games</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>10 Emulator Android Ringan 2024 untuk PC atau ...</td>
-      <td>Jakarta - Ternyata ada lho emulator Android ya...</td>
-      <td>Jumat, 06 Sep 2024 20:40 WIB</td>
-      <td>Games</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Iklan Game Hero Wars di X Sekarang Dikasih 'Pe...</td>
-      <td>Jakarta - Ketika gamer menonton YouTube atau m...</td>
-      <td>Jumat, 06 Sep 2024 17:40 WIB</td>
-      <td>Games</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>7 Tim Indonesia Lolos Final 2024 PMSL SEA Fall...</td>
-      <td>Jakarta - Babak League Stage 2024 PMSL SEA Fal...</td>
-      <td>Jumat, 06 Sep 2024 15:06 WIB</td>
-      <td>Games</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Jadwal MPL ID S14 Week 5 Hari Ini: Evos Glory ...</td>
-      <td>Jakarta - Jadwal MPL ID S14 pekan kelima disel...</td>
-      <td>Jumat, 06 Sep 2024 12:15 WIB</td>
-      <td>Games</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Stefano Lilipaly Kenang Momen Dilatih Arne Slot</td>
-      <td>Jakarta - Stefano Lilipaly pernah merasakan di...</td>
-      <td>Minggu, 08 Sep 2024 04:10 WIB</td>
+      <th>95</th>
+      <td>Dua Kata Mees Hilgers dan Eliano Reijnders Usa...</td>
+      <td>Jakarta - Mees Hilgers dan Eliano Reijnders me...</td>
+      <td>Sabtu, 07 Sep 2024 05:00 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
-      <th>11</th>
-      <td>Jerman Vs Hungaria: Die Mannschaft Menang 5-0</td>
-      <td>Jakarta - Jerman bertemu Hungaria pada matchda...</td>
-      <td>Minggu, 08 Sep 2024 03:49 WIB</td>
+      <th>96</th>
+      <td>UEFA Nations League: Belgia Sikat Israel 3-1</td>
+      <td>Debracen - Timnas Belgia mengatasi Timnas Isra...</td>
+      <td>Sabtu, 07 Sep 2024 04:29 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
-      <th>12</th>
-      <td>Belanda Vs Bosnia dan Herzegovina: De Oranje M...</td>
-      <td>Rotterdam - Tujuh gol tercipta saat Timnas Bel...</td>
-      <td>Minggu, 08 Sep 2024 03:45 WIB</td>
+      <th>97</th>
+      <td>Kyle Walker Tak Dipanggil Inggris, Komentari K...</td>
+      <td>London - Kyle Walker tak dipanggil Timnas Ingg...</td>
+      <td>Sabtu, 07 Sep 2024 04:20 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>Indonesia Vs Australia: Socceroos Diminta Horm...</td>
-      <td>Jakarta - Australia dituntut bangkit dalam lag...</td>
-      <td>Minggu, 08 Sep 2024 02:00 WIB</td>
+      <th>98</th>
+      <td>Prancis Vs Italia: Gli Azzurri Menang 3-1 di P...</td>
+      <td>Paris - Timnas Italia meraih poin penuh di mar...</td>
+      <td>Sabtu, 07 Sep 2024 03:40 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
-      <th>14</th>
-      <td>Republik Irlandia Vs Inggris: Tiga Singa Menan...</td>
-      <td>Dublin - Timnas Inggris meraih kemenangan 2-0 ...</td>
-      <td>Minggu, 08 Sep 2024 01:00 WIB</td>
-      <td>Sepak Bola</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Diego Michiels Ungkap Perbedaan Gelombang Natu...</td>
-      <td>Jakarta - Pemain Borneo FC Samarinda , Diego M...</td>
-      <td>Minggu, 08 Sep 2024 00:29 WIB</td>
-      <td>Sepak Bola</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Salah Sadar Status di Liverpool, Belum Akan Pe...</td>
-      <td>Liverpool - Masa depan Mohamed Salah di Liverp...</td>
-      <td>Sabtu, 07 Sep 2024 23:12 WIB</td>
-      <td>Sepak Bola</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Rekor Timnas San Marino: 2 Kali Menang, 9 Seri...</td>
-      <td>Jakarta - San Marino, negara kecil peringkat t...</td>
-      <td>Sabtu, 07 Sep 2024 22:30 WIB</td>
-      <td>Sepak Bola</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Hentikan Kebiasaanmu Ini, Arne Slot</td>
-      <td>Liverpool - Arne Slot memulai eranya di Liverp...</td>
-      <td>Sabtu, 07 Sep 2024 22:00 WIB</td>
-      <td>Sepak Bola</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>MU Jaga Komunikasi dengan Thomas Tuchel</td>
-      <td>Manchester - Manchester United sejauh ini masi...</td>
-      <td>Sabtu, 07 Sep 2024 21:30 WIB</td>
+      <th>99</th>
+      <td>Baru Main Semenit Musim ini, Endo Tak Panik</td>
+      <td>Tojyo - Wataru Endo tidak khawatir sekalipun b...</td>
+      <td>Sabtu, 07 Sep 2024 02:00 WIB</td>
       <td>Sepak Bola</td>
     </tr>
   </tbody>
 </table>
+<p>100 rows × 4 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-772505db-142a-47ea-bbd8-ca77a82c3f03')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a24cca1f-8c91-43c3-ba7c-b7aba93ff4ae')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -836,12 +768,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-772505db-142a-47ea-bbd8-ca77a82c3f03 button.colab-df-convert');
+        document.querySelector('#df-a24cca1f-8c91-43c3-ba7c-b7aba93ff4ae button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-772505db-142a-47ea-bbd8-ca77a82c3f03');
+        const element = document.querySelector('#df-a24cca1f-8c91-43c3-ba7c-b7aba93ff4ae');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -864,7 +796,6 @@ document.write(`
   </div>
   </div></div>
 </div>
-</section>
 </section>
 </section>
 
@@ -898,6 +829,24 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Penambangan Web A</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Tugas-2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -914,17 +863,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adz-dzikry-pradana-putra-210411100093">Adz Dzikry Pradana Putra - 210411100093</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penambangan-web-a">Penambangan Web A</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl">1. Import library yang dibutuhkan untuk melakukan web crawl</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-data">2. Inisialisasi Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-filter-konten">3. Membuat fungsi filter konten</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com">4. Membuat fungsi untuk melakukan crawling data pada situs web Detik.com.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl">5. Inisialisasi URL dan Kategori yang Akan Di-Crawl</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl">6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-hasil-crawl-dengan-dataframe">7. Menampilkan Hasil Crawl dengan dataframe</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-dibutuhkan-untuk-melakukan-web-crawl">1. Import library yang dibutuhkan untuk melakukan web crawl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-data">2. Inisialisasi Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-filter-konten">3. Membuat fungsi filter konten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-melakukan-crawling-data-pada-situs-web-detik-com">4. Membuat fungsi untuk melakukan crawling data pada situs web Detik.com.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-url-dan-kategori-yang-akan-di-crawl">5. Inisialisasi URL dan Kategori yang Akan Di-Crawl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-iterasi-untuk-setiap-url-dan-kategori-yang-akan-di-crawl">6. Melakukan Iterasi untuk Setiap URL dan Kategori yang akan di Crawl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-hasil-crawl-dengan-dataframe">7. Menampilkan Hasil Crawl dengan dataframe</a></li>
 </ul>
   </nav></div>
 
