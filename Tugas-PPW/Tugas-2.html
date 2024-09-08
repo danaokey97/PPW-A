@@ -179,7 +179,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Tugas-1.html">Tugas 1 : Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-1.html"><strong>Tugas 1 : Crawling Berita</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></a></li>
 </ul>
 
@@ -426,6 +426,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Inisialisasi data yang sudah dicrawl untuk diapanggil dan disimpan ke variable df</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -437,7 +438,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-117ac0ee-8711-4ae6-ba69-5f32ffbe3045" class="colab-df-container">
+  <div id="df-89579155-b53b-46e3-ac97-82da49afbbcb" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -465,44 +466,44 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
+      <td>Game Battle of Guardian Gelar Eksibisi di PON ...</td>
+      <td>Jakarta - Pada ajang Pekan Olahraga Nasional (...</td>
+      <td>Minggu, 08 Sep 2024 19:03 WIB</td>
+      <td>Games</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Setelah Viral, Game Hamster Kombat akan Jadi T...</td>
+      <td>Jakarta - Bitget, exchange mata uang kripto, m...</td>
+      <td>Minggu, 08 Sep 2024 15:03 WIB</td>
+      <td>Games</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>3 Cara Log Out Akun ML 2024 dan Beralih Akun Baru</td>
       <td>Jakarta - Mobile Legends (ML) adalah salah sat...</td>
       <td>Sabtu, 07 Sep 2024 19:41 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>Ada Apa dengan Indostars di FFWS SEA 2024 Fall...</td>
       <td>Jakarta - Free Fire World Series (FFWS) Southe...</td>
       <td>Sabtu, 07 Sep 2024 17:18 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>NBA 2K25 Rilis di PS4, PS5, Xbox, dan PC, Segi...</td>
       <td>Jakarta - 2K selaku penerbit dan Visual Concep...</td>
       <td>Sabtu, 07 Sep 2024 16:14 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>5</th>
       <td>Film Adaptasi Game Minecraft Rilis Teaser Trai...</td>
       <td>Jakarta - Warner Bros Pictures telah merilis t...</td>
       <td>Sabtu, 07 Sep 2024 11:30 WIB</td>
-      <td>Games</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Universitas Terbuka Gelar Turnamen Mobile Lege...</td>
-      <td>Jakarta - Universitas Terbuka (UT) menggelar M...</td>
-      <td>Jumat, 06 Sep 2024 22:14 WIB</td>
-      <td>Games</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Tips Jago Football Manager 2024 Ala Juara Duni...</td>
-      <td>Jakarta - Tahukah detikers, Indonesia sukses m...</td>
-      <td>Jumat, 06 Sep 2024 21:40 WIB</td>
       <td>Games</td>
     </tr>
   </tbody>
@@ -511,7 +512,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-117ac0ee-8711-4ae6-ba69-5f32ffbe3045')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-89579155-b53b-46e3-ac97-82da49afbbcb')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -563,12 +564,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-117ac0ee-8711-4ae6-ba69-5f32ffbe3045 button.colab-df-convert');
+        document.querySelector('#df-89579155-b53b-46e3-ac97-82da49afbbcb button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-117ac0ee-8711-4ae6-ba69-5f32ffbe3045');
+        const element = document.querySelector('#df-89579155-b53b-46e3-ac97-82da49afbbcb');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -593,8 +594,7 @@ document.write(`
 </div>
 <p><strong>CLEANING</strong></p>
 <hr class="docutils" />
-<p><strong>Cleaning Data</strong> adalah proses awal dalam pengolahan teks yang bertujuan untuk membersihkan data
-teks dari elemen-elemen yang tidak diperlukan atau mengganggu, seperti :</p>
+<p><strong>Cleaning Data</strong> adalah tahap pembersihan data ulasan dari elemen yang tidak diinginkan , seperti :</p>
 <ul class="simple">
 <li><p>Tanda baca
 (punctuation) titik, koma, tanda seru</p></li>
@@ -646,7 +646,7 @@ teks dari elemen-elemen yang tidak diperlukan atau mengganggu, seperti :</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-cadce837-3b4f-4891-b530-5cc9faa4de54" class="colab-df-container">
+  <div id="df-f6e3c2b9-ad5a-4da8-942f-30fcae65bb77" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -675,6 +675,22 @@ teks dari elemen-elemen yang tidak diperlukan atau mengganggu, seperti :</p>
   <tbody>
     <tr>
       <th>0</th>
+      <td>Game Battle of Guardian Gelar Eksibisi di PON ...</td>
+      <td>Jakarta - Pada ajang Pekan Olahraga Nasional (...</td>
+      <td>Minggu, 08 Sep 2024 19:03 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Pada ajang Pekan Olahraga Nasional PO...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Setelah Viral, Game Hamster Kombat akan Jadi T...</td>
+      <td>Jakarta - Bitget, exchange mata uang kripto, m...</td>
+      <td>Minggu, 08 Sep 2024 15:03 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Bitget exchange mata uang kripto meng...</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>3 Cara Log Out Akun ML 2024 dan Beralih Akun Baru</td>
       <td>Jakarta - Mobile Legends (ML) adalah salah sat...</td>
       <td>Sabtu, 07 Sep 2024 19:41 WIB</td>
@@ -682,7 +698,7 @@ teks dari elemen-elemen yang tidak diperlukan atau mengganggu, seperti :</p>
       <td>Jakarta  Mobile Legends ML adalah salah satu g...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>Ada Apa dengan Indostars di FFWS SEA 2024 Fall...</td>
       <td>Jakarta - Free Fire World Series (FFWS) Southe...</td>
       <td>Sabtu, 07 Sep 2024 17:18 WIB</td>
@@ -690,7 +706,7 @@ teks dari elemen-elemen yang tidak diperlukan atau mengganggu, seperti :</p>
       <td>Jakarta  Free Fire World Series FFWS Southeeas...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>NBA 2K25 Rilis di PS4, PS5, Xbox, dan PC, Segi...</td>
       <td>Jakarta - 2K selaku penerbit dan Visual Concep...</td>
       <td>Sabtu, 07 Sep 2024 16:14 WIB</td>
@@ -698,28 +714,12 @@ teks dari elemen-elemen yang tidak diperlukan atau mengganggu, seperti :</p>
       <td>Jakarta  K selaku penerbit dan Visual Concept ...</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>5</th>
       <td>Film Adaptasi Game Minecraft Rilis Teaser Trai...</td>
       <td>Jakarta - Warner Bros Pictures telah merilis t...</td>
       <td>Sabtu, 07 Sep 2024 11:30 WIB</td>
       <td>Games</td>
       <td>Jakarta  Warner Bros Pictures telah merilis te...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Universitas Terbuka Gelar Turnamen Mobile Lege...</td>
-      <td>Jakarta - Universitas Terbuka (UT) menggelar M...</td>
-      <td>Jumat, 06 Sep 2024 22:14 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Universitas Terbuka UT menggelar Mobi...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Tips Jago Football Manager 2024 Ala Juara Duni...</td>
-      <td>Jakarta - Tahukah detikers, Indonesia sukses m...</td>
-      <td>Jumat, 06 Sep 2024 21:40 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Tahukah detikers Indonesia sukses men...</td>
     </tr>
   </tbody>
 </table>
@@ -727,7 +727,7 @@ teks dari elemen-elemen yang tidak diperlukan atau mengganggu, seperti :</p>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-cadce837-3b4f-4891-b530-5cc9faa4de54')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f6e3c2b9-ad5a-4da8-942f-30fcae65bb77')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -779,12 +779,12 @@ teks dari elemen-elemen yang tidak diperlukan atau mengganggu, seperti :</p>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-cadce837-3b4f-4891-b530-5cc9faa4de54 button.colab-df-convert');
+        document.querySelector('#df-f6e3c2b9-ad5a-4da8-942f-30fcae65bb77 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-cadce837-3b4f-4891-b530-5cc9faa4de54');
+        const element = document.querySelector('#df-f6e3c2b9-ad5a-4da8-942f-30fcae65bb77');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -809,12 +809,7 @@ teks dari elemen-elemen yang tidak diperlukan atau mengganggu, seperti :</p>
 </div>
 <p><strong>CASE FOLDING</strong></p>
 <hr class="docutils" />
-<p><strong>Casefolding</strong> adalah langkah dalam preprocessing yang melibatkan
-pengonversian semua karakter teks menjadi huruf kecil. Tujuan dari casefolding adalah
-untuk menghilangkan ambiguitas yang dapat muncul karena perbedaan huruf besar
-dan kecil. Misalnya, kata yang sama tetapi ditulis dengan huruf besar atau kecil akan
-dianggap sebagai entitas yang berbeda. Dengan menerapkan casefolding, konsistensi
-dalam representasi kata dapat dipertahankan.</p>
+<p><strong>Casefolding</strong> adalah Proses merubah semua huruf yang ada pada data ulasan agar dirubah menjadi huruf kecil , hal ini dilakukan untuk memastikan konsistensi dalam datanya</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">case_folding</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
@@ -832,7 +827,7 @@ dalam representasi kata dapat dipertahankan.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7e9b4293-eccd-4650-9276-68b16b594307" class="colab-df-container">
+  <div id="df-09e84ac1-790a-4afb-8258-44fe00f93a44" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -862,6 +857,24 @@ dalam representasi kata dapat dipertahankan.</p>
   <tbody>
     <tr>
       <th>0</th>
+      <td>Game Battle of Guardian Gelar Eksibisi di PON ...</td>
+      <td>Jakarta - Pada ajang Pekan Olahraga Nasional (...</td>
+      <td>Minggu, 08 Sep 2024 19:03 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Pada ajang Pekan Olahraga Nasional PO...</td>
+      <td>jakarta  pada ajang pekan olahraga nasional po...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Setelah Viral, Game Hamster Kombat akan Jadi T...</td>
+      <td>Jakarta - Bitget, exchange mata uang kripto, m...</td>
+      <td>Minggu, 08 Sep 2024 15:03 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Bitget exchange mata uang kripto meng...</td>
+      <td>jakarta  bitget exchange mata uang kripto meng...</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>3 Cara Log Out Akun ML 2024 dan Beralih Akun Baru</td>
       <td>Jakarta - Mobile Legends (ML) adalah salah sat...</td>
       <td>Sabtu, 07 Sep 2024 19:41 WIB</td>
@@ -870,7 +883,7 @@ dalam representasi kata dapat dipertahankan.</p>
       <td>jakarta  mobile legends ml adalah salah satu g...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>Ada Apa dengan Indostars di FFWS SEA 2024 Fall...</td>
       <td>Jakarta - Free Fire World Series (FFWS) Southe...</td>
       <td>Sabtu, 07 Sep 2024 17:18 WIB</td>
@@ -879,7 +892,7 @@ dalam representasi kata dapat dipertahankan.</p>
       <td>jakarta  free fire world series ffws southeeas...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>NBA 2K25 Rilis di PS4, PS5, Xbox, dan PC, Segi...</td>
       <td>Jakarta - 2K selaku penerbit dan Visual Concep...</td>
       <td>Sabtu, 07 Sep 2024 16:14 WIB</td>
@@ -888,7 +901,7 @@ dalam representasi kata dapat dipertahankan.</p>
       <td>jakarta  k selaku penerbit dan visual concept ...</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>5</th>
       <td>Film Adaptasi Game Minecraft Rilis Teaser Trai...</td>
       <td>Jakarta - Warner Bros Pictures telah merilis t...</td>
       <td>Sabtu, 07 Sep 2024 11:30 WIB</td>
@@ -896,31 +909,13 @@ dalam representasi kata dapat dipertahankan.</p>
       <td>Jakarta  Warner Bros Pictures telah merilis te...</td>
       <td>jakarta  warner bros pictures telah merilis te...</td>
     </tr>
-    <tr>
-      <th>4</th>
-      <td>Universitas Terbuka Gelar Turnamen Mobile Lege...</td>
-      <td>Jakarta - Universitas Terbuka (UT) menggelar M...</td>
-      <td>Jumat, 06 Sep 2024 22:14 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Universitas Terbuka UT menggelar Mobi...</td>
-      <td>jakarta  universitas terbuka ut menggelar mobi...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Tips Jago Football Manager 2024 Ala Juara Duni...</td>
-      <td>Jakarta - Tahukah detikers, Indonesia sukses m...</td>
-      <td>Jumat, 06 Sep 2024 21:40 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Tahukah detikers Indonesia sukses men...</td>
-      <td>jakarta  tahukah detikers indonesia sukses men...</td>
-    </tr>
   </tbody>
 </table>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-7e9b4293-eccd-4650-9276-68b16b594307')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-09e84ac1-790a-4afb-8258-44fe00f93a44')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -972,12 +967,12 @@ dalam representasi kata dapat dipertahankan.</p>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-7e9b4293-eccd-4650-9276-68b16b594307 button.colab-df-convert');
+        document.querySelector('#df-09e84ac1-790a-4afb-8258-44fe00f93a44 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-7e9b4293-eccd-4650-9276-68b16b594307');
+        const element = document.querySelector('#df-09e84ac1-790a-4afb-8258-44fe00f93a44');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1002,10 +997,8 @@ dalam representasi kata dapat dipertahankan.</p>
 </div>
 <p><strong>TOKENIZATION</strong></p>
 <hr class="docutils" />
-<p><strong>Tokenization atau Tokenisasi</strong> memisahkan kata per kata dengan operator tokenize pada text
-processing. Tujuannya untuk dikelompokkan kemunculan suatu kata pada proses
-selanjutnya.Lebih jelasnya untuk memecah teks menjadi unit terkecil yang dapat
-berupa kata,frasa atau karakter terpisah.</p>
+<p><strong>Tokenization atau Tokenisasi</strong></p>
+<p>Proses ini berfokus pada pembagian kalimat menjadi kata-kata individual. Setiap kata akan diproses secara terpisah dan disimpan dalam suatu variabel atau array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
@@ -1021,7 +1014,7 @@ berupa kata,frasa atau karakter terpisah.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c843d145-9bb0-4866-a783-fe0971e4cdd9" class="colab-df-container">
+  <div id="df-34498301-08e7-4393-91b3-d97118748a27" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1052,6 +1045,26 @@ berupa kata,frasa atau karakter terpisah.</p>
   <tbody>
     <tr>
       <th>0</th>
+      <td>Game Battle of Guardian Gelar Eksibisi di PON ...</td>
+      <td>Jakarta - Pada ajang Pekan Olahraga Nasional (...</td>
+      <td>Minggu, 08 Sep 2024 19:03 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Pada ajang Pekan Olahraga Nasional PO...</td>
+      <td>jakarta  pada ajang pekan olahraga nasional po...</td>
+      <td>[jakarta, pada, ajang, pekan, olahraga, nasion...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Setelah Viral, Game Hamster Kombat akan Jadi T...</td>
+      <td>Jakarta - Bitget, exchange mata uang kripto, m...</td>
+      <td>Minggu, 08 Sep 2024 15:03 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Bitget exchange mata uang kripto meng...</td>
+      <td>jakarta  bitget exchange mata uang kripto meng...</td>
+      <td>[jakarta, bitget, exchange, mata, uang, kripto...</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>3 Cara Log Out Akun ML 2024 dan Beralih Akun Baru</td>
       <td>Jakarta - Mobile Legends (ML) adalah salah sat...</td>
       <td>Sabtu, 07 Sep 2024 19:41 WIB</td>
@@ -1061,7 +1074,7 @@ berupa kata,frasa atau karakter terpisah.</p>
       <td>[jakarta, mobile, legends, ml, adalah, salah, ...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>Ada Apa dengan Indostars di FFWS SEA 2024 Fall...</td>
       <td>Jakarta - Free Fire World Series (FFWS) Southe...</td>
       <td>Sabtu, 07 Sep 2024 17:18 WIB</td>
@@ -1071,7 +1084,7 @@ berupa kata,frasa atau karakter terpisah.</p>
       <td>[jakarta, free, fire, world, series, ffws, sou...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>NBA 2K25 Rilis di PS4, PS5, Xbox, dan PC, Segi...</td>
       <td>Jakarta - 2K selaku penerbit dan Visual Concep...</td>
       <td>Sabtu, 07 Sep 2024 16:14 WIB</td>
@@ -1081,7 +1094,7 @@ berupa kata,frasa atau karakter terpisah.</p>
       <td>[jakarta, k, selaku, penerbit, dan, visual, co...</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>5</th>
       <td>Film Adaptasi Game Minecraft Rilis Teaser Trai...</td>
       <td>Jakarta - Warner Bros Pictures telah merilis t...</td>
       <td>Sabtu, 07 Sep 2024 11:30 WIB</td>
@@ -1090,33 +1103,13 @@ berupa kata,frasa atau karakter terpisah.</p>
       <td>jakarta  warner bros pictures telah merilis te...</td>
       <td>[jakarta, warner, bros, pictures, telah, meril...</td>
     </tr>
-    <tr>
-      <th>4</th>
-      <td>Universitas Terbuka Gelar Turnamen Mobile Lege...</td>
-      <td>Jakarta - Universitas Terbuka (UT) menggelar M...</td>
-      <td>Jumat, 06 Sep 2024 22:14 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Universitas Terbuka UT menggelar Mobi...</td>
-      <td>jakarta  universitas terbuka ut menggelar mobi...</td>
-      <td>[jakarta, universitas, terbuka, ut, menggelar,...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Tips Jago Football Manager 2024 Ala Juara Duni...</td>
-      <td>Jakarta - Tahukah detikers, Indonesia sukses m...</td>
-      <td>Jumat, 06 Sep 2024 21:40 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Tahukah detikers Indonesia sukses men...</td>
-      <td>jakarta  tahukah detikers indonesia sukses men...</td>
-      <td>[jakarta, tahukah, detikers, indonesia, sukses...</td>
-    </tr>
   </tbody>
 </table>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-c843d145-9bb0-4866-a783-fe0971e4cdd9')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-34498301-08e7-4393-91b3-d97118748a27')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1168,12 +1161,12 @@ berupa kata,frasa atau karakter terpisah.</p>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-c843d145-9bb0-4866-a783-fe0971e4cdd9 button.colab-df-convert');
+        document.querySelector('#df-34498301-08e7-4393-91b3-d97118748a27 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-c843d145-9bb0-4866-a783-fe0971e4cdd9');
+        const element = document.querySelector('#df-34498301-08e7-4393-91b3-d97118748a27');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1198,9 +1191,7 @@ berupa kata,frasa atau karakter terpisah.</p>
 </div>
 <p><strong>FILTERING/STOPWORD REMOVAL</strong></p>
 <hr class="docutils" />
-<p>Tahap <strong>Stopword Removal</strong> yakni sebagai tahap pemilihan kata-kata yang
-dianggap tidak penting atau kata yang tidak relevan.Untuk mengetahui kata mana yang
-tidak relevan berdasarkan dari daftar stopword removal yang digunakan.</p>
+<p>Tahap <strong>Stopword Removal</strong> yakni pemilihan kata-kata yang memiliki makna atau relevansi untuk analisis, sementara kata-kata yang tidak berkontribusi atau merupakan kata penghubung umum (stopwords) dihilangkan. Contoh kata-kata penghubung adalah “dan,” “atau,” “lalu,” dan sejenisnya.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
@@ -1230,7 +1221,7 @@ tidak relevan berdasarkan dari daftar stopword removal yang digunakan.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5aa409cc-e150-47d5-b565-6393d34e344f" class="colab-df-container">
+  <div id="df-9e224a46-282d-49ea-a290-f31082a6ac7d" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1262,6 +1253,28 @@ tidak relevan berdasarkan dari daftar stopword removal yang digunakan.</p>
   <tbody>
     <tr>
       <th>0</th>
+      <td>Game Battle of Guardian Gelar Eksibisi di PON ...</td>
+      <td>Jakarta - Pada ajang Pekan Olahraga Nasional (...</td>
+      <td>Minggu, 08 Sep 2024 19:03 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Pada ajang Pekan Olahraga Nasional PO...</td>
+      <td>jakarta  pada ajang pekan olahraga nasional po...</td>
+      <td>[jakarta, pada, ajang, pekan, olahraga, nasion...</td>
+      <td>jakarta ajang pekan olahraga nasional pon aceh...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Setelah Viral, Game Hamster Kombat akan Jadi T...</td>
+      <td>Jakarta - Bitget, exchange mata uang kripto, m...</td>
+      <td>Minggu, 08 Sep 2024 15:03 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Bitget exchange mata uang kripto meng...</td>
+      <td>jakarta  bitget exchange mata uang kripto meng...</td>
+      <td>[jakarta, bitget, exchange, mata, uang, kripto...</td>
+      <td>jakarta bitget exchange mata uang kripto mengu...</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>3 Cara Log Out Akun ML 2024 dan Beralih Akun Baru</td>
       <td>Jakarta - Mobile Legends (ML) adalah salah sat...</td>
       <td>Sabtu, 07 Sep 2024 19:41 WIB</td>
@@ -1272,7 +1285,7 @@ tidak relevan berdasarkan dari daftar stopword removal yang digunakan.</p>
       <td>jakarta mobile legends ml salah game online po...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>Ada Apa dengan Indostars di FFWS SEA 2024 Fall...</td>
       <td>Jakarta - Free Fire World Series (FFWS) Southe...</td>
       <td>Sabtu, 07 Sep 2024 17:18 WIB</td>
@@ -1283,7 +1296,7 @@ tidak relevan berdasarkan dari daftar stopword removal yang digunakan.</p>
       <td>jakarta free fire world series ffws southeeast...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>NBA 2K25 Rilis di PS4, PS5, Xbox, dan PC, Segi...</td>
       <td>Jakarta - 2K selaku penerbit dan Visual Concep...</td>
       <td>Sabtu, 07 Sep 2024 16:14 WIB</td>
@@ -1294,7 +1307,7 @@ tidak relevan berdasarkan dari daftar stopword removal yang digunakan.</p>
       <td>jakarta k penerbit visual concept pengembang g...</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>5</th>
       <td>Film Adaptasi Game Minecraft Rilis Teaser Trai...</td>
       <td>Jakarta - Warner Bros Pictures telah merilis t...</td>
       <td>Sabtu, 07 Sep 2024 11:30 WIB</td>
@@ -1304,35 +1317,13 @@ tidak relevan berdasarkan dari daftar stopword removal yang digunakan.</p>
       <td>[jakarta, warner, bros, pictures, telah, meril...</td>
       <td>jakarta warner bros pictures merilis teaser tr...</td>
     </tr>
-    <tr>
-      <th>4</th>
-      <td>Universitas Terbuka Gelar Turnamen Mobile Lege...</td>
-      <td>Jakarta - Universitas Terbuka (UT) menggelar M...</td>
-      <td>Jumat, 06 Sep 2024 22:14 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Universitas Terbuka UT menggelar Mobi...</td>
-      <td>jakarta  universitas terbuka ut menggelar mobi...</td>
-      <td>[jakarta, universitas, terbuka, ut, menggelar,...</td>
-      <td>jakarta universitas terbuka ut menggelar mobil...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Tips Jago Football Manager 2024 Ala Juara Duni...</td>
-      <td>Jakarta - Tahukah detikers, Indonesia sukses m...</td>
-      <td>Jumat, 06 Sep 2024 21:40 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Tahukah detikers Indonesia sukses men...</td>
-      <td>jakarta  tahukah detikers indonesia sukses men...</td>
-      <td>[jakarta, tahukah, detikers, indonesia, sukses...</td>
-      <td>jakarta tahukah detikers indonesia sukses menj...</td>
-    </tr>
   </tbody>
 </table>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-5aa409cc-e150-47d5-b565-6393d34e344f')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9e224a46-282d-49ea-a290-f31082a6ac7d')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1384,12 +1375,12 @@ tidak relevan berdasarkan dari daftar stopword removal yang digunakan.</p>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-5aa409cc-e150-47d5-b565-6393d34e344f button.colab-df-convert');
+        document.querySelector('#df-9e224a46-282d-49ea-a290-f31082a6ac7d button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-5aa409cc-e150-47d5-b565-6393d34e344f');
+        const element = document.querySelector('#df-9e224a46-282d-49ea-a290-f31082a6ac7d');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1426,12 +1417,8 @@ tidak relevan berdasarkan dari daftar stopword removal yang digunakan.</p>
 frekuensi kemunculan setiap kata dalam dokumen tersebut.Pembobotan TF-IDF
 menghitung nilai bobot setiap kata untuk setiap dokumen. Ini dibagi menjadi dua proses
 yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
-<p><strong>TF (Term Frequency)</strong> menghitung jumlah kemunculan setiap kata dalam dokumen,
-dan dengan kemunculan kata terbanyak, nilai kata tersebut adalah yang terbesar.</p>
-<p><strong>IDF (Inverse Document Frequency)</strong> menghitung jumlah dokumen untuk setiap kata yang
-jarang muncul dalam dokumen yang dianggap memiliki nilai terbesar. Jika kata tersebut
-memiliki banyak kemunculan kata dalam dokumen, hasilnya akan memiliki nilai yang
-kecil.</p>
+<p><strong>TF (Term Frequency)</strong> yang mengukur seberapa sering kata muncul dalam suatu dokumen dengan membandingkannya dengan keseluruhan dalam berkas.</p>
+<p><strong>IDF (Inverse Document Frequency)</strong> untuk menilai kepentingan kata tersebut dalam konteks seluruh dokumen yang ada.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1465,7 +1452,7 @@ kecil.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7c82dc9d-25e7-43bf-9ae7-1597c078035d" class="colab-df-container">
+  <div id="df-7ec9554e-640d-460c-b191-10f2e047cfe4" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1485,15 +1472,15 @@ kecil.</p>
     <tr style="text-align: right;">
       <th></th>
       <th>aaa</th>
+      <th>aab</th>
       <th>aao</th>
       <th>aarav</th>
-      <th>abadi</th>
       <th>abdullah</th>
       <th>abg</th>
       <th>ability</th>
       <th>abnormal</th>
       <th>abramovich</th>
-      <th>abroad</th>
+      <th>absen</th>
       <th>...</th>
       <th>zirkzee</th>
       <th>zola</th>
@@ -1514,7 +1501,7 @@ kecil.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>0.048598</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1538,7 +1525,7 @@ kecil.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1562,7 +1549,7 @@ kecil.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1586,7 +1573,7 @@ kecil.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1596,7 +1583,7 @@ kecil.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.059392</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1610,7 +1597,7 @@ kecil.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1634,7 +1621,7 @@ kecil.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1644,7 +1631,7 @@ kecil.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.059512</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1658,7 +1645,7 @@ kecil.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1682,7 +1669,7 @@ kecil.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1706,7 +1693,7 @@ kecil.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1730,7 +1717,7 @@ kecil.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1750,12 +1737,12 @@ kecil.</p>
     </tr>
   </tbody>
 </table>
-<p>10 rows × 5291 columns</p>
+<p>10 rows × 5288 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-7c82dc9d-25e7-43bf-9ae7-1597c078035d')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-7ec9554e-640d-460c-b191-10f2e047cfe4')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1807,12 +1794,12 @@ kecil.</p>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-7c82dc9d-25e7-43bf-9ae7-1597c078035d button.colab-df-convert');
+        document.querySelector('#df-7ec9554e-640d-460c-b191-10f2e047cfe4 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-7c82dc9d-25e7-43bf-9ae7-1597c078035d');
+        const element = document.querySelector('#df-7ec9554e-640d-460c-b191-10f2e047cfe4');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1873,7 +1860,7 @@ kecil.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas 1 : Crawling Berita</p>
+        <p class="prev-next-title"><strong>Tugas 1 : Crawling Berita</strong></p>
       </div>
     </a>
 </div>
