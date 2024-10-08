@@ -2,7 +2,7 @@
 title: 210411100093_adz dzikry pradana putra_word embedding
 ---
 
-# Word Embedding
+# **Word Embedding**
 
 Word Embedding adalah teknik untuk merepresentasikan kata-kata dalam bentuk vektor numerik, yang memungkinkan komputer untuk memahami hubungan antara kata-kata dalam suatu konteks. Teknik ini mengubah kata menjadi representasi yang memiliki makna semantik, sehingga kata-kata dengan makna serupa memiliki representasi yang lebih dekat satu sama lain dalam ruang vektor.
 
