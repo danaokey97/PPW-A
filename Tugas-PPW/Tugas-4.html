@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Nama : Adz Dzikry Pradana Putra &#8212; Penambangan Web A</title>
+    <title>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality &#8212; Penambangan Web A</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas-PPW/Tugas-4';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Word Embedding" href="Skip-Gram.html" />
+    <link rel="prev" title="Tugas - 3 Modelling (Logistic Regression) dan Testing" href="Tugas-3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,14 +181,8 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Tugas-1.html"><strong>Tugas 1 : Crawling Berita</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-2.html"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Skip-Gram.html">Word Embedding</a></li>
-
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Nama : Adz Dzikry Pradana Putra</a></li>
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="Tugas-3.html">Tugas - 3 Modelling (Logistic Regression) dan Testing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality</strong></a></li>
 </ul>
 
     </div>
@@ -405,7 +399,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Nama : Adz Dzikry Pradana Putra</h1>
+    <h1>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -415,21 +409,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Nama : Adz Dzikry Pradana Putra</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nim-210411100093">Nim : 210411100093</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-hasil-preprocessing">1.Data Hasil Preprocessing</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf-weight">TF-IDF Weight</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pelabelan-menggunakan-labelencoder">Pelabelan menggunakan LabelEncoder</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nama-adz-dzikry-pradana-putra">Nama : Adz Dzikry Pradana Putra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nim-210411100093">Nim : 210411100093</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-hasil-preprocessing">1.Data Hasil Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf-weight">TF-IDF Weight</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pelabelan-menggunakan-labelencoder">Pelabelan menggunakan LabelEncoder</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubah-nilai-tf-idf-di-bawah-0-5-menjadi-0-dan-di-atas-atau-sama-dengan-0-5-menjadi-1">Ubah nilai TF-IDF di bawah 0.5 menjadi 0, dan di atas atau sama dengan 0.5 menjadi 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-graf-berdasarkan-co-occurrence-fitur">Membuat graf berdasarkan co-occurrence fitur</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-graf">Membuat graf</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-closeness-centrality">Menghitung closeness centrality</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-cosine-similarity">Menghitung cosine similarity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengujian-sample-baru"><strong>Pengujian sample baru</strong></a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pengujian-sample-baru"><strong>Pengujian sample baru</strong></a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -440,14 +431,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="nama-adz-dzikry-pradana-putra">
-<h1>Nama : Adz Dzikry Pradana Putra<a class="headerlink" href="#nama-adz-dzikry-pradana-putra" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-4-tf-idf-cosine-similarity-closeness-centrality">
+<h1><strong>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality</strong><a class="headerlink" href="#tugas-4-tf-idf-cosine-similarity-closeness-centrality" title="Link to this heading">#</a></h1>
+<section id="nama-adz-dzikry-pradana-putra">
+<h2>Nama : Adz Dzikry Pradana Putra<a class="headerlink" href="#nama-adz-dzikry-pradana-putra" title="Link to this heading">#</a></h2>
 </section>
 <section id="nim-210411100093">
-<h1>Nim : 210411100093<a class="headerlink" href="#nim-210411100093" title="Link to this heading">#</a></h1>
+<h2>Nim : 210411100093<a class="headerlink" href="#nim-210411100093" title="Link to this heading">#</a></h2>
 </section>
 <section id="data-hasil-preprocessing">
-<h1>1.Data Hasil Preprocessing<a class="headerlink" href="#data-hasil-preprocessing" title="Link to this heading">#</a></h1>
+<h2>1.Data Hasil Preprocessing<a class="headerlink" href="#data-hasil-preprocessing" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -774,7 +767,7 @@ document.write(`
 </div>
 </section>
 <section id="tf-idf-weight">
-<h1>TF-IDF Weight<a class="headerlink" href="#tf-idf-weight" title="Link to this heading">#</a></h1>
+<h2>TF-IDF Weight<a class="headerlink" href="#tf-idf-weight" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -896,7 +889,7 @@ DataFrame setelah Label Encoding:
 </div>
 </section>
 <section id="pelabelan-menggunakan-labelencoder">
-<h1>Pelabelan menggunakan LabelEncoder<a class="headerlink" href="#pelabelan-menggunakan-labelencoder" title="Link to this heading">#</a></h1>
+<h2>Pelabelan menggunakan LabelEncoder<a class="headerlink" href="#pelabelan-menggunakan-labelencoder" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1551,6 +1544,7 @@ Jumlah data uji: 20
   </div>
 </div></div>
 </div>
+</section>
 <section id="ubah-nilai-tf-idf-di-bawah-0-5-menjadi-0-dan-di-atas-atau-sama-dengan-0-5-menjadi-1">
 <h2>Ubah nilai TF-IDF di bawah 0.5 menjadi 0, dan di atas atau sama dengan 0.5 menjadi 1<a class="headerlink" href="#ubah-nilai-tf-idf-di-bawah-0-5-menjadi-0-dan-di-atas-atau-sama-dengan-0-5-menjadi-1" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -2804,9 +2798,8 @@ norskpl                 0.0      0.0
 </div>
 </div>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="pengujian-sample-baru">
-<h1><strong>Pengujian sample baru</strong><a class="headerlink" href="#pengujian-sample-baru" title="Link to this heading">#</a></h1>
+<section id="pengujian-sample-baru">
+<h2><strong>Pengujian sample baru</strong><a class="headerlink" href="#pengujian-sample-baru" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3057,6 +3050,7 @@ Betweenness Centrality:
 </div>
 </div>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -3089,12 +3083,12 @@ Betweenness Centrality:
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Skip-Gram.html"
+       href="Tugas-3.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Word Embedding</p>
+        <p class="prev-next-title">Tugas - 3 Modelling (Logistic Regression) dan Testing</p>
       </div>
     </a>
 </div>
@@ -3113,21 +3107,18 @@ Betweenness Centrality:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Nama : Adz Dzikry Pradana Putra</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nim-210411100093">Nim : 210411100093</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-hasil-preprocessing">1.Data Hasil Preprocessing</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf-weight">TF-IDF Weight</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pelabelan-menggunakan-labelencoder">Pelabelan menggunakan LabelEncoder</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nama-adz-dzikry-pradana-putra">Nama : Adz Dzikry Pradana Putra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nim-210411100093">Nim : 210411100093</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-hasil-preprocessing">1.Data Hasil Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf-weight">TF-IDF Weight</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pelabelan-menggunakan-labelencoder">Pelabelan menggunakan LabelEncoder</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubah-nilai-tf-idf-di-bawah-0-5-menjadi-0-dan-di-atas-atau-sama-dengan-0-5-menjadi-1">Ubah nilai TF-IDF di bawah 0.5 menjadi 0, dan di atas atau sama dengan 0.5 menjadi 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-graf-berdasarkan-co-occurrence-fitur">Membuat graf berdasarkan co-occurrence fitur</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-graf">Membuat graf</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-closeness-centrality">Menghitung closeness centrality</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-cosine-similarity">Menghitung cosine similarity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengujian-sample-baru"><strong>Pengujian sample baru</strong></a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pengujian-sample-baru"><strong>Pengujian sample baru</strong></a></li>
-</ul>
-
   </nav></div>
 
 </div></div>

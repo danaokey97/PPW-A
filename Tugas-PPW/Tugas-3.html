@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Penambangan Web A</title>
+    <title>Tugas - 3 Modelling (Logistic Regression) dan Testing &#8212; Penambangan Web A</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas-PPW/Tugas-3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Word Embedding" href="Skip-Gram.html" />
+    <link rel="next" title="Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality" href="Tugas-4.html" />
     <link rel="prev" title="Tugas 2 - Pre-Processing Data dan TF-IDF" href="Tugas-2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -179,17 +179,11 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Tugas-1.html"><strong>Tugas 1 : Crawling Berita</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-2.html"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Skip-Gram.html">Word Embedding</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="Tugas-4.html">Nama : Adz Dzikry Pradana Putra</a></li>
-
-
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas - 3 Modelling (Logistic Regression) dan Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-4.html"><strong>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality</strong></a></li>
 </ul>
 
     </div>
@@ -393,9 +387,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -406,19 +398,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Tugas - 3 Modelling (Logistic Regression) dan Testing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -428,7 +412,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-3-modelling-logistic-regression-dan-testing">
+<h1>Tugas - 3 Modelling (Logistic Regression) dan Testing<a class="headerlink" href="#tugas-3-modelling-logistic-regression-dan-testing" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
 <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
@@ -452,7 +438,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e1affef6-bb39-473e-95f0-d15f3279c6ca" class="colab-df-container">
+  <div id="df-2e513a6d-486c-4f5b-ab9a-67ce058788c0" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -543,7 +529,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-e1affef6-bb39-473e-95f0-d15f3279c6ca')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-2e513a6d-486c-4f5b-ab9a-67ce058788c0')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -595,12 +581,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-e1affef6-bb39-473e-95f0-d15f3279c6ca button.colab-df-convert');
+        document.querySelector('#df-2e513a6d-486c-4f5b-ab9a-67ce058788c0 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-e1affef6-bb39-473e-95f0-d15f3279c6ca');
+        const element = document.querySelector('#df-2e513a6d-486c-4f5b-ab9a-67ce058788c0');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -675,8 +661,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shape of X_train: (80, 4233)
-Shape of X_test: (20, 4233)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shape of X_train: (80, 4250)
+Shape of X_test: (20, 4250)
 </pre></div>
 </div>
 </div>
@@ -710,15 +696,15 @@ Shape of X_test: (20, 4233)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy: 80.00%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy: 90.00%
               precision    recall  f1-score   support
 
-       Games       1.00      0.67      0.80        12
-  Sepak Bola       0.67      1.00      0.80         8
+       Games       1.00      0.83      0.91        12
+  Sepak Bola       0.80      1.00      0.89         8
 
-    accuracy                           0.80        20
-   macro avg       0.83      0.83      0.80        20
-weighted avg       0.87      0.80      0.80        20
+    accuracy                           0.90        20
+   macro avg       0.90      0.92      0.90        20
+weighted avg       0.92      0.90      0.90        20
 </pre></div>
 </div>
 </div>
@@ -787,6 +773,7 @@ Reinkarnasi Flappy Bird dipelopori oleh sekumpulan penggemar yang tergabung dala
 Game Flappy Bird akan tersedia untuk Android dan iOS mulai tahun 2025,
 tapi game ini akan bisa dimainkan di platform lain sebelum tanggal tersebut.
 Tim Flappy Bird Foundation berencana menghadirkan game ini ke platform seperti desktop dan mobile web mulai musim gugur tahun ini.</p>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -828,11 +815,11 @@ Tim Flappy Bird Foundation berencana menghadirkan game ini ke platform seperti d
       </div>
     </a>
     <a class="right-next"
-       href="Skip-Gram.html"
+       href="Tugas-4.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Word Embedding</p>
+        <p class="prev-next-title"><strong>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -842,21 +829,6 @@ Tim Flappy Bird Foundation berencana menghadirkan game ini ke platform seperti d
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
