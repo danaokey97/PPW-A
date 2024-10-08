@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas-PPW/Tugas-3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality" href="Tugas-4.html" />
+    <link rel="next" title="Word Embedding" href="SkipGram.html" />
     <link rel="prev" title="Tugas 2 - Pre-Processing Data dan TF-IDF" href="Tugas-2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,6 +183,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas-1.html"><strong>Tugas 1 : Crawling Berita</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-2.html"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas - 3 Modelling (Logistic Regression) dan Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SkipGram.html">Word Embedding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-4.html"><strong>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality</strong></a></li>
 </ul>
 
@@ -438,7 +439,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-2e513a6d-486c-4f5b-ab9a-67ce058788c0" class="colab-df-container">
+  <div id="df-225adc37-d09f-42d1-9503-f30920c97616" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -529,7 +530,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-2e513a6d-486c-4f5b-ab9a-67ce058788c0')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-225adc37-d09f-42d1-9503-f30920c97616')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -581,12 +582,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-2e513a6d-486c-4f5b-ab9a-67ce058788c0 button.colab-df-convert');
+        document.querySelector('#df-225adc37-d09f-42d1-9503-f30920c97616 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-2e513a6d-486c-4f5b-ab9a-67ce058788c0');
+        const element = document.querySelector('#df-225adc37-d09f-42d1-9503-f30920c97616');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -661,8 +662,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shape of X_train: (80, 4250)
-Shape of X_test: (20, 4250)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shape of X_train: (80, 4252)
+Shape of X_test: (20, 4252)
 </pre></div>
 </div>
 </div>
@@ -815,11 +816,11 @@ Tim Flappy Bird Foundation berencana menghadirkan game ini ke platform seperti d
       </div>
     </a>
     <a class="right-next"
-       href="Tugas-4.html"
+       href="SkipGram.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality</strong></p>
+        <p class="prev-next-title">Word Embedding</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
