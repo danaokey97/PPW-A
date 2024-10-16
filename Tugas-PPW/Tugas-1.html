@@ -185,6 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas-3.html"><strong>Tugas - 3 Modelling (Logistic Regression) dan Testing</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="SkipGram.html"><strong>Word Embedding</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-4.html"><strong>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-5.html"><strong>Tugas 5 : Keyword Extraction</strong></a></li>
 </ul>
 
     </div>
@@ -609,7 +610,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c0462912-0766-4929-bc8e-d4b14db59f7f" class="colab-df-container">
+  <div id="df-6d739581-ddbd-4987-8e2a-0cccf7f40ebf" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -637,37 +638,37 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>Daftar Game PS4, PS5, Xbox, dan PC Rilis Mingg...</td>
-      <td>Jakarta - Oktober 2024 sudah berjalan selama t...</td>
-      <td>Selasa, 08 Okt 2024 14:45 WIB</td>
+      <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
+      <td>Jakarta - Game horor selalu punya daya tarikny...</td>
+      <td>Rabu, 16 Okt 2024 14:20 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Studi: Game Single Player Lebih Disukai Gamer ...</td>
-      <td>Jakarta - Di tengah kepopuleran game multiplay...</td>
-      <td>Selasa, 08 Okt 2024 12:15 WIB</td>
+      <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
+      <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
+      <td>Rabu, 16 Okt 2024 12:15 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>MPL ID S14: Ini Jadwal Playoff dan Bracket Per...</td>
-      <td>Jakarta - Rangkaian pertandingan di fase liga ...</td>
-      <td>Senin, 07 Okt 2024 13:15 WIB</td>
+      <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
+      <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
+      <td>Selasa, 15 Okt 2024 17:36 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Daftar Tim yang Gugur dan Lolos Playoff MPL ID...</td>
-      <td>Jakarta - MPL ID S14 memasuki babak playoff. S...</td>
-      <td>Senin, 07 Okt 2024 11:15 WIB</td>
+      <td>Buriram United Ungkap Alasannya Bisa Juara FFW...</td>
+      <td>Jakarta - Buriram United sukses merebut gelar ...</td>
+      <td>Selasa, 15 Okt 2024 16:33 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Studi Ungkap Main Game PowerWash Simulator Bai...</td>
-      <td>Jakarta - Sebuah studi mengungkapkan, memainka...</td>
-      <td>Minggu, 06 Okt 2024 15:06 WIB</td>
+      <td>GTA 6 Baru akan Dirilis Saat Sudah Sempurna</td>
+      <td>Jakarta - Pencinta seri game Grand Theft Auto ...</td>
+      <td>Senin, 14 Okt 2024 18:00 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
@@ -679,37 +680,37 @@ document.write(`
     </tr>
     <tr>
       <th>95</th>
-      <td>Video: Eks Bintang Barcelona Andres Iniesta Um...</td>
-      <td>Gelandang legendaris Spanyol Andres Iniesta me...</td>
-      <td>3,473 Views  |  Selasa, 08 Okt 2024 01:36 WIB</td>
+      <td>Lemparan ke Dalam Arhan Masih Ampuh!</td>
+      <td>Qingdao - Saat Indonesia buntu dan kesulitan m...</td>
+      <td>Rabu, 16 Okt 2024 00:00 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>2 Pemain Chelsea Diskors Lawan Liverpool, Mare...</td>
-      <td>London - Chelsea tanpa 2 pemain saat menantang...</td>
-      <td>Selasa, 08 Okt 2024 02:00 WIB</td>
+      <td>Indonesia Ditekuk China, Erick Thohir: Akan Sa...</td>
+      <td>Jakarta - Ketua Umum PSSI Erick Thohir akan me...</td>
+      <td>Selasa, 15 Okt 2024 23:30 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>Legenda Belanda Johan Neeskens Meninggal Dunia</td>
-      <td>Aljir - Johan Neeskens, legenda Ajax dan Barce...</td>
-      <td>Selasa, 08 Okt 2024 01:00 WIB</td>
+      <td>Utak-atik Taktik Shin Tae-yong Tak Berjalan Baik</td>
+      <td>Qingdao - Shin Tae-yong melakukan perubahan ta...</td>
+      <td>Selasa, 15 Okt 2024 23:00 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>Man City Menangi Pertarungan Legal Pertama Mel...</td>
-      <td>Manchester - Manchester City memenangkan perta...</td>
-      <td>Selasa, 08 Okt 2024 00:04 WIB</td>
+      <td>Indonesia Vs Jepang Kapan? Ini Jadwalnya</td>
+      <td>Jakarta - Usai takluk dari China, Indonesia su...</td>
+      <td>Selasa, 15 Okt 2024 22:40 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>Andres Iniesta Umumkan Pensiun</td>
-      <td>Barcelona - Andres Iniesta resmi mengakhiri ka...</td>
-      <td>Senin, 07 Okt 2024 23:28 WIB</td>
+      <td>Video Momen-momen Indonesia Dibekuk China, Gar...</td>
+      <td>Timnas Indonesia tumbang lawan China di ronde ...</td>
+      <td>63,456 Views  |  Selasa, 15 Okt 2024 22:03 WIB</td>
       <td>Sepak Bola</td>
     </tr>
   </tbody>
@@ -719,7 +720,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-c0462912-0766-4929-bc8e-d4b14db59f7f')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-6d739581-ddbd-4987-8e2a-0cccf7f40ebf')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -771,12 +772,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-c0462912-0766-4929-bc8e-d4b14db59f7f button.colab-df-convert');
+        document.querySelector('#df-6d739581-ddbd-4987-8e2a-0cccf7f40ebf button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-c0462912-0766-4929-bc8e-d4b14db59f7f');
+        const element = document.querySelector('#df-6d739581-ddbd-4987-8e2a-0cccf7f40ebf');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});

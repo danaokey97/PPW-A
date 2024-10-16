@@ -60,6 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas-PPW/Tugas-4';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tugas 5 : Keyword Extraction" href="Tugas-5.html" />
     <link rel="prev" title="Word Embedding" href="SkipGram.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -184,6 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas-3.html"><strong>Tugas - 3 Modelling (Logistic Regression) dan Testing</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="SkipGram.html"><strong>Word Embedding</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-5.html"><strong>Tugas 5 : Keyword Extraction</strong></a></li>
 </ul>
 
     </div>
@@ -467,7 +469,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-14537ebb-ecb3-447b-be8e-8c7c658c8e99" class="colab-df-container">
+  <div id="df-112b1bc7-ba07-4e59-95d8-77d63086c80c" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -499,58 +501,58 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>Game Battle of Guardian Gelar Eksibisi di PON ...</td>
-      <td>Jakarta - Pada ajang Pekan Olahraga Nasional (...</td>
-      <td>Minggu, 08 Sep 2024 19:03 WIB</td>
+      <td>Daftar Game PS4, PS5, Xbox, dan PC Rilis Mingg...</td>
+      <td>Jakarta - Oktober 2024 sudah berjalan selama t...</td>
+      <td>Selasa, 08 Okt 2024 14:45 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Pada ajang Pekan Olahraga Nasional PO...</td>
-      <td>jakarta  pada ajang pekan olahraga nasional po...</td>
-      <td>['jakarta', 'pada', 'ajang', 'pekan', 'olahrag...</td>
-      <td>jakarta ajang pekan olahraga nasional pon aceh...</td>
+      <td>Jakarta  Oktober  sudah berjalan selama tujuh ...</td>
+      <td>jakarta  oktober  sudah berjalan selama tujuh ...</td>
+      <td>['jakarta', 'oktober', 'sudah', 'berjalan', 's...</td>
+      <td>jakarta oktober berjalan tujuh beragam game me...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Setelah Viral, Game Hamster Kombat akan Jadi T...</td>
-      <td>Jakarta - Bitget, exchange mata uang kripto, m...</td>
-      <td>Minggu, 08 Sep 2024 15:03 WIB</td>
+      <td>Studi: Game Single Player Lebih Disukai Gamer ...</td>
+      <td>Jakarta - Di tengah kepopuleran game multiplay...</td>
+      <td>Selasa, 08 Okt 2024 12:15 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Bitget exchange mata uang kripto meng...</td>
-      <td>jakarta  bitget exchange mata uang kripto meng...</td>
-      <td>['jakarta', 'bitget', 'exchange', 'mata', 'uan...</td>
-      <td>jakarta bitget exchange mata uang kripto mengu...</td>
+      <td>Jakarta  Di tengah kepopuleran game multiplaye...</td>
+      <td>jakarta  di tengah kepopuleran game multiplaye...</td>
+      <td>['jakarta', 'di', 'tengah', 'kepopuleran', 'ga...</td>
+      <td>jakarta kepopuleran game multiplayer online st...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3 Cara Log Out Akun ML 2024 dan Beralih Akun Baru</td>
-      <td>Jakarta - Mobile Legends (ML) adalah salah sat...</td>
-      <td>Sabtu, 07 Sep 2024 19:41 WIB</td>
+      <td>MPL ID S14: Ini Jadwal Playoff dan Bracket Per...</td>
+      <td>Jakarta - Rangkaian pertandingan di fase liga ...</td>
+      <td>Senin, 07 Okt 2024 13:15 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Mobile Legends ML adalah salah satu g...</td>
-      <td>jakarta  mobile legends ml adalah salah satu g...</td>
-      <td>['jakarta', 'mobile', 'legends', 'ml', 'adalah...</td>
-      <td>jakarta mobile legends ml salah game online po...</td>
+      <td>Jakarta  Rangkaian pertandingan di fase liga M...</td>
+      <td>jakarta  rangkaian pertandingan di fase liga m...</td>
+      <td>['jakarta', 'rangkaian', 'pertandingan', 'di',...</td>
+      <td>jakarta rangkaian pertandingan fase liga mpl i...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Ada Apa dengan Indostars di FFWS SEA 2024 Fall...</td>
-      <td>Jakarta - Free Fire World Series (FFWS) Southe...</td>
-      <td>Sabtu, 07 Sep 2024 17:18 WIB</td>
+      <td>Daftar Tim yang Gugur dan Lolos Playoff MPL ID...</td>
+      <td>Jakarta - MPL ID S14 memasuki babak playoff. S...</td>
+      <td>Senin, 07 Okt 2024 11:15 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Free Fire World Series FFWS Southeeas...</td>
-      <td>jakarta  free fire world series ffws southeeas...</td>
-      <td>['jakarta', 'free', 'fire', 'world', 'series',...</td>
-      <td>jakarta free fire world series ffws southeeast...</td>
+      <td>Jakarta  MPL ID S memasuki babak playoff Sudah...</td>
+      <td>jakarta  mpl id s memasuki babak playoff sudah...</td>
+      <td>['jakarta', 'mpl', 'id', 's', 'memasuki', 'bab...</td>
+      <td>jakarta mpl id s memasuki babak playoff enam t...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>NBA 2K25 Rilis di PS4, PS5, Xbox, dan PC, Segi...</td>
-      <td>Jakarta - 2K selaku penerbit dan Visual Concep...</td>
-      <td>Sabtu, 07 Sep 2024 16:14 WIB</td>
+      <td>Studi Ungkap Main Game PowerWash Simulator Bai...</td>
+      <td>Jakarta - Sebuah studi mengungkapkan, memainka...</td>
+      <td>Minggu, 06 Okt 2024 15:06 WIB</td>
       <td>Games</td>
-      <td>Jakarta  K selaku penerbit dan Visual Concept ...</td>
-      <td>jakarta  k selaku penerbit dan visual concept ...</td>
-      <td>['jakarta', 'k', 'selaku', 'penerbit', 'dan', ...</td>
-      <td>jakarta k penerbit visual concept pengembang g...</td>
+      <td>Jakarta  Sebuah studi mengungkapkan memainkan ...</td>
+      <td>jakarta  sebuah studi mengungkapkan memainkan ...</td>
+      <td>['jakarta', 'sebuah', 'studi', 'mengungkapkan'...</td>
+      <td>jakarta studi memainkan salah game square enix...</td>
     </tr>
   </tbody>
 </table>
@@ -558,7 +560,7 @@ document.write(`
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-14537ebb-ecb3-447b-be8e-8c7c658c8e99')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-112b1bc7-ba07-4e59-95d8-77d63086c80c')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -610,12 +612,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-14537ebb-ecb3-447b-be8e-8c7c658c8e99 button.colab-df-convert');
+        document.querySelector('#df-112b1bc7-ba07-4e59-95d8-77d63086c80c button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-14537ebb-ecb3-447b-be8e-8c7c658c8e99');
+        const element = document.querySelector('#df-112b1bc7-ba07-4e59-95d8-77d63086c80c');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -635,8 +637,8 @@ document.write(`
   </div>
 
 
-<div id="df-6f0c6963-b4ce-48fc-8ead-873686374740">
-  <button class="colab-df-quickchart" onclick="quickchart('df-6f0c6963-b4ce-48fc-8ead-873686374740')"
+<div id="df-24df60ec-a1db-4c4f-88b4-7e59231beaf0">
+  <button class="colab-df-quickchart" onclick="quickchart('df-24df60ec-a1db-4c4f-88b4-7e59231beaf0')"
             title="Suggest charts"
             style="display:none;">
 
@@ -755,7 +757,7 @@ document.write(`
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-6f0c6963-b4ce-48fc-8ead-873686374740 button');
+        document.querySelector('#df-24df60ec-a1db-4c4f-88b4-7e59231beaf0 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -793,95 +795,95 @@ document.write(`
 
 DataFrame setelah Label Encoding:
                                                 judul  \
-0   Game Battle of Guardian Gelar Eksibisi di PON ...   
-1   Setelah Viral, Game Hamster Kombat akan Jadi T...   
-2   3 Cara Log Out Akun ML 2024 dan Beralih Akun Baru   
-3   Ada Apa dengan Indostars di FFWS SEA 2024 Fall...   
-4   NBA 2K25 Rilis di PS4, PS5, Xbox, dan PC, Segi...   
+0   Daftar Game PS4, PS5, Xbox, dan PC Rilis Mingg...   
+1   Studi: Game Single Player Lebih Disukai Gamer ...   
+2   MPL ID S14: Ini Jadwal Playoff dan Bracket Per...   
+3   Daftar Tim yang Gugur dan Lolos Playoff MPL ID...   
+4   Studi Ungkap Main Game PowerWash Simulator Bai...   
 ..                                                ...   
-95  Dikejutkan Indonesia, Arab Saudi Nggak Istirah...   
-96  Klopp Kritik Keras MU Gara-gara Lepas Jadon Sa...   
-97       Mees Hilgers Tak Sabar Bela Timnas Indonesia   
-98       Militao Cedera, Sisa Berapa Bek Real Madrid?   
-99  Naturalisasi Mees Hilgers &amp; Eliano Reijnders B...   
+95  Video: Eks Bintang Barcelona Andres Iniesta Um...   
+96  2 Pemain Chelsea Diskors Lawan Liverpool, Mare...   
+97     Legenda Belanda Johan Neeskens Meninggal Dunia   
+98  Man City Menangi Pertarungan Legal Pertama Mel...   
+99                     Andres Iniesta Umumkan Pensiun   
 
                                                   isi  \
-0   Jakarta - Pada ajang Pekan Olahraga Nasional (...   
-1   Jakarta - Bitget, exchange mata uang kripto, m...   
-2   Jakarta - Mobile Legends (ML) adalah salah sat...   
-3   Jakarta - Free Fire World Series (FFWS) Southe...   
-4   Jakarta - 2K selaku penerbit dan Visual Concep...   
+0   Jakarta - Oktober 2024 sudah berjalan selama t...   
+1   Jakarta - Di tengah kepopuleran game multiplay...   
+2   Jakarta - Rangkaian pertandingan di fase liga ...   
+3   Jakarta - MPL ID S14 memasuki babak playoff. S...   
+4   Jakarta - Sebuah studi mengungkapkan, memainka...   
 ..                                                ...   
-95  Jakarta - Arab Saudi dikejutkan oleh Timnas In...   
-96  Dortmund - Juergen Klopp mengomentari situasi ...   
-97  Jakarta - Mees Hilgers akan menjalani proses n...   
-98  Jakarta - Kabar buruk buat Real Madrid, beknya...   
-99  Jakarta - Timnas Indonesia akan segera mendapa...   
+95  Gelandang legendaris Spanyol Andres Iniesta me...   
+96  London - Chelsea tanpa 2 pemain saat menantang...   
+97  Aljir - Johan Neeskens, legenda Ajax dan Barce...   
+98  Manchester - Manchester City memenangkan perta...   
+99  Barcelona - Andres Iniesta resmi mengakhiri ka...   
 
-                          tanggal    kategori  \
-0   Minggu, 08 Sep 2024 19:03 WIB       Games   
-1   Minggu, 08 Sep 2024 15:03 WIB       Games   
-2    Sabtu, 07 Sep 2024 19:41 WIB       Games   
-3    Sabtu, 07 Sep 2024 17:18 WIB       Games   
-4    Sabtu, 07 Sep 2024 16:14 WIB       Games   
-..                            ...         ...   
-95   Sabtu, 07 Sep 2024 18:00 WIB  Sepak Bola   
-96   Sabtu, 07 Sep 2024 17:30 WIB  Sepak Bola   
-97   Sabtu, 07 Sep 2024 17:00 WIB  Sepak Bola   
-98   Sabtu, 07 Sep 2024 16:30 WIB  Sepak Bola   
-99   Sabtu, 07 Sep 2024 16:00 WIB  Sepak Bola   
+                                          tanggal    kategori  \
+0                   Selasa, 08 Okt 2024 14:45 WIB       Games   
+1                   Selasa, 08 Okt 2024 12:15 WIB       Games   
+2                    Senin, 07 Okt 2024 13:15 WIB       Games   
+3                    Senin, 07 Okt 2024 11:15 WIB       Games   
+4                   Minggu, 06 Okt 2024 15:06 WIB       Games   
+..                                            ...         ...   
+95  3,473 Views  |  Selasa, 08 Okt 2024 01:36 WIB  Sepak Bola   
+96                  Selasa, 08 Okt 2024 02:00 WIB  Sepak Bola   
+97                  Selasa, 08 Okt 2024 01:00 WIB  Sepak Bola   
+98                  Selasa, 08 Okt 2024 00:04 WIB  Sepak Bola   
+99                   Senin, 07 Okt 2024 23:28 WIB  Sepak Bola   
 
                                       Hasil cleansing  \
-0   Jakarta  Pada ajang Pekan Olahraga Nasional PO...   
-1   Jakarta  Bitget exchange mata uang kripto meng...   
-2   Jakarta  Mobile Legends ML adalah salah satu g...   
-3   Jakarta  Free Fire World Series FFWS Southeeas...   
-4   Jakarta  K selaku penerbit dan Visual Concept ...   
+0   Jakarta  Oktober  sudah berjalan selama tujuh ...   
+1   Jakarta  Di tengah kepopuleran game multiplaye...   
+2   Jakarta  Rangkaian pertandingan di fase liga M...   
+3   Jakarta  MPL ID S memasuki babak playoff Sudah...   
+4   Jakarta  Sebuah studi mengungkapkan memainkan ...   
 ..                                                ...   
-95  Jakarta  Arab Saudi dikejutkan oleh Timnas Ind...   
-96  Dortmund  Juergen Klopp mengomentari situasi J...   
-97  Jakarta  Mees Hilgers akan menjalani proses na...   
-98  Jakarta  Kabar buruk buat Real Madrid beknya E...   
-99  Jakarta  Timnas Indonesia akan segera mendapat...   
+95  Gelandang legendaris Spanyol Andres Iniesta me...   
+96  London  Chelsea tanpa  pemain saat menantang L...   
+97  Aljir  Johan Neeskens legenda Ajax dan Barcelo...   
+98  Manchester  Manchester City memenangkan pertar...   
+99  Barcelona  Andres Iniesta resmi mengakhiri kar...   
 
                                    Hasil case_folding  \
-0   jakarta  pada ajang pekan olahraga nasional po...   
-1   jakarta  bitget exchange mata uang kripto meng...   
-2   jakarta  mobile legends ml adalah salah satu g...   
-3   jakarta  free fire world series ffws southeeas...   
-4   jakarta  k selaku penerbit dan visual concept ...   
+0   jakarta  oktober  sudah berjalan selama tujuh ...   
+1   jakarta  di tengah kepopuleran game multiplaye...   
+2   jakarta  rangkaian pertandingan di fase liga m...   
+3   jakarta  mpl id s memasuki babak playoff sudah...   
+4   jakarta  sebuah studi mengungkapkan memainkan ...   
 ..                                                ...   
-95  jakarta  arab saudi dikejutkan oleh timnas ind...   
-96  dortmund  juergen klopp mengomentari situasi j...   
-97  jakarta  mees hilgers akan menjalani proses na...   
-98  jakarta  kabar buruk buat real madrid beknya e...   
-99  jakarta  timnas indonesia akan segera mendapat...   
+95  gelandang legendaris spanyol andres iniesta me...   
+96  london  chelsea tanpa  pemain saat menantang l...   
+97  aljir  johan neeskens legenda ajax dan barcelo...   
+98  manchester  manchester city memenangkan pertar...   
+99  barcelona  andres iniesta resmi mengakhiri kar...   
 
                                              tokenize  \
-0   [&#39;jakarta&#39;, &#39;pada&#39;, &#39;ajang&#39;, &#39;pekan&#39;, &#39;olahrag...   
-1   [&#39;jakarta&#39;, &#39;bitget&#39;, &#39;exchange&#39;, &#39;mata&#39;, &#39;uan...   
-2   [&#39;jakarta&#39;, &#39;mobile&#39;, &#39;legends&#39;, &#39;ml&#39;, &#39;adalah...   
-3   [&#39;jakarta&#39;, &#39;free&#39;, &#39;fire&#39;, &#39;world&#39;, &#39;series&#39;,...   
-4   [&#39;jakarta&#39;, &#39;k&#39;, &#39;selaku&#39;, &#39;penerbit&#39;, &#39;dan&#39;, ...   
+0   [&#39;jakarta&#39;, &#39;oktober&#39;, &#39;sudah&#39;, &#39;berjalan&#39;, &#39;s...   
+1   [&#39;jakarta&#39;, &#39;di&#39;, &#39;tengah&#39;, &#39;kepopuleran&#39;, &#39;ga...   
+2   [&#39;jakarta&#39;, &#39;rangkaian&#39;, &#39;pertandingan&#39;, &#39;di&#39;,...   
+3   [&#39;jakarta&#39;, &#39;mpl&#39;, &#39;id&#39;, &#39;s&#39;, &#39;memasuki&#39;, &#39;bab...   
+4   [&#39;jakarta&#39;, &#39;sebuah&#39;, &#39;studi&#39;, &#39;mengungkapkan&#39;...   
 ..                                                ...   
-95  [&#39;jakarta&#39;, &#39;arab&#39;, &#39;saudi&#39;, &#39;dikejutkan&#39;, &#39;ol...   
-96  [&#39;dortmund&#39;, &#39;juergen&#39;, &#39;klopp&#39;, &#39;mengomentari...   
-97  [&#39;jakarta&#39;, &#39;mees&#39;, &#39;hilgers&#39;, &#39;akan&#39;, &#39;menjal...   
-98  [&#39;jakarta&#39;, &#39;kabar&#39;, &#39;buruk&#39;, &#39;buat&#39;, &#39;real&#39;, ...   
-99  [&#39;jakarta&#39;, &#39;timnas&#39;, &#39;indonesia&#39;, &#39;akan&#39;, &#39;se...   
+95  [&#39;gelandang&#39;, &#39;legendaris&#39;, &#39;spanyol&#39;, &#39;andres...   
+96  [&#39;london&#39;, &#39;chelsea&#39;, &#39;tanpa&#39;, &#39;pemain&#39;, &#39;saat...   
+97  [&#39;aljir&#39;, &#39;johan&#39;, &#39;neeskens&#39;, &#39;legenda&#39;, &#39;aja...   
+98  [&#39;manchester&#39;, &#39;manchester&#39;, &#39;city&#39;, &#39;memenang...   
+99  [&#39;barcelona&#39;, &#39;andres&#39;, &#39;iniesta&#39;, &#39;resmi&#39;, &#39;m...   
 
                                        Hasil stopword  kategori_encoded  
-0   jakarta ajang pekan olahraga nasional pon aceh...                 0  
-1   jakarta bitget exchange mata uang kripto mengu...                 0  
-2   jakarta mobile legends ml salah game online po...                 0  
-3   jakarta free fire world series ffws southeeast...                 0  
-4   jakarta k penerbit visual concept pengembang g...                 0  
+0   jakarta oktober berjalan tujuh beragam game me...                 0  
+1   jakarta kepopuleran game multiplayer online st...                 0  
+2   jakarta rangkaian pertandingan fase liga mpl i...                 0  
+3   jakarta mpl id s memasuki babak playoff enam t...                 0  
+4   jakarta studi memainkan salah game square enix...                 0  
 ..                                                ...               ...  
-95  jakarta arab saudi dikejutkan timnas indonesia...                 1  
-96  dortmund juergen klopp mengomentari situasi ja...                 1  
-97  jakarta mees hilgers menjalani proses naturali...                 1  
-98  jakarta kabar buruk real madrid beknya eder mi...                 1  
-99  jakarta timnas indonesia pemain naturalisasi m...                 1  
+95  gelandang legendaris spanyol andres iniesta me...                 1  
+96  london chelsea pemain menantang liverpool jeda...                 1  
+97  aljir johan neeskens legenda ajax barcelona me...                 1  
+98  manchester manchester city memenangkan pertaru...                 1  
+99  barcelona andres iniesta resmi kariernya pesep...                 1  
 
 [100 rows x 9 columns]
 </pre></div>
@@ -912,17 +914,17 @@ DataFrame setelah Label Encoding:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     jakarta ajang pekan olahraga nasional pon aceh...
-1     jakarta bitget exchange mata uang kripto mengu...
-2     jakarta mobile legends ml salah game online po...
-3     jakarta free fire world series ffws southeeast...
-4     jakarta k penerbit visual concept pengembang g...
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     jakarta oktober berjalan tujuh beragam game me...
+1     jakarta kepopuleran game multiplayer online st...
+2     jakarta rangkaian pertandingan fase liga mpl i...
+3     jakarta mpl id s memasuki babak playoff enam t...
+4     jakarta studi memainkan salah game square enix...
                             ...                        
-95    jakarta arab saudi dikejutkan timnas indonesia...
-96    dortmund juergen klopp mengomentari situasi ja...
-97    jakarta mees hilgers menjalani proses naturali...
-98    jakarta kabar buruk real madrid beknya eder mi...
-99    jakarta timnas indonesia pemain naturalisasi m...
+95    gelandang legendaris spanyol andres iniesta me...
+96    london chelsea pemain menantang liverpool jeda...
+97    aljir johan neeskens legenda ajax barcelona me...
+98    manchester manchester city memenangkan pertaru...
+99    barcelona andres iniesta resmi kariernya pesep...
 Name: Hasil stopword, Length: 100, dtype: object
 0     0
 1     0
@@ -968,7 +970,7 @@ Jumlah data uji: 20
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ef4377ba-b93e-4180-a471-f76af11cb280" class="colab-df-container">
+  <div id="df-191f1b7e-c46e-4584-8ae4-f9646dde97bc" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -988,43 +990,42 @@ Jumlah data uji: 20
     <tr style="text-align: right;">
       <th></th>
       <th>aaa</th>
-      <th>aao</th>
-      <th>aarav</th>
-      <th>abdullah</th>
-      <th>abg</th>
-      <th>abnormal</th>
-      <th>abramovich</th>
+      <th>abdulkarim</th>
+      <th>about</th>
+      <th>abraham</th>
       <th>absen</th>
-      <th>abyssal</th>
+      <th>abu</th>
+      <th>abuabu</th>
       <th>ac</th>
+      <th>academy</th>
+      <th>acak</th>
       <th>...</th>
-      <th>zirkzee</th>
-      <th>zola</th>
-      <th>zombie</th>
-      <th>zombies</th>
+      <th>yukinari</th>
+      <th>yusoff</th>
+      <th>yuto</th>
+      <th>yves</th>
+      <th>zelvia</th>
+      <th>zero</th>
+      <th>zion</th>
       <th>zona</th>
-      <th>zone</th>
-      <th>zones</th>
-      <th>zora</th>
-      <th>zs</th>
-      <th>zwolle</th>
+      <th>zug</th>
+      <th>zurich</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.067807</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.00000</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1032,23 +1033,23 @@ Jumlah data uji: 20
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.054088</td>
       <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.00000</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1056,23 +1057,23 @@ Jumlah data uji: 20
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>2</th>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.00000</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1080,47 +1081,23 @@ Jumlah data uji: 20
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>3</th>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.141742</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.00000</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1128,6 +1105,31 @@ Jumlah data uji: 20
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
     </tr>
@@ -1157,18 +1159,17 @@ Jumlah data uji: 20
     </tr>
     <tr>
       <th>75</th>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.00000</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1176,23 +1177,23 @@ Jumlah data uji: 20
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>76</th>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.00000</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1200,47 +1201,47 @@ Jumlah data uji: 20
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.029293</td>
       <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>77</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.051299</td>
+      <td>0.00000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.051299</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>78</th>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.05073</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1248,23 +1249,23 @@ Jumlah data uji: 20
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>79</th>
+      <td>0.000000</td>
+      <td>0.17491</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.00000</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1272,17 +1273,18 @@ Jumlah data uji: 20
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
     </tr>
   </tbody>
 </table>
-<p>80 rows × 4383 columns</p>
+<p>80 rows × 3424 columns</p>
 </div>
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-ef4377ba-b93e-4180-a471-f76af11cb280')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-191f1b7e-c46e-4584-8ae4-f9646dde97bc')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -1334,12 +1336,12 @@ Jumlah data uji: 20
 
     <script>
       const buttonEl =
-        document.querySelector('#df-ef4377ba-b93e-4180-a471-f76af11cb280 button.colab-df-convert');
+        document.querySelector('#df-191f1b7e-c46e-4584-8ae4-f9646dde97bc button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-ef4377ba-b93e-4180-a471-f76af11cb280');
+        const element = document.querySelector('#df-191f1b7e-c46e-4584-8ae4-f9646dde97bc');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1359,8 +1361,8 @@ Jumlah data uji: 20
   </div>
 
 
-<div id="df-6f251128-96fa-4a95-83ca-988c9993eed2">
-  <button class="colab-df-quickchart" onclick="quickchart('df-6f251128-96fa-4a95-83ca-988c9993eed2')"
+<div id="df-0192a84e-c521-40ce-b0bd-58d05aeb6295">
+  <button class="colab-df-quickchart" onclick="quickchart('df-0192a84e-c521-40ce-b0bd-58d05aeb6295')"
             title="Suggest charts"
             style="display:none;">
 
@@ -1479,14 +1481,14 @@ Jumlah data uji: 20
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-6f251128-96fa-4a95-83ca-988c9993eed2 button');
+        document.querySelector('#df-0192a84e-c521-40ce-b0bd-58d05aeb6295 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
 
-  <div id="id_e8b7efce-91ae-4cc0-b348-101297884cd9">
+  <div id="id_7c3c887a-892b-45b1-9f4a-7e852adea8ce">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -1530,7 +1532,7 @@ Jumlah data uji: 20
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_e8b7efce-91ae-4cc0-b348-101297884cd9 button.colab-df-generate');
+        document.querySelector('#id_7c3c887a-892b-45b1-9f4a-7e852adea8ce button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -1559,7 +1561,7 @@ Jumlah data uji: 20
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-75aef360-4bac-4a03-b1ab-007b40f98b66" class="colab-df-container">
+  <div id="df-2e83cf11-e3c1-4bf9-bfbc-6e21c185fa16" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1579,26 +1581,26 @@ Jumlah data uji: 20
     <tr style="text-align: right;">
       <th></th>
       <th>aaa</th>
-      <th>aao</th>
-      <th>aarav</th>
-      <th>abdullah</th>
-      <th>abg</th>
-      <th>abnormal</th>
-      <th>abramovich</th>
+      <th>abdulkarim</th>
+      <th>about</th>
+      <th>abraham</th>
       <th>absen</th>
-      <th>abyssal</th>
+      <th>abu</th>
+      <th>abuabu</th>
       <th>ac</th>
+      <th>academy</th>
+      <th>acak</th>
       <th>...</th>
-      <th>zirkzee</th>
-      <th>zola</th>
-      <th>zombie</th>
-      <th>zombies</th>
+      <th>yukinari</th>
+      <th>yusoff</th>
+      <th>yuto</th>
+      <th>yves</th>
+      <th>zelvia</th>
+      <th>zero</th>
+      <th>zion</th>
       <th>zona</th>
-      <th>zone</th>
-      <th>zones</th>
-      <th>zora</th>
-      <th>zs</th>
-      <th>zwolle</th>
+      <th>zug</th>
+      <th>zurich</th>
     </tr>
   </thead>
   <tbody>
@@ -1868,12 +1870,12 @@ Jumlah data uji: 20
     </tr>
   </tbody>
 </table>
-<p>80 rows × 4383 columns</p>
+<p>80 rows × 3424 columns</p>
 </div>
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-75aef360-4bac-4a03-b1ab-007b40f98b66')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-2e83cf11-e3c1-4bf9-bfbc-6e21c185fa16')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -1925,12 +1927,12 @@ Jumlah data uji: 20
 
     <script>
       const buttonEl =
-        document.querySelector('#df-75aef360-4bac-4a03-b1ab-007b40f98b66 button.colab-df-convert');
+        document.querySelector('#df-2e83cf11-e3c1-4bf9-bfbc-6e21c185fa16 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-75aef360-4bac-4a03-b1ab-007b40f98b66');
+        const element = document.querySelector('#df-2e83cf11-e3c1-4bf9-bfbc-6e21c185fa16');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1950,8 +1952,8 @@ Jumlah data uji: 20
   </div>
 
 
-<div id="df-88fa3f94-ddc5-4ecd-b6ba-60624b0c5d50">
-  <button class="colab-df-quickchart" onclick="quickchart('df-88fa3f94-ddc5-4ecd-b6ba-60624b0c5d50')"
+<div id="df-27f45c9f-148a-46ce-8204-7ae6aa4fd2e6">
+  <button class="colab-df-quickchart" onclick="quickchart('df-27f45c9f-148a-46ce-8204-7ae6aa4fd2e6')"
             title="Suggest charts"
             style="display:none;">
 
@@ -2070,14 +2072,14 @@ Jumlah data uji: 20
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-88fa3f94-ddc5-4ecd-b6ba-60624b0c5d50 button');
+        document.querySelector('#df-27f45c9f-148a-46ce-8204-7ae6aa4fd2e6 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
 
-  <div id="id_5fdd4258-20fa-4c66-b4ad-bbf0123d047c">
+  <div id="id_5ea4f979-c9a3-44e0-832a-701fec0bba48">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -2121,7 +2123,7 @@ Jumlah data uji: 20
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_5fdd4258-20fa-4c66-b4ad-bbf0123d047c button.colab-df-generate');
+        document.querySelector('#id_5ea4f979-c9a3-44e0-832a-701fec0bba48 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -2172,20 +2174,20 @@ Jumlah data uji: 20
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               Node  Degree Centrality
-0               aaa                0.0
-2920  onefootballmy                0.0
-2926         operan                0.0
-2925           open                0.0
-2924             oo                0.0
-...             ...                ...
-1467          harap                0.0
-1468        harapan                0.0
-1469          harga                0.0
-1470       harganya                0.0
-4382         zwolle                0.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         Node  Degree Centrality
+538        de           0.000292
+1014      gea           0.000292
+0         aaa           0.000000
+2287    pahit           0.000000
+2277  oseania           0.000000
+...       ...                ...
+1145   hpshps           0.000000
+1146   hpsrns           0.000000
+1147   hpsvmp           0.000000
+1148      hua           0.000000
+3423   zurich           0.000000
 
-[4383 rows x 2 columns]
+[3424 rows x 2 columns]
 </pre></div>
 </div>
 </div>
@@ -2207,7 +2209,7 @@ Jumlah data uji: 20
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-b440e1ff-1bc6-48bd-a225-e7b2102ec411" class="colab-df-container">
+  <div id="df-733d0c76-81d8-426e-8a7d-0236d3ed1b8a" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2226,16 +2228,16 @@ Jumlah data uji: 20
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>de</th>
+      <th>gea</th>
       <th>aaa</th>
-      <th>onefootballmy</th>
-      <th>operan</th>
-      <th>open</th>
-      <th>oo</th>
-      <th>onside</th>
-      <th>online</th>
-      <th>onic</th>
-      <th>onefootballm</th>
-      <th>norskpl</th>
+      <th>pahit</th>
+      <th>oseania</th>
+      <th>otomatis</th>
+      <th>out</th>
+      <th>outbreak</th>
+      <th>outlaws</th>
+      <th>overall</th>
     </tr>
   </thead>
   <tbody>
@@ -2389,7 +2391,7 @@ Jumlah data uji: 20
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-b440e1ff-1bc6-48bd-a225-e7b2102ec411')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-733d0c76-81d8-426e-8a7d-0236d3ed1b8a')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -2441,12 +2443,12 @@ Jumlah data uji: 20
 
     <script>
       const buttonEl =
-        document.querySelector('#df-b440e1ff-1bc6-48bd-a225-e7b2102ec411 button.colab-df-convert');
+        document.querySelector('#df-733d0c76-81d8-426e-8a7d-0236d3ed1b8a button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-b440e1ff-1bc6-48bd-a225-e7b2102ec411');
+        const element = document.querySelector('#df-733d0c76-81d8-426e-8a7d-0236d3ed1b8a');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -2466,8 +2468,8 @@ Jumlah data uji: 20
   </div>
 
 
-<div id="df-370e125a-620a-4d01-8d06-556e486a5991">
-  <button class="colab-df-quickchart" onclick="quickchart('df-370e125a-620a-4d01-8d06-556e486a5991')"
+<div id="df-fe761300-0d2a-4a50-aef1-d0755767910b">
+  <button class="colab-df-quickchart" onclick="quickchart('df-fe761300-0d2a-4a50-aef1-d0755767910b')"
             title="Suggest charts"
             style="display:none;">
 
@@ -2586,14 +2588,14 @@ Jumlah data uji: 20
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-370e125a-620a-4d01-8d06-556e486a5991 button');
+        document.querySelector('#df-fe761300-0d2a-4a50-aef1-d0755767910b button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
 
-  <div id="id_f787d7c8-63bd-4448-be37-0c2a0589961c">
+  <div id="id_e49c813d-d32a-4f94-9dd3-3391e7248177">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -2637,7 +2639,7 @@ Jumlah data uji: 20
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_f787d7c8-63bd-4448-be37-0c2a0589961c button.colab-df-generate');
+        document.querySelector('#id_e49c813d-d32a-4f94-9dd3-3391e7248177 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -2694,7 +2696,7 @@ Jumlah data uji: 20
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/13d63cb1e564cb6db7602a80b7fbb021c8817a3cdbdbc7b80f0edb1c75e6ff89.png" src="../_images/13d63cb1e564cb6db7602a80b7fbb021c8817a3cdbdbc7b80f0edb1c75e6ff89.png" />
+<img alt="../_images/352fc22a28e52a74bbbb20e38fa4a13b8e2b8248f8266b7b85f799be870dd789.png" src="../_images/352fc22a28e52a74bbbb20e38fa4a13b8e2b8248f8266b7b85f799be870dd789.png" />
 </div>
 </div>
 </section>
@@ -2722,29 +2724,17 @@ Jumlah data uji: 20
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            Node  Degree Centrality  Closeness Centrality  \
-0            aaa                0.0                   0.0   
-1  onefootballmy                0.0                   0.0   
-2         operan                0.0                   0.0   
-3           open                0.0                   0.0   
-4             oo                0.0                   0.0   
-5         onside                0.0                   0.0   
-6         online                0.0                   0.0   
-7           onic                0.0                   0.0   
-8   onefootballm                0.0                   0.0   
-9        norskpl                0.0                   0.0   
-
-   Betweenness Centrality  
-0                     0.0  
-1                     0.0  
-2                     0.0  
-3                     0.0  
-4                     0.0  
-5                     0.0  
-6                     0.0  
-7                     0.0  
-8                     0.0  
-9                     0.0  
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       Node  Degree Centrality  Closeness Centrality  Betweenness Centrality
+0        de           0.000292              0.111111                     0.0
+1       gea           0.000292              0.111111                     0.0
+2       aaa           0.000000              0.000000                     0.0
+3     pahit           0.000000              0.000000                     0.0
+4   oseania           0.000000              0.000000                     0.0
+5  otomatis           0.000000              0.000000                     0.0
+6       out           0.000000              0.000000                     0.0
+7  outbreak           0.000000              0.000000                     0.0
+8   outlaws           0.000000              0.000000                     0.0
+9   overall           0.000000              0.000000                     0.0
 </pre></div>
 </div>
 </div>
@@ -2771,29 +2761,29 @@ Jumlah data uji: 20
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cosine Similarity antara Fitur Teratas:
-               aaa  onefootballmy  operan  open   oo  onside  online  onic  \
-aaa            0.0            0.0     0.0   0.0  0.0     0.0     0.0   0.0   
-onefootballmy  0.0            0.0     0.0   0.0  0.0     0.0     0.0   0.0   
-operan         0.0            0.0     0.0   0.0  0.0     0.0     0.0   0.0   
-open           0.0            0.0     0.0   0.0  0.0     0.0     0.0   0.0   
-oo             0.0            0.0     0.0   0.0  0.0     0.0     0.0   0.0   
-onside         0.0            0.0     0.0   0.0  0.0     0.0     0.0   0.0   
-online         0.0            0.0     0.0   0.0  0.0     0.0     0.0   0.0   
-onic           0.0            0.0     0.0   0.0  0.0     0.0     0.0   0.0   
-onefootballm   0.0            0.0     0.0   0.0  0.0     0.0     0.0   0.0   
-norskpl        0.0            0.0     0.0   0.0  0.0     0.0     0.0   0.0   
+           de  gea  aaa  pahit  oseania  otomatis  out  outbreak  outlaws  \
+de        1.0  1.0  0.0    0.0      0.0       0.0  0.0       0.0      0.0   
+gea       1.0  1.0  0.0    0.0      0.0       0.0  0.0       0.0      0.0   
+aaa       0.0  0.0  0.0    0.0      0.0       0.0  0.0       0.0      0.0   
+pahit     0.0  0.0  0.0    0.0      0.0       0.0  0.0       0.0      0.0   
+oseania   0.0  0.0  0.0    0.0      0.0       0.0  0.0       0.0      0.0   
+otomatis  0.0  0.0  0.0    0.0      0.0       0.0  0.0       0.0      0.0   
+out       0.0  0.0  0.0    0.0      0.0       0.0  0.0       0.0      0.0   
+outbreak  0.0  0.0  0.0    0.0      0.0       0.0  0.0       0.0      0.0   
+outlaws   0.0  0.0  0.0    0.0      0.0       0.0  0.0       0.0      0.0   
+overall   0.0  0.0  0.0    0.0      0.0       0.0  0.0       0.0      0.0   
 
-               onefootballm  norskpl  
-aaa                     0.0      0.0  
-onefootballmy           0.0      0.0  
-operan                  0.0      0.0  
-open                    0.0      0.0  
-oo                      0.0      0.0  
-onside                  0.0      0.0  
-online                  0.0      0.0  
-onic                    0.0      0.0  
-onefootballm            0.0      0.0  
-norskpl                 0.0      0.0  
+          overall  
+de            0.0  
+gea           0.0  
+aaa           0.0  
+pahit         0.0  
+oseania       0.0  
+otomatis      0.0  
+out           0.0  
+outbreak      0.0  
+outlaws       0.0  
+overall       0.0  
 </pre></div>
 </div>
 </div>
@@ -3091,6 +3081,15 @@ Betweenness Centrality:
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title"><strong>Word Embedding</strong></p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Tugas-5.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Tugas 5 : Keyword Extraction</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

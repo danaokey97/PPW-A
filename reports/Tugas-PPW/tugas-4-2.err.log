@@ -1,0 +1,206 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import pandas as pd
+import numpy as np
+import re
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Pastikan untuk mengunduh stopwords untuk bahasa Indonesia
+nltk.download('stopwords')
+stop_words = stopwords.words('indonesian')
+
+# Fungsi untuk memisahkan dan memproses berita
+def process_news_input(user_input):
+    # Memisahkan kalimat
+    result_list = []
+    sentences = user_input.split('.')  # Pisahkan kalimat berdasarkan titik
+    sentences = [s.strip() for s in sentences if s.strip()]  # Hilangkan spasi berlebih dan kosong
+    for i, sentence in enumerate(sentences, 1):
+        result_list.append({'kalimat ke n': f"Kalimat ke {i}", 'kalimat': sentence})
+
+    result_df = pd.DataFrame(result_list)
+
+    # Fungsi preprocessing yang disesuaikan
+    def remove_url(data_berita):
+        url = re.compile(r'https?://\S+|www\.S+')
+        return url.sub(r'', data_berita)
+
+    def remove_html(data_berita):
+        html = re.compile(r'<.#?>')
+        return html.sub(r'', data_berita)
+
+    def remove_emoji(data_berita):
+        emoji_pattern = re.compile("["u"\U0001F600-\U0001F64F"
+                                   u"\U0001F300-\U0001F5FF"
+                                   u"\U0001F680-\U0001F6FF"
+                                   u"\U0001F1E0-\U0001F1FF""]+", flags=re.UNICODE)
+        return emoji_pattern.sub(r'', data_berita)
+
+    def remove_numbers(data_berita):
+        data_berita = re.sub(r'\d+', '', data_berita)
+        return data_berita
+
+    def remove_symbols(data_berita):
+        data_berita = re.sub(r'[^a-zA-Z0-9\s]', '', data_berita)
+        return data_berita
+
+    def case_folding(text):
+        if isinstance(text, str):
+            return text.lower()
+        return text
+
+    def tokenize(text):
+        return text.split()
+
+    def remove_stopwords(text):
+        return [word for word in text if word not in stop_words]
+
+    # Inisialisasi stemmer
+    factory = StemmerFactory()
+    stemmer = factory.create_stemmer()
+
+    def stemming(text):
+        return [stemmer.stem(word) for word in text]
+
+    # Looping setiap kalimat di dataframe 'result_df'
+    result_df['clean'] = result_df['kalimat'].apply(remove_url)
+    result_df['clean'] = result_df['clean'].apply(remove_html)
+    result_df['clean'] = result_df['clean'].apply(remove_emoji)
+    result_df['clean'] = result_df['clean'].apply(remove_symbols)
+    result_df['clean'] = result_df['clean'].apply(remove_numbers)
+    result_df['clean'] = result_df['clean'].apply(case_folding)
+    result_df['tokenize'] = result_df['clean'].apply(tokenize)
+    result_df['stopword removal'] = result_df['tokenize'].apply(remove_stopwords)
+    result_df['stemming'] = result_df['stopword removal'].apply(stemming)
+
+    # Gabungkan kata setelah stemming
+    result_df['final'] = result_df['stemming'].apply(lambda x: ' '.join(x))
+
+    # TF-IDF
+    vectorizer = TfidfVectorizer()
+    tfidf_matrix = vectorizer.fit_transform(result_df['final'])
+
+    # Cosine similarity
+    cosine_sim = cosine_similarity(tfidf_matrix)
+
+    # Matriks adjacency
+    threshold = 0.6
+    adjacency_matrix = np.where(cosine_sim >= threshold, 1, 0)
+
+    # Buat graf dari matriks adjacency
+    G = nx.from_numpy_array(adjacency_matrix)
+
+    # Atur label node
+    mapping = {i: f"Kalimat ke {i+1}" for i in range(len(result_df))}
+    G = nx.relabel_nodes(G, mapping)
+
+    # Hitung centrality
+    betweenness_centrality = nx.betweenness_centrality(G)
+    degree_centrality = nx.degree_centrality(G)
+    closeness_centrality = nx.closeness_centrality(G)
+
+    # Buat dataframe untuk centrality
+    centrality_df = pd.DataFrame({
+        'Kalimat': list(betweenness_centrality.keys()),
+        'Betweenness Centrality': list(betweenness_centrality.values()),
+        'Degree Centrality': list(degree_centrality.values()),
+        'Closeness Centrality': list(closeness_centrality.values())
+    })
+
+    return result_df[['kalimat ke n', 'kalimat', 'final']], cosine_sim, adjacency_matrix, G, centrality_df
+
+# Input dari pengguna
+user_input = input("Masukkan isi berita: ")
+
+# Proses berita dan ambil hasil
+result_df, cosine_sim, adjacency_matrix, G, centrality_df = process_news_input(user_input)
+
+# Pilih jenis centrality untuk dihitung
+print("\nPilih jenis centrality yang ingin dihitung:")
+print("1. Betweenness Centrality")
+print("2. Degree Centrality")
+print("3. Closeness Centrality")
+choice = int(input("Masukkan pilihan (1/2/3): "))
+
+# Ambil centrality sesuai pilihan
+if choice == 1:
+    centrality_values = centrality_df[['Kalimat', 'Betweenness Centrality']]
+    centrality_name = 'Betweenness Centrality'
+elif choice == 2:
+    centrality_values = centrality_df[['Kalimat', 'Degree Centrality']]
+    centrality_name = 'Degree Centrality'
+elif choice == 3:
+    centrality_values = centrality_df[['Kalimat', 'Closeness Centrality']]
+    centrality_name = 'Closeness Centrality'
+else:
+    print("Pilihan tidak valid.")
+    exit()
+
+# Ringkasan: 3 kalimat dengan centrality tertinggi
+top_sentences = centrality_values.nlargest(3, centrality_name)
+
+# Tampilkan hasil
+print("\nHasil Pemisahan Kalimat:")
+print(result_df)
+print("\nCosine Similarity Matrix:")
+print(cosine_sim)
+print("\nAdjacency Matrix:")
+print(adjacency_matrix)
+print("\nGraph:")
+plt.figure(figsize=(5, 5))
+pos = nx.spring_layout(G)
+nx.draw(G, pos, with_labels=True, node_color='skyblue', node_size=1000, font_size=10, font_color='black', edge_color='gray', linewidths=1, font_weight='bold')
+plt.title("Graph Based on Adjacency Matrix")
+plt.show()
+print("\nNilai Centrality:")
+print(centrality_df)
+print(f"\nRingkasan (3 Kalimat Teratas Berdasarkan {centrality_name}):")
+print(top_sentences)
+
+------------------
+
+----- stderr -----
+[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+[0;32m<ipython-input-15-e23ef7baec6d>[0m in [0;36m<cell line: 118>[0;34m()[0m
+[1;32m    116[0m [0;34m[0m[0m
+[1;32m    117[0m [0;31m# Input dari pengguna[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 118[0;31m [0muser_input[0m [0;34m=[0m [0minput[0m[0;34m([0m[0;34m"Masukkan isi berita: "[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    119[0m [0;34m[0m[0m
+[1;32m    120[0m [0;31m# Proses berita dan ambil hasil[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
+[1;32m    846[0m         """
+[1;32m    847[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 848[0;31m             raise StdinNotImplementedError(
+[0m[1;32m    849[0m                 [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    850[0m             )
+
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+
