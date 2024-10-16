@@ -183,6 +183,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 1 : Crawling Berita</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-2.html"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-3.html"><strong>Tugas - 3 Modelling (Logistic Regression) dan Testing</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-4.html"><strong>Tugas 4 : Graph</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-5.html"><strong>Tugas 5 : Keyword Extraction</strong></a></li>
 </ul>
 
@@ -608,7 +609,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4fb214c1-4c32-42b7-9162-186904b005fb" class="colab-df-container">
+  <div id="df-b80327a0-bf84-4299-9796-0ce16d49a19b" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -678,37 +679,37 @@ document.write(`
     </tr>
     <tr>
       <th>95</th>
-      <td>Hasil Brasil Vs Peru: Raphinha 2 Gol, Tim Samb...</td>
-      <td>Jakarta - Brasil meraih kemenangan 4-0 saat me...</td>
-      <td>Rabu, 16 Okt 2024 09:52 WIB</td>
+      <td>China Vs Indonesia: Coret Eliano Reijnders Blu...</td>
+      <td>Qingdao - Keputusan mencoret Eliano Reijnders ...</td>
+      <td>Rabu, 16 Okt 2024 11:40 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>Scaloni: Lautaro Paling Pantas Raih Ballon d'Or</td>
-      <td>Buenos Aires - Pelatih Timnas Argentina Lionel...</td>
-      <td>Rabu, 16 Okt 2024 09:40 WIB</td>
+      <td>Dumfries Akui Performanya Lebih Baik di Timnas...</td>
+      <td>Jakarta - Denzel Dumfries mengakui, performany...</td>
+      <td>Rabu, 16 Okt 2024 11:20 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>Hasil Argentina Vs Bolivia: Messi Hattrick, Ti...</td>
-      <td>Jakarta - Argentina pesta gol 6-0 melawan Boli...</td>
-      <td>Rabu, 16 Okt 2024 09:19 WIB</td>
+      <td>Hasil Lengkap-Klasemen Kualifikasi Piala Dunia...</td>
+      <td>Jakarta - Matchday 4 di babak ketiga kualifika...</td>
+      <td>Rabu, 16 Okt 2024 11:00 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>Kylian Mbappe Mau Pilih-pilih Main sama Timnas...</td>
-      <td>Jakarta - Muncul kabar, Kylian Mbappe mau pili...</td>
-      <td>Rabu, 16 Okt 2024 09:00 WIB</td>
+      <td>Spanyol Vs Serbia: De la Fuente Turunkan Start...</td>
+      <td>Jakarta - Pelatih Spanyol Luis de la Fuente me...</td>
+      <td>Rabu, 16 Okt 2024 10:43 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>Pelatih China: Indonesia Dominan, tapi Bisa Ka...</td>
-      <td>Qingdao - Pelatih China Branko Ivankovic memuj...</td>
-      <td>Rabu, 16 Okt 2024 08:20 WIB</td>
+      <td>Hasil Lengkap-Klasemen Kualifikasi Piala Dunia...</td>
+      <td>Jakarta - Kualifikasi Piala Dunia 2026 Zona CO...</td>
+      <td>Rabu, 16 Okt 2024 10:27 WIB</td>
       <td>Sepak Bola</td>
     </tr>
   </tbody>
@@ -718,7 +719,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-4fb214c1-4c32-42b7-9162-186904b005fb')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b80327a0-bf84-4299-9796-0ce16d49a19b')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -770,12 +771,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-4fb214c1-4c32-42b7-9162-186904b005fb button.colab-df-convert');
+        document.querySelector('#df-b80327a0-bf84-4299-9796-0ce16d49a19b button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-4fb214c1-4c32-42b7-9162-186904b005fb');
+        const element = document.querySelector('#df-b80327a0-bf84-4299-9796-0ce16d49a19b');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
