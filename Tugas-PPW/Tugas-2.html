@@ -183,7 +183,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas-1.html"><strong>Tugas 1 : Crawling Berita</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-3.html"><strong>Tugas - 3 Modelling (Logistic Regression) dan Testing</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="SkipGram.html"><strong>Word Embedding</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-4.html"><strong>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-5.html"><strong>Tugas 5 : Keyword Extraction</strong></a></li>
 </ul>
@@ -443,7 +442,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4552ad73-a686-4b97-beac-d12a6200497c" class="colab-df-container">
+  <div id="df-a974f8bf-d527-4127-b307-d1bed778423b" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -471,44 +470,44 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
+      <td>18 Tim yang Lolos FFWS Global Finals 2024 di B...</td>
+      <td>Jakarta - Rangkaian pertandingan di FFWS SEA 2...</td>
+      <td>Rabu, 16 Okt 2024 19:30 WIB</td>
+      <td>Games</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ampun Bang Jago! Zuckerberg Klaim Pemain Handa...</td>
+      <td>Jakarta - CEO Meta Mark Zuckerberg, cukup perc...</td>
+      <td>Rabu, 16 Okt 2024 17:50 WIB</td>
+      <td>Games</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
       <td>Jakarta - Game horor selalu punya daya tarikny...</td>
       <td>Rabu, 16 Okt 2024 14:20 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
       <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
       <td>Rabu, 16 Okt 2024 12:15 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
       <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
       <td>Selasa, 15 Okt 2024 17:36 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>5</th>
       <td>Buriram United Ungkap Alasannya Bisa Juara FFW...</td>
       <td>Jakarta - Buriram United sukses merebut gelar ...</td>
       <td>Selasa, 15 Okt 2024 16:33 WIB</td>
-      <td>Games</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>GTA 6 Baru akan Dirilis Saat Sudah Sempurna</td>
-      <td>Jakarta - Pencinta seri game Grand Theft Auto ...</td>
-      <td>Senin, 14 Okt 2024 18:00 WIB</td>
-      <td>Games</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Honor of Kings Championship 2024 Segera Digela...</td>
-      <td>Jakarta - Kejuaraan dunia Honor of Kings akan ...</td>
-      <td>Senin, 14 Okt 2024 10:45 WIB</td>
       <td>Games</td>
     </tr>
   </tbody>
@@ -517,7 +516,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-4552ad73-a686-4b97-beac-d12a6200497c')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a974f8bf-d527-4127-b307-d1bed778423b')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -569,12 +568,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-4552ad73-a686-4b97-beac-d12a6200497c button.colab-df-convert');
+        document.querySelector('#df-a974f8bf-d527-4127-b307-d1bed778423b button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-4552ad73-a686-4b97-beac-d12a6200497c');
+        const element = document.querySelector('#df-a974f8bf-d527-4127-b307-d1bed778423b');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -651,7 +650,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ffa770e0-0c73-4410-8999-4a1fd3cf7654" class="colab-df-container">
+  <div id="df-e4cfa763-b9a3-46bd-82b7-1abd07468d3e" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -680,6 +679,22 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
+      <td>18 Tim yang Lolos FFWS Global Finals 2024 di B...</td>
+      <td>Jakarta - Rangkaian pertandingan di FFWS SEA 2...</td>
+      <td>Rabu, 16 Okt 2024 19:30 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Rangkaian pertandingan di FFWS SEA  F...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ampun Bang Jago! Zuckerberg Klaim Pemain Handa...</td>
+      <td>Jakarta - CEO Meta Mark Zuckerberg, cukup perc...</td>
+      <td>Rabu, 16 Okt 2024 17:50 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  CEO Meta Mark Zuckerberg cukup percay...</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
       <td>Jakarta - Game horor selalu punya daya tarikny...</td>
       <td>Rabu, 16 Okt 2024 14:20 WIB</td>
@@ -687,7 +702,7 @@ document.write(`
       <td>Jakarta  Game horor selalu punya daya tariknya...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
       <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
       <td>Rabu, 16 Okt 2024 12:15 WIB</td>
@@ -695,7 +710,7 @@ document.write(`
       <td>Jakarta  Ternyata cara dapat skin Zhou Yu Hono...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
       <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
       <td>Selasa, 15 Okt 2024 17:36 WIB</td>
@@ -703,28 +718,12 @@ document.write(`
       <td>Jakarta  Tampil di depan ribuan pendukungnya t...</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>5</th>
       <td>Buriram United Ungkap Alasannya Bisa Juara FFW...</td>
       <td>Jakarta - Buriram United sukses merebut gelar ...</td>
       <td>Selasa, 15 Okt 2024 16:33 WIB</td>
       <td>Games</td>
       <td>Jakarta  Buriram United sukses merebut gelar j...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>GTA 6 Baru akan Dirilis Saat Sudah Sempurna</td>
-      <td>Jakarta - Pencinta seri game Grand Theft Auto ...</td>
-      <td>Senin, 14 Okt 2024 18:00 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Pencinta seri game Grand Theft Auto G...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Honor of Kings Championship 2024 Segera Digela...</td>
-      <td>Jakarta - Kejuaraan dunia Honor of Kings akan ...</td>
-      <td>Senin, 14 Okt 2024 10:45 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Kejuaraan dunia Honor of Kings akan s...</td>
     </tr>
   </tbody>
 </table>
@@ -732,7 +731,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-ffa770e0-0c73-4410-8999-4a1fd3cf7654')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e4cfa763-b9a3-46bd-82b7-1abd07468d3e')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -784,12 +783,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-ffa770e0-0c73-4410-8999-4a1fd3cf7654 button.colab-df-convert');
+        document.querySelector('#df-e4cfa763-b9a3-46bd-82b7-1abd07468d3e button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-ffa770e0-0c73-4410-8999-4a1fd3cf7654');
+        const element = document.querySelector('#df-e4cfa763-b9a3-46bd-82b7-1abd07468d3e');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -832,7 +831,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-badbebe7-ac84-47f1-b97a-e5cc1efb183f" class="colab-df-container">
+  <div id="df-b58ab381-e226-415b-b299-1ab4e3a7c78b" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -862,6 +861,24 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
+      <td>18 Tim yang Lolos FFWS Global Finals 2024 di B...</td>
+      <td>Jakarta - Rangkaian pertandingan di FFWS SEA 2...</td>
+      <td>Rabu, 16 Okt 2024 19:30 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Rangkaian pertandingan di FFWS SEA  F...</td>
+      <td>jakarta  rangkaian pertandingan di ffws sea  f...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ampun Bang Jago! Zuckerberg Klaim Pemain Handa...</td>
+      <td>Jakarta - CEO Meta Mark Zuckerberg, cukup perc...</td>
+      <td>Rabu, 16 Okt 2024 17:50 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  CEO Meta Mark Zuckerberg cukup percay...</td>
+      <td>jakarta  ceo meta mark zuckerberg cukup percay...</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
       <td>Jakarta - Game horor selalu punya daya tarikny...</td>
       <td>Rabu, 16 Okt 2024 14:20 WIB</td>
@@ -870,7 +887,7 @@ document.write(`
       <td>jakarta  game horor selalu punya daya tariknya...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
       <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
       <td>Rabu, 16 Okt 2024 12:15 WIB</td>
@@ -879,7 +896,7 @@ document.write(`
       <td>jakarta  ternyata cara dapat skin zhou yu hono...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
       <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
       <td>Selasa, 15 Okt 2024 17:36 WIB</td>
@@ -888,7 +905,7 @@ document.write(`
       <td>jakarta  tampil di depan ribuan pendukungnya t...</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>5</th>
       <td>Buriram United Ungkap Alasannya Bisa Juara FFW...</td>
       <td>Jakarta - Buriram United sukses merebut gelar ...</td>
       <td>Selasa, 15 Okt 2024 16:33 WIB</td>
@@ -896,31 +913,13 @@ document.write(`
       <td>Jakarta  Buriram United sukses merebut gelar j...</td>
       <td>jakarta  buriram united sukses merebut gelar j...</td>
     </tr>
-    <tr>
-      <th>4</th>
-      <td>GTA 6 Baru akan Dirilis Saat Sudah Sempurna</td>
-      <td>Jakarta - Pencinta seri game Grand Theft Auto ...</td>
-      <td>Senin, 14 Okt 2024 18:00 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Pencinta seri game Grand Theft Auto G...</td>
-      <td>jakarta  pencinta seri game grand theft auto g...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Honor of Kings Championship 2024 Segera Digela...</td>
-      <td>Jakarta - Kejuaraan dunia Honor of Kings akan ...</td>
-      <td>Senin, 14 Okt 2024 10:45 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Kejuaraan dunia Honor of Kings akan s...</td>
-      <td>jakarta  kejuaraan dunia honor of kings akan s...</td>
-    </tr>
   </tbody>
 </table>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-badbebe7-ac84-47f1-b97a-e5cc1efb183f')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b58ab381-e226-415b-b299-1ab4e3a7c78b')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -972,12 +971,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-badbebe7-ac84-47f1-b97a-e5cc1efb183f button.colab-df-convert');
+        document.querySelector('#df-b58ab381-e226-415b-b299-1ab4e3a7c78b button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-badbebe7-ac84-47f1-b97a-e5cc1efb183f');
+        const element = document.querySelector('#df-b58ab381-e226-415b-b299-1ab4e3a7c78b');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1019,7 +1018,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5eda5495-bf07-47b8-91aa-35afaa043112" class="colab-df-container">
+  <div id="df-151bbedc-03a8-4042-a027-9cec50a3f38b" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1050,6 +1049,26 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
+      <td>18 Tim yang Lolos FFWS Global Finals 2024 di B...</td>
+      <td>Jakarta - Rangkaian pertandingan di FFWS SEA 2...</td>
+      <td>Rabu, 16 Okt 2024 19:30 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Rangkaian pertandingan di FFWS SEA  F...</td>
+      <td>jakarta  rangkaian pertandingan di ffws sea  f...</td>
+      <td>[jakarta, rangkaian, pertandingan, di, ffws, s...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ampun Bang Jago! Zuckerberg Klaim Pemain Handa...</td>
+      <td>Jakarta - CEO Meta Mark Zuckerberg, cukup perc...</td>
+      <td>Rabu, 16 Okt 2024 17:50 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  CEO Meta Mark Zuckerberg cukup percay...</td>
+      <td>jakarta  ceo meta mark zuckerberg cukup percay...</td>
+      <td>[jakarta, ceo, meta, mark, zuckerberg, cukup, ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
       <td>Jakarta - Game horor selalu punya daya tarikny...</td>
       <td>Rabu, 16 Okt 2024 14:20 WIB</td>
@@ -1059,7 +1078,7 @@ document.write(`
       <td>[jakarta, game, horor, selalu, punya, daya, ta...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
       <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
       <td>Rabu, 16 Okt 2024 12:15 WIB</td>
@@ -1069,7 +1088,7 @@ document.write(`
       <td>[jakarta, ternyata, cara, dapat, skin, zhou, y...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
       <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
       <td>Selasa, 15 Okt 2024 17:36 WIB</td>
@@ -1079,7 +1098,7 @@ document.write(`
       <td>[jakarta, tampil, di, depan, ribuan, pendukung...</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>5</th>
       <td>Buriram United Ungkap Alasannya Bisa Juara FFW...</td>
       <td>Jakarta - Buriram United sukses merebut gelar ...</td>
       <td>Selasa, 15 Okt 2024 16:33 WIB</td>
@@ -1088,33 +1107,13 @@ document.write(`
       <td>jakarta  buriram united sukses merebut gelar j...</td>
       <td>[jakarta, buriram, united, sukses, merebut, ge...</td>
     </tr>
-    <tr>
-      <th>4</th>
-      <td>GTA 6 Baru akan Dirilis Saat Sudah Sempurna</td>
-      <td>Jakarta - Pencinta seri game Grand Theft Auto ...</td>
-      <td>Senin, 14 Okt 2024 18:00 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Pencinta seri game Grand Theft Auto G...</td>
-      <td>jakarta  pencinta seri game grand theft auto g...</td>
-      <td>[jakarta, pencinta, seri, game, grand, theft, ...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Honor of Kings Championship 2024 Segera Digela...</td>
-      <td>Jakarta - Kejuaraan dunia Honor of Kings akan ...</td>
-      <td>Senin, 14 Okt 2024 10:45 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Kejuaraan dunia Honor of Kings akan s...</td>
-      <td>jakarta  kejuaraan dunia honor of kings akan s...</td>
-      <td>[jakarta, kejuaraan, dunia, honor, of, kings, ...</td>
-    </tr>
   </tbody>
 </table>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-5eda5495-bf07-47b8-91aa-35afaa043112')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-151bbedc-03a8-4042-a027-9cec50a3f38b')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1166,12 +1165,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-5eda5495-bf07-47b8-91aa-35afaa043112 button.colab-df-convert');
+        document.querySelector('#df-151bbedc-03a8-4042-a027-9cec50a3f38b button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-5eda5495-bf07-47b8-91aa-35afaa043112');
+        const element = document.querySelector('#df-151bbedc-03a8-4042-a027-9cec50a3f38b');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1207,7 +1206,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
-[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data]   Unzipping corpora/stopwords.zip.
 </pre></div>
 </div>
 </div>
@@ -1226,7 +1225,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a21c6877-a687-4d79-82c0-ba8b17546455" class="colab-df-container">
+  <div id="df-a7cfc8b7-4d65-4960-a532-3c9878a2fe94" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1258,6 +1257,28 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
+      <td>18 Tim yang Lolos FFWS Global Finals 2024 di B...</td>
+      <td>Jakarta - Rangkaian pertandingan di FFWS SEA 2...</td>
+      <td>Rabu, 16 Okt 2024 19:30 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Rangkaian pertandingan di FFWS SEA  F...</td>
+      <td>jakarta  rangkaian pertandingan di ffws sea  f...</td>
+      <td>[jakarta, rangkaian, pertandingan, di, ffws, s...</td>
+      <td>jakarta rangkaian pertandingan ffws sea fall s...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ampun Bang Jago! Zuckerberg Klaim Pemain Handa...</td>
+      <td>Jakarta - CEO Meta Mark Zuckerberg, cukup perc...</td>
+      <td>Rabu, 16 Okt 2024 17:50 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  CEO Meta Mark Zuckerberg cukup percay...</td>
+      <td>jakarta  ceo meta mark zuckerberg cukup percay...</td>
+      <td>[jakarta, ceo, meta, mark, zuckerberg, cukup, ...</td>
+      <td>jakarta ceo meta mark zuckerberg percaya kemam...</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
       <td>Jakarta - Game horor selalu punya daya tarikny...</td>
       <td>Rabu, 16 Okt 2024 14:20 WIB</td>
@@ -1268,7 +1289,7 @@ document.write(`
       <td>jakarta game horor daya tariknya penikmatnya b...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
       <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
       <td>Rabu, 16 Okt 2024 12:15 WIB</td>
@@ -1279,7 +1300,7 @@ document.write(`
       <td>jakarta skin zhou yu honor of kings hok gratis...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
       <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
       <td>Selasa, 15 Okt 2024 17:36 WIB</td>
@@ -1290,7 +1311,7 @@ document.write(`
       <td>jakarta tampil ribuan pendukungnya wakil indon...</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>5</th>
       <td>Buriram United Ungkap Alasannya Bisa Juara FFW...</td>
       <td>Jakarta - Buriram United sukses merebut gelar ...</td>
       <td>Selasa, 15 Okt 2024 16:33 WIB</td>
@@ -1300,35 +1321,13 @@ document.write(`
       <td>[jakarta, buriram, united, sukses, merebut, ge...</td>
       <td>jakarta buriram united sukses merebut gelar ju...</td>
     </tr>
-    <tr>
-      <th>4</th>
-      <td>GTA 6 Baru akan Dirilis Saat Sudah Sempurna</td>
-      <td>Jakarta - Pencinta seri game Grand Theft Auto ...</td>
-      <td>Senin, 14 Okt 2024 18:00 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Pencinta seri game Grand Theft Auto G...</td>
-      <td>jakarta  pencinta seri game grand theft auto g...</td>
-      <td>[jakarta, pencinta, seri, game, grand, theft, ...</td>
-      <td>jakarta pencinta seri game grand theft auto gt...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Honor of Kings Championship 2024 Segera Digela...</td>
-      <td>Jakarta - Kejuaraan dunia Honor of Kings akan ...</td>
-      <td>Senin, 14 Okt 2024 10:45 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Kejuaraan dunia Honor of Kings akan s...</td>
-      <td>jakarta  kejuaraan dunia honor of kings akan s...</td>
-      <td>[jakarta, kejuaraan, dunia, honor, of, kings, ...</td>
-      <td>jakarta kejuaraan dunia honor of kings diselen...</td>
-    </tr>
   </tbody>
 </table>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-a21c6877-a687-4d79-82c0-ba8b17546455')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a7cfc8b7-4d65-4960-a532-3c9878a2fe94')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1380,12 +1379,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-a21c6877-a687-4d79-82c0-ba8b17546455 button.colab-df-convert');
+        document.querySelector('#df-a7cfc8b7-4d65-4960-a532-3c9878a2fe94 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-a21c6877-a687-4d79-82c0-ba8b17546455');
+        const element = document.querySelector('#df-a7cfc8b7-4d65-4960-a532-3c9878a2fe94');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1457,7 +1456,7 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-15160869-c76e-4849-a809-b79075cf7db8" class="colab-df-container">
+  <div id="df-cf79d9a1-5147-4476-a1dc-7745b4e254b8" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1480,22 +1479,22 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <th>abaaax</th>
       <th>abaay</th>
       <th>abdulla</th>
-      <th>abdulllah</th>
       <th>abduweli</th>
       <th>abduwelli</th>
       <th>abner</th>
       <th>about</th>
       <th>absen</th>
+      <th>abu</th>
       <th>...</th>
+      <th>zhang</th>
       <th>zhou</th>
       <th>zhunyi</th>
-      <th>zielinski</th>
-      <th>zirkzee</th>
       <th>zombie</th>
       <th>zona</th>
       <th>zone</th>
       <th>zoo</th>
       <th>zubimendi</th>
+      <th>zuckerberg</th>
       <th>zwolle</th>
     </tr>
   </thead>
@@ -1513,15 +1512,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.025203</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.025203</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -1537,15 +1536,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.463815</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.556663</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -1561,15 +1560,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.025207</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.025207</td>
       <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -1585,15 +1584,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.0</td>
+      <td>0.463436</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -1609,15 +1608,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -1633,15 +1632,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -1657,22 +1656,22 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>7</th>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.025522</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1681,15 +1680,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -1705,22 +1704,22 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>9</th>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.025507</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1729,25 +1728,25 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
   </tbody>
 </table>
-<p>10 rows × 4374 columns</p>
+<p>10 rows × 4279 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-15160869-c76e-4849-a809-b79075cf7db8')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-cf79d9a1-5147-4476-a1dc-7745b4e254b8')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1799,12 +1798,12 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-15160869-c76e-4849-a809-b79075cf7db8 button.colab-df-convert');
+        document.querySelector('#df-cf79d9a1-5147-4476-a1dc-7745b4e254b8 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-15160869-c76e-4849-a809-b79075cf7db8');
+        const element = document.querySelector('#df-cf79d9a1-5147-4476-a1dc-7745b4e254b8');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1844,7 +1843,7 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah kolom: 4374
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah kolom: 4279
 </pre></div>
 </div>
 </div>
@@ -1889,7 +1888,7 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0b0d38bc-6986-42e2-b893-40498e1efce2" class="colab-df-container">
+  <div id="df-651267fc-2d2d-4b8e-b4cf-ec3f2e929fa0" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1912,22 +1911,22 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <th>abaaax</th>
       <th>abaay</th>
       <th>abdulla</th>
-      <th>abdulllah</th>
       <th>abduweli</th>
       <th>abduwelli</th>
       <th>abner</th>
       <th>about</th>
       <th>absen</th>
+      <th>abu</th>
       <th>...</th>
+      <th>zhang</th>
       <th>zhou</th>
       <th>zhunyi</th>
-      <th>zielinski</th>
-      <th>zirkzee</th>
       <th>zombie</th>
       <th>zona</th>
       <th>zone</th>
       <th>zoo</th>
       <th>zubimendi</th>
+      <th>zuckerberg</th>
       <th>zwolle</th>
     </tr>
   </thead>
@@ -1945,15 +1944,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.025203</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.025203</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -1969,15 +1968,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.463815</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.556663</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -1993,15 +1992,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.025207</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.025207</td>
       <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -2017,15 +2016,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.0</td>
+      <td>0.463436</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -2041,15 +2040,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -2065,15 +2064,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -2089,22 +2088,22 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>7</th>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.025522</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -2113,15 +2112,15 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -2137,22 +2136,22 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>9</th>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.025507</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -2161,25 +2160,25 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
   </tbody>
 </table>
-<p>10 rows × 4374 columns</p>
+<p>10 rows × 4279 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-0b0d38bc-6986-42e2-b893-40498e1efce2')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-651267fc-2d2d-4b8e-b4cf-ec3f2e929fa0')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -2231,12 +2230,12 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-0b0d38bc-6986-42e2-b893-40498e1efce2 button.colab-df-convert');
+        document.querySelector('#df-651267fc-2d2d-4b8e-b4cf-ec3f2e929fa0 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-0b0d38bc-6986-42e2-b893-40498e1efce2');
+        const element = document.querySelector('#df-651267fc-2d2d-4b8e-b4cf-ec3f2e929fa0');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});

@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas-PPW/Tugas-3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Word Embedding" href="SkipGram.html" />
+    <link rel="next" title="Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality" href="Tugas-4.html" />
     <link rel="prev" title="Tugas 2 - Pre-Processing Data dan TF-IDF" href="Tugas-2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,7 +183,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas-1.html"><strong>Tugas 1 : Crawling Berita</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-2.html"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas - 3 Modelling (Logistic Regression) dan Testing</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="SkipGram.html"><strong>Word Embedding</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-4.html"><strong>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-5.html"><strong>Tugas 5 : Keyword Extraction</strong></a></li>
 </ul>
@@ -440,7 +439,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-3d0f0867-19ee-4c91-a081-78ad1de99752" class="colab-df-container">
+  <div id="df-d4f7ebdc-0489-4d15-aab8-8803b69516a1" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -472,6 +471,28 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
+      <td>18 Tim yang Lolos FFWS Global Finals 2024 di B...</td>
+      <td>Jakarta - Rangkaian pertandingan di FFWS SEA 2...</td>
+      <td>Rabu, 16 Okt 2024 19:30 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  Rangkaian pertandingan di FFWS SEA  F...</td>
+      <td>jakarta  rangkaian pertandingan di ffws sea  f...</td>
+      <td>['jakarta', 'rangkaian', 'pertandingan', 'di',...</td>
+      <td>jakarta rangkaian pertandingan ffws sea fall s...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ampun Bang Jago! Zuckerberg Klaim Pemain Handa...</td>
+      <td>Jakarta - CEO Meta Mark Zuckerberg, cukup perc...</td>
+      <td>Rabu, 16 Okt 2024 17:50 WIB</td>
+      <td>Games</td>
+      <td>Jakarta  CEO Meta Mark Zuckerberg cukup percay...</td>
+      <td>jakarta  ceo meta mark zuckerberg cukup percay...</td>
+      <td>['jakarta', 'ceo', 'meta', 'mark', 'zuckerberg...</td>
+      <td>jakarta ceo meta mark zuckerberg percaya kemam...</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
       <td>Jakarta - Game horor selalu punya daya tarikny...</td>
       <td>Rabu, 16 Okt 2024 14:20 WIB</td>
@@ -482,7 +503,7 @@ document.write(`
       <td>jakarta game horor daya tariknya penikmatnya b...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
       <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
       <td>Rabu, 16 Okt 2024 12:15 WIB</td>
@@ -493,7 +514,7 @@ document.write(`
       <td>jakarta skin zhou yu honor of kings hok gratis...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
       <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
       <td>Selasa, 15 Okt 2024 17:36 WIB</td>
@@ -503,35 +524,13 @@ document.write(`
       <td>['jakarta', 'tampil', 'di', 'depan', 'ribuan',...</td>
       <td>jakarta tampil ribuan pendukungnya wakil indon...</td>
     </tr>
-    <tr>
-      <th>3</th>
-      <td>Buriram United Ungkap Alasannya Bisa Juara FFW...</td>
-      <td>Jakarta - Buriram United sukses merebut gelar ...</td>
-      <td>Selasa, 15 Okt 2024 16:33 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Buriram United sukses merebut gelar j...</td>
-      <td>jakarta  buriram united sukses merebut gelar j...</td>
-      <td>['jakarta', 'buriram', 'united', 'sukses', 'me...</td>
-      <td>jakarta buriram united sukses merebut gelar ju...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>GTA 6 Baru akan Dirilis Saat Sudah Sempurna</td>
-      <td>Jakarta - Pencinta seri game Grand Theft Auto ...</td>
-      <td>Senin, 14 Okt 2024 18:00 WIB</td>
-      <td>Games</td>
-      <td>Jakarta  Pencinta seri game Grand Theft Auto G...</td>
-      <td>jakarta  pencinta seri game grand theft auto g...</td>
-      <td>['jakarta', 'pencinta', 'seri', 'game', 'grand...</td>
-      <td>jakarta pencinta seri game grand theft auto gt...</td>
-    </tr>
   </tbody>
 </table>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-3d0f0867-19ee-4c91-a081-78ad1de99752')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-d4f7ebdc-0489-4d15-aab8-8803b69516a1')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -583,12 +582,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-3d0f0867-19ee-4c91-a081-78ad1de99752 button.colab-df-convert');
+        document.querySelector('#df-d4f7ebdc-0489-4d15-aab8-8803b69516a1 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-3d0f0867-19ee-4c91-a081-78ad1de99752');
+        const element = document.querySelector('#df-d4f7ebdc-0489-4d15-aab8-8803b69516a1');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -663,8 +662,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shape of X_train: (80, 4374)
-Shape of X_test: (20, 4374)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shape of X_train: (80, 4279)
+Shape of X_test: (20, 4279)
 </pre></div>
 </div>
 </div>
@@ -817,11 +816,11 @@ Tim Flappy Bird Foundation berencana menghadirkan game ini ke platform seperti d
       </div>
     </a>
     <a class="right-next"
-       href="SkipGram.html"
+       href="Tugas-4.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Word Embedding</strong></p>
+        <p class="prev-next-title"><strong>Tugas 4 - TF-IDF,Cosine Similarity,Closeness Centrality</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
