@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Penambangan Web A</title>
+    <title>Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD) &#8212; Penambangan Web A</title>
   
   
   
@@ -168,17 +168,17 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Tugas-1.html"><strong>Tugas 1 : Crawling Berita</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-2.html"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-3.html"><strong>Tugas - 3 Modelling (Logistic Regression) dan Testing</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-4.html"><strong>Tugas 4 - Graph</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-5.html"><strong>Tugas 5 : Keyword Extraction</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-7.html"><strong>Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-8-Evaluasi.html"><strong>Tugas - 8 Clustering menggunakan Fuzzy C Means</strong></a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="Tugas-Deploy.html"><strong>Tugas Deploy</strong></a></li>
-
-
-
 </ul>
 
     </div>
@@ -374,9 +374,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -387,19 +385,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -409,7 +399,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>#<strong>Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)</strong></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-6-sistem-pencarian-dokumen-dengan-penerapan-singular-value-decomposition-svd">
+<h1><strong>Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)</strong><a class="headerlink" href="#tugas-6-sistem-pencarian-dokumen-dengan-penerapan-singular-value-decomposition-svd" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>membuat sistem pencarian dokumen</p></li>
 <li><p>reduksi dimensi SVD</p></li>
@@ -455,7 +446,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c7ce3a75-99b9-4a64-93f0-009fa450c2a8" class="colab-df-container">
+  <div id="df-68b22a7f-265f-4a17-83ae-4787bcde17e4" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -613,7 +604,7 @@
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-c7ce3a75-99b9-4a64-93f0-009fa450c2a8')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-68b22a7f-265f-4a17-83ae-4787bcde17e4')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -665,12 +656,12 @@
 
     <script>
       const buttonEl =
-        document.querySelector('#df-c7ce3a75-99b9-4a64-93f0-009fa450c2a8 button.colab-df-convert');
+        document.querySelector('#df-68b22a7f-265f-4a17-83ae-4787bcde17e4 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-c7ce3a75-99b9-4a64-93f0-009fa450c2a8');
+        const element = document.querySelector('#df-68b22a7f-265f-4a17-83ae-4787bcde17e4');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -723,7 +714,7 @@
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-202afb4c-337a-4428-8af5-94b1c9695f95" class="colab-df-container">
+  <div id="df-d4c0fdae-576f-4a7a-a806-8705ebbbf379" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1037,7 +1028,7 @@
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-202afb4c-337a-4428-8af5-94b1c9695f95')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-d4c0fdae-576f-4a7a-a806-8705ebbbf379')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1089,12 +1080,12 @@
 
     <script>
       const buttonEl =
-        document.querySelector('#df-202afb4c-337a-4428-8af5-94b1c9695f95 button.colab-df-convert');
+        document.querySelector('#df-d4c0fdae-576f-4a7a-a806-8705ebbbf379 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-202afb4c-337a-4428-8af5-94b1c9695f95');
+        const element = document.querySelector('#df-d4c0fdae-576f-4a7a-a806-8705ebbbf379');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1139,7 +1130,7 @@
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-718dd9c5-dd48-4d9a-9469-85b9624a577c" class="colab-df-container">
+  <div id="df-9f162391-463e-4fe7-b00e-9239cf424267" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1453,7 +1444,7 @@
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-718dd9c5-dd48-4d9a-9469-85b9624a577c')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9f162391-463e-4fe7-b00e-9239cf424267')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1505,12 +1496,12 @@
 
     <script>
       const buttonEl =
-        document.querySelector('#df-718dd9c5-dd48-4d9a-9469-85b9624a577c button.colab-df-convert');
+        document.querySelector('#df-9f162391-463e-4fe7-b00e-9239cf424267 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-718dd9c5-dd48-4d9a-9469-85b9624a577c');
+        const element = document.querySelector('#df-9f162391-463e-4fe7-b00e-9239cf424267');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1605,7 +1596,7 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
 [nltk_data]   Package stopwords is already up-to-date!
 [nltk_data] Downloading package punkt to /root/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
+[nltk_data]   Unzipping tokenizers/punkt.zip.
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
@@ -1629,6 +1620,7 @@
 </div>
 </div>
 </div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1684,22 +1676,6 @@
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
