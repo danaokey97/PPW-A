@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas - 3 Modelling (Logistic Regression) dan Testing &#8212; Penambangan Web A</title>
+    <title>Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi &#8212; Penambangan Web A</title>
   
   
   
@@ -60,11 +60,10 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas-PPW/Tugas-3';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas-PPW/Tugas-7';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tugas 4 - Graph" href="Tugas-4.html" />
-    <link rel="prev" title="Tugas 2 - Pre-Processing Data dan TF-IDF" href="Tugas-2.html" />
+    <link rel="prev" title="Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)" href="Tugas-6.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -171,11 +170,11 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Tugas-1.html"><strong>Tugas 1 : Crawling Berita</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-2.html"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas - 3 Modelling (Logistic Regression) dan Testing</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-3.html"><strong>Tugas - 3 Modelling (Logistic Regression) dan Testing</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-4.html"><strong>Tugas 4 - Graph</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-5.html"><strong>Tugas 5 : Keyword Extraction</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-6.html">Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas-7.html">Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi</a></li>
 </ul>
 
     </div>
@@ -230,7 +229,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/danaokey97/PPW-A/blob/gh-pages/_sources/Tugas-PPW/Tugas-3.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/danaokey97/PPW-A/blob/gh-pages/_sources/Tugas-PPW/Tugas-7.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -278,7 +277,7 @@
       
       
       
-      <li><a href="https://github.com/danaokey97/PPW-A/issues/new?title=Issue%20on%20page%20%2FTugas-PPW/Tugas-3.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/danaokey97/PPW-A/issues/new?title=Issue%20on%20page%20%2FTugas-PPW/Tugas-7.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -308,7 +307,7 @@
       
       
       
-      <li><a href="../_sources/Tugas-PPW/Tugas-3.ipynb" target="_blank"
+      <li><a href="../_sources/Tugas-PPW/Tugas-7.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -371,7 +370,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -382,11 +383,24 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas - 3 Modelling (Logistic Regression) dan Testing</h1>
+    <h1>Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#label-encoder"><strong>Label Encoder</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-data"><strong>Split Data</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf-term-frequency-inverse-document-frequency"><strong>TF-IDF (Term Frequency-Inverse Document Frequency)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduksi-dimensi-svd"><strong>Reduksi Dimensi (SVD)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-logistic-regression"><strong>Model Logistic Regression</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengujian"><strong>Pengujian</strong></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -396,27 +410,12 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-3-modelling-logistic-regression-dan-testing">
-<h1><strong>Tugas - 3 Modelling (Logistic Regression) dan Testing</strong><a class="headerlink" href="#tugas-3-modelling-logistic-regression-dan-testing" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sklearn</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sklearn</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5.2
-</pre></div>
-</div>
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-7-klasifikasi-berita-metode-logistic-regression-dengan-reduksi-dimensi">
+<h1>Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi<a class="headerlink" href="#tugas-7-klasifikasi-berita-metode-logistic-regression-dengan-reduksi-dimensi" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
 <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
-<span class="kn">import</span> <span class="nn">pickle</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 </div>
 </div>
@@ -428,14 +427,16 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/My Drive/PPW-A/report/Tugas-PPW/hasil_preprocesing.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/My Drive/PPW-A/report/Tugas-PPW/hasil_preprocesing.csv&quot;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-01778f24-3934-42fb-a6f4-5bc4d2e2f203" class="colab-df-container">
+  <div id="df-d30f6551-7715-4114-8319-be2bd41761f3" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -526,7 +527,7 @@
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-01778f24-3934-42fb-a6f4-5bc4d2e2f203')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-d30f6551-7715-4114-8319-be2bd41761f3')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -578,12 +579,12 @@
 
     <script>
       const buttonEl =
-        document.querySelector('#df-01778f24-3934-42fb-a6f4-5bc4d2e2f203 button.colab-df-convert');
+        document.querySelector('#df-d30f6551-7715-4114-8319-be2bd41761f3 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-01778f24-3934-42fb-a6f4-5bc4d2e2f203');
+        const element = document.querySelector('#df-d30f6551-7715-4114-8319-be2bd41761f3');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -606,6 +607,8 @@
   </div>
   </div></div>
 </div>
+<section id="label-encoder">
+<h2><strong>Label Encoder</strong><a class="headerlink" href="#label-encoder" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
@@ -619,7 +622,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">label_encoder</span><span class="o">.</span><span class="n">classes_</span><span class="p">,</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">label_encoder</span><span class="o">.</span><span class="n">classes_</span><span class="p">))))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">DataFrame setelah Label Encoding:&quot;</span><span class="p">)</span>
-<span class="n">df</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -631,7 +634,7 @@ DataFrame setelah Label Encoding:
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-d7aa1946-a8a2-492b-ad19-a09d56b35811" class="colab-df-container">
+  <div id="df-dcd09930-7d6e-4ca8-9956-f4361cffecc6" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -722,86 +725,13 @@ DataFrame setelah Label Encoding:
       <td>jakarta indonesia berpartisipasi asian esports...</td>
       <td>0</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>Man City Vs Feyenoord: Buang Keunggulan 3 Gol,...</td>
-      <td>Manchester - Manchester City membuang keunggul...</td>
-      <td>Rabu, 27 Nov 2024 04:58 WIB</td>
-      <td>Sepak Bola</td>
-      <td>Manchester  Manchester City membuang keunggula...</td>
-      <td>manchester  manchester city membuang keunggula...</td>
-      <td>['manchester', 'manchester', 'city', 'membuang...</td>
-      <td>manchester manchester city membuang keunggulan...</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>96</th>
-      <td>Barcelona Vs Brest: 2 Gol Lewandowski Antar Ba...</td>
-      <td>Barcelona - Barcelona memetik angka penuh di p...</td>
-      <td>Rabu, 27 Nov 2024 04:55 WIB</td>
-      <td>Sepak Bola</td>
-      <td>Barcelona  Barcelona memetik angka penuh di pe...</td>
-      <td>barcelona  barcelona memetik angka penuh di pe...</td>
-      <td>['barcelona', 'barcelona', 'memetik', 'angka',...</td>
-      <td>barcelona barcelona memetik angka penuh pertan...</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>Sporting CP Vs Arsenal: Meriam London 'Meledak...</td>
-      <td>Lisbon - Arsenal memberikan kekalahan perdana ...</td>
-      <td>Rabu, 27 Nov 2024 04:50 WIB</td>
-      <td>Sepak Bola</td>
-      <td>Lisbon  Arsenal memberikan kekalahan perdana b...</td>
-      <td>lisbon  arsenal memberikan kekalahan perdana b...</td>
-      <td>['lisbon', 'arsenal', 'memberikan', 'kekalahan...</td>
-      <td>lisbon arsenal kekalahan perdana sporting cp l...</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>Inter Vs Leipzig: Gol Bunuh Diri Bawa Nerazzur...</td>
-      <td>Milan - Inter Milan unggul 1-0 atas RB Leipzig...</td>
-      <td>Rabu, 27 Nov 2024 03:55 WIB</td>
-      <td>Sepak Bola</td>
-      <td>Milan  Inter Milan unggul  atas RB Leipzig saa...</td>
-      <td>milan  inter milan unggul  atas rb leipzig saa...</td>
-      <td>['milan', 'inter', 'milan', 'unggul', 'atas', ...</td>
-      <td>milan inter milan unggul rb leipzig turun minu...</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>Man City Vs Feyenoord: Penalti Haaland Jadi Pe...</td>
-      <td>Jakarta - Manchester City memimpin 1-0 atas Fe...</td>
-      <td>Rabu, 27 Nov 2024 03:51 WIB</td>
-      <td>Sepak Bola</td>
-      <td>Jakarta  Manchester City memimpin  atas Feyeno...</td>
-      <td>jakarta  manchester city memimpin  atas feyeno...</td>
-      <td>['jakarta', 'manchester', 'city', 'memimpin', ...</td>
-      <td>jakarta manchester city memimpin feyenoord bab...</td>
-      <td>1</td>
-    </tr>
   </tbody>
 </table>
-<p>100 rows × 9 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-d7aa1946-a8a2-492b-ad19-a09d56b35811')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-dcd09930-7d6e-4ca8-9956-f4361cffecc6')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -853,12 +783,12 @@ DataFrame setelah Label Encoding:
 
     <script>
       const buttonEl =
-        document.querySelector('#df-d7aa1946-a8a2-492b-ad19-a09d56b35811 button.colab-df-convert');
+        document.querySelector('#df-dcd09930-7d6e-4ca8-9956-f4361cffecc6 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-d7aa1946-a8a2-492b-ad19-a09d56b35811');
+        const element = document.querySelector('#df-dcd09930-7d6e-4ca8-9956-f4361cffecc6');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -883,251 +813,893 @@ DataFrame setelah Label Encoding:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-
-<span class="c1"># Split data</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">df</span> <span class="p">[</span><span class="s1">&#39;Hasil stopword&#39;</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">df</span> <span class="p">[</span><span class="s1">&#39;kategori_encoded&#39;</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-
-<span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah data latih:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_train</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah data uji:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_test</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     jakarta indonesia berhasil meraih juara kompet...
-1     jakarta sederet game android favorit wibu deh ...
-2     jakarta fase wild card keseruan m mobile legen...
-3     jakarta pokemon trading card game tcg pocket s...
-4     jakarta indonesia berpartisipasi asian esports...
-                            ...                        
-95    manchester manchester city membuang keunggulan...
-96    barcelona barcelona memetik angka penuh pertan...
-97    lisbon arsenal kekalahan perdana sporting cp l...
-98    milan inter milan unggul rb leipzig turun minu...
-99    jakarta manchester city memimpin feyenoord bab...
-Name: Hasil stopword, Length: 100, dtype: object
-0     0
-1     0
-2     0
-3     0
-4     0
-     ..
-95    1
-96    1
-97    1
-98    1
-99    1
-Name: kategori_encoded, Length: 100, dtype: int64
-==================================================
-Jumlah data latih: 80
-Jumlah data uji: 20
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
-
-<span class="c1"># Inisialisasi TF-IDF Vectorizer</span>
-<span class="n">tfidf</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
-
-<span class="c1"># Fit dan transform pada data training</span>
-<span class="n">x_train_tfidf</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span>
-
-<span class="c1"># Transform pada data testing</span>
-<span class="n">x_test_tfidf</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
-
-<span class="c1"># Mendapatkan nama fitur dari TF-IDF</span>
-<span class="n">feature_names</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
-
-<span class="c1"># Konversi TF-IDF hasil training ke DataFrame</span>
-<span class="n">df_train_tfidf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x_train_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">feature_names</span><span class="p">)</span>
-
-<span class="c1"># Konversi TF-IDF hasil testing ke DataFrame</span>
-<span class="n">df_test_tfidf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x_test_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">feature_names</span><span class="p">)</span>
-
-<span class="c1"># Tampilkan hasil TF-IDF dalam DataFrame</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TF-IDF untuk data training:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df_train_tfidf</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">TF-IDF untuk data testing:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df_test_tfidf</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TF-IDF untuk data training:
-    aaa  abdullah  absen   ac  acara  acaranya  access  accessibility  \
-0   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0   
-1   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0   
-2   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0   
-3   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0   
-4   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0   
-..  ...       ...    ...  ...    ...       ...     ...            ...   
-75  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0   
-76  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0   
-77  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0   
-78  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0   
-79  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0   
-
-         ace  acer  ...  zhejiang  zheng  zielinski  zmjjkk  zombie  \
-0   0.000000   0.0  ...       0.0    0.0        0.0     0.0     0.0   
-1   0.000000   0.0  ...       0.0    0.0        0.0     0.0     0.0   
-2   0.000000   0.0  ...       0.0    0.0        0.0     0.0     0.0   
-3   0.000000   0.0  ...       0.0    0.0        0.0     0.0     0.0   
-4   0.000000   0.0  ...       0.0    0.0        0.0     0.0     0.0   
-..       ...   ...  ...       ...    ...        ...     ...     ...   
-75  0.000000   0.0  ...       0.0    0.0        0.0     0.0     0.0   
-76  0.000000   0.0  ...       0.0    0.0        0.0     0.0     0.0   
-77  0.165822   0.0  ...       0.0    0.0        0.0     0.0     0.0   
-78  0.000000   0.0  ...       0.0    0.0        0.0     0.0     0.0   
-79  0.000000   0.0  ...       0.0    0.0        0.0     0.0     0.0   
-
-    zombienya  zombies  zona  zone  zywoo  
-0         0.0      0.0   0.0   0.0    0.0  
-1         0.0      0.0   0.0   0.0    0.0  
-2         0.0      0.0   0.0   0.0    0.0  
-3         0.0      0.0   0.0   0.0    0.0  
-4         0.0      0.0   0.0   0.0    0.0  
-..        ...      ...   ...   ...    ...  
-75        0.0      0.0   0.0   0.0    0.0  
-76        0.0      0.0   0.0   0.0    0.0  
-77        0.0      0.0   0.0   0.0    0.0  
-78        0.0      0.0   0.0   0.0    0.0  
-79        0.0      0.0   0.0   0.0    0.0  
-
-[80 rows x 4106 columns]
-
-TF-IDF untuk data testing:
-    aaa  abdullah  absen   ac  acara  acaranya  access  accessibility  ace  \
-0   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-1   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-2   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-3   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-4   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-5   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-6   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-7   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-8   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-9   0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-10  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-11  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-12  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-13  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-14  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-15  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-16  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-17  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-18  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-19  0.0       0.0    0.0  0.0    0.0       0.0     0.0            0.0  0.0   
-
-    acer  ...  zhejiang  zheng  zielinski  zmjjkk  zombie  zombienya  zombies  \
-0    0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-1    0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-2    0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-3    0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-4    0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-5    0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-6    0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-7    0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-8    0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-9    0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-10   0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-11   0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-12   0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-13   0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-14   0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-15   0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-16   0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-17   0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-18   0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-19   0.0  ...       0.0    0.0        0.0     0.0     0.0        0.0      0.0   
-
-    zona  zone  zywoo  
-0    0.0   0.0    0.0  
-1    0.0   0.0    0.0  
-2    0.0   0.0    0.0  
-3    0.0   0.0    0.0  
-4    0.0   0.0    0.0  
-5    0.0   0.0    0.0  
-6    0.0   0.0    0.0  
-7    0.0   0.0    0.0  
-8    0.0   0.0    0.0  
-9    0.0   0.0    0.0  
-10   0.0   0.0    0.0  
-11   0.0   0.0    0.0  
-12   0.0   0.0    0.0  
-13   0.0   0.0    0.0  
-14   0.0   0.0    0.0  
-15   0.0   0.0    0.0  
-16   0.0   0.0    0.0  
-17   0.0   0.0    0.0  
-18   0.0   0.0    0.0  
-19   0.0   0.0    0.0  
-
-[20 rows x 4106 columns]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from sklearn.feature_extraction.text import TfidfVectorizer</span>
-<span class="c1"># # Menginisialisasi TfidfVectorizer</span>
-<span class="c1"># vectorizer = TfidfVectorizer()</span>
-
-<span class="c1"># # Menghitung TF-IDF</span>
-<span class="c1"># train_tfidf_matrix = vectorizer.fit_transform(x_train)</span>
-<span class="c1"># test_tfidf_matrix = vectorizer.fit_transform(x_test)</span>
-
-
-<span class="c1"># # Mengubah hasilnya menjadi DataFrame</span>
-<span class="c1"># tfidf_df = pd.DataFrame(train_tfidf_matrix.toarray(), columns=vectorizer.get_feature_names_out())</span>
-<span class="c1"># tfidf_df.head(10)</span>
-<span class="c1"># # Menyimpan hasil ke file CSV</span>
-<span class="c1"># tfidf_df.to_csv(&#39;hasil_tfidf.csv&#39;, index=False)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">accuracy_score</span>
-
-<span class="c1"># Membuat model Logistic Regression dengan regularisasi</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>  <span class="c1"># Mengurangi nilai C untuk menambah regularisasi</span>
-
-<span class="c1"># Melatih model dengan data yang sudah diresample (jika diperlukan)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train_tfidf</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-
-<span class="c1"># Memprediksi hasil pada data testing</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test_tfidf</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Evaluasi hasil prediksi</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Memisahkan fitur dan label</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Hasil stopword&#39;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;kategori_encoded&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="split-data">
+<h2><strong>Split Data</strong><a class="headerlink" href="#split-data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membagi data menjadi data latih dan data uji</span>
+<span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tf-idf-term-frequency-inverse-document-frequency">
+<h2><strong>TF-IDF (Term Frequency-Inverse Document Frequency)</strong><a class="headerlink" href="#tf-idf-term-frequency-inverse-document-frequency" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tahap 1: TF-IDF</span>
+<span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+<span class="n">x_train_tfidf</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span>
+<span class="n">x_test_tfidf</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
 
-<span class="c1"># Menampilkan laporan klasifikasi</span>
+<span class="c1"># Mengonversi hasil TF-IDF menjadi DataFrame</span>
+<span class="n">df_train_tfidf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x_train_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
+<span class="n">df_test_tfidf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x_test_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil TF-IDF (Data Latih):&quot;</span><span class="p">)</span>
+<span class="n">df_train_tfidf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil TF-IDF (Data Latih):
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-4c58f7ce-b47c-4976-b247-2ef9943054e8" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>aaa</th>
+      <th>abdullah</th>
+      <th>absen</th>
+      <th>ac</th>
+      <th>acara</th>
+      <th>acaranya</th>
+      <th>access</th>
+      <th>accessibility</th>
+      <th>ace</th>
+      <th>acer</th>
+      <th>...</th>
+      <th>zhejiang</th>
+      <th>zheng</th>
+      <th>zielinski</th>
+      <th>zmjjkk</th>
+      <th>zombie</th>
+      <th>zombienya</th>
+      <th>zombies</th>
+      <th>zona</th>
+      <th>zone</th>
+      <th>zywoo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.165822</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>80 rows × 4106 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-4c58f7ce-b47c-4976-b247-2ef9943054e8')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-4c58f7ce-b47c-4976-b247-2ef9943054e8 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-4c58f7ce-b47c-4976-b247-2ef9943054e8');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
+</div>
+</section>
+<section id="reduksi-dimensi-svd">
+<h2><strong>Reduksi Dimensi (SVD)</strong><a class="headerlink" href="#reduksi-dimensi-svd" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tahap 2: SVD (Reduksi Dimensi)</span>
+<span class="n">svd</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>  <span class="c1"># Sesuaikan n_components dengan kebutuhan</span>
+<span class="n">x_train_svd</span> <span class="o">=</span> <span class="n">svd</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_train_tfidf</span><span class="p">)</span>
+<span class="n">x_test_svd</span> <span class="o">=</span> <span class="n">svd</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x_test_tfidf</span><span class="p">)</span>
+
+<span class="c1"># Mengonversi hasil SVD menjadi DataFrame</span>
+<span class="n">df_train_svd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x_train_svd</span><span class="p">)</span>
+<span class="n">df_test_svd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x_test_svd</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil SVD (Data Latih):&quot;</span><span class="p">)</span>
+<span class="n">df_train_svd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil SVD (Data Latih):
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-40f9c2c7-6aff-4549-924d-c0a59aeb7355" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>...</th>
+      <th>70</th>
+      <th>71</th>
+      <th>72</th>
+      <th>73</th>
+      <th>74</th>
+      <th>75</th>
+      <th>76</th>
+      <th>77</th>
+      <th>78</th>
+      <th>79</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.608518</td>
+      <td>0.271397</td>
+      <td>0.056999</td>
+      <td>-0.015427</td>
+      <td>-0.147462</td>
+      <td>-0.038385</td>
+      <td>0.256842</td>
+      <td>-0.033494</td>
+      <td>0.005365</td>
+      <td>-0.021150</td>
+      <td>...</td>
+      <td>-0.045493</td>
+      <td>-0.069280</td>
+      <td>0.005113</td>
+      <td>0.082556</td>
+      <td>0.023756</td>
+      <td>0.028564</td>
+      <td>-0.003782</td>
+      <td>0.012281</td>
+      <td>0.008614</td>
+      <td>-0.000214</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.344975</td>
+      <td>0.014838</td>
+      <td>-0.047421</td>
+      <td>-0.008215</td>
+      <td>0.175394</td>
+      <td>0.045144</td>
+      <td>-0.236218</td>
+      <td>0.082812</td>
+      <td>0.010627</td>
+      <td>-0.082112</td>
+      <td>...</td>
+      <td>-0.032084</td>
+      <td>-0.047274</td>
+      <td>0.017513</td>
+      <td>0.021150</td>
+      <td>0.011504</td>
+      <td>0.007690</td>
+      <td>-0.002366</td>
+      <td>-0.007910</td>
+      <td>-0.010011</td>
+      <td>0.001481</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.186393</td>
+      <td>-0.338478</td>
+      <td>-0.081221</td>
+      <td>0.037285</td>
+      <td>-0.105012</td>
+      <td>-0.052870</td>
+      <td>0.022305</td>
+      <td>0.006085</td>
+      <td>0.069074</td>
+      <td>0.504722</td>
+      <td>...</td>
+      <td>-0.040648</td>
+      <td>0.007406</td>
+      <td>0.032698</td>
+      <td>0.014155</td>
+      <td>0.042045</td>
+      <td>-0.174867</td>
+      <td>-0.000233</td>
+      <td>0.003334</td>
+      <td>-0.000496</td>
+      <td>0.002361</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.212716</td>
+      <td>-0.421193</td>
+      <td>-0.190015</td>
+      <td>-0.093461</td>
+      <td>-0.180292</td>
+      <td>-0.349724</td>
+      <td>0.018049</td>
+      <td>0.035904</td>
+      <td>-0.254921</td>
+      <td>-0.271051</td>
+      <td>...</td>
+      <td>0.007958</td>
+      <td>0.033547</td>
+      <td>0.001623</td>
+      <td>-0.133306</td>
+      <td>0.306265</td>
+      <td>-0.040472</td>
+      <td>0.006455</td>
+      <td>-0.002770</td>
+      <td>0.001051</td>
+      <td>0.003362</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.000154</td>
+      <td>-0.000705</td>
+      <td>0.000188</td>
+      <td>-0.000582</td>
+      <td>-0.000971</td>
+      <td>0.003344</td>
+      <td>-0.000181</td>
+      <td>0.000206</td>
+      <td>-0.002745</td>
+      <td>-0.001751</td>
+      <td>...</td>
+      <td>0.000235</td>
+      <td>0.000096</td>
+      <td>-0.000230</td>
+      <td>0.000258</td>
+      <td>-0.000412</td>
+      <td>0.000061</td>
+      <td>0.000011</td>
+      <td>-0.000036</td>
+      <td>-0.000007</td>
+      <td>0.000002</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>0.344194</td>
+      <td>-0.040203</td>
+      <td>-0.238700</td>
+      <td>-0.346022</td>
+      <td>0.451672</td>
+      <td>0.111635</td>
+      <td>0.356103</td>
+      <td>-0.088573</td>
+      <td>0.050439</td>
+      <td>-0.046680</td>
+      <td>...</td>
+      <td>0.009197</td>
+      <td>-0.003899</td>
+      <td>-0.037814</td>
+      <td>0.008070</td>
+      <td>-0.052686</td>
+      <td>-0.019070</td>
+      <td>-0.008520</td>
+      <td>0.009163</td>
+      <td>-0.004512</td>
+      <td>0.001376</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>0.302124</td>
+      <td>-0.059353</td>
+      <td>-0.213116</td>
+      <td>-0.312133</td>
+      <td>0.407430</td>
+      <td>0.092735</td>
+      <td>0.357211</td>
+      <td>-0.062195</td>
+      <td>0.050057</td>
+      <td>-0.020218</td>
+      <td>...</td>
+      <td>0.000919</td>
+      <td>0.045375</td>
+      <td>-0.016479</td>
+      <td>-0.013497</td>
+      <td>0.032318</td>
+      <td>-0.001909</td>
+      <td>0.000403</td>
+      <td>0.004286</td>
+      <td>0.006881</td>
+      <td>-0.001909</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>0.067670</td>
+      <td>-0.122819</td>
+      <td>0.097993</td>
+      <td>-0.043997</td>
+      <td>-0.004088</td>
+      <td>0.061289</td>
+      <td>-0.008906</td>
+      <td>0.027113</td>
+      <td>-0.054910</td>
+      <td>0.030973</td>
+      <td>...</td>
+      <td>-0.005263</td>
+      <td>0.004130</td>
+      <td>0.000218</td>
+      <td>-0.006918</td>
+      <td>-0.005392</td>
+      <td>-0.008521</td>
+      <td>-0.003479</td>
+      <td>0.000909</td>
+      <td>0.000041</td>
+      <td>-0.003739</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>0.697741</td>
+      <td>0.314407</td>
+      <td>0.082908</td>
+      <td>0.054729</td>
+      <td>-0.154612</td>
+      <td>-0.020416</td>
+      <td>0.117214</td>
+      <td>-0.032032</td>
+      <td>0.027435</td>
+      <td>-0.012331</td>
+      <td>...</td>
+      <td>0.007480</td>
+      <td>0.237510</td>
+      <td>-0.145145</td>
+      <td>-0.274053</td>
+      <td>-0.141055</td>
+      <td>-0.055226</td>
+      <td>0.024116</td>
+      <td>-0.041989</td>
+      <td>-0.031488</td>
+      <td>-0.004166</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>0.215240</td>
+      <td>0.006834</td>
+      <td>-0.016348</td>
+      <td>0.020795</td>
+      <td>0.101723</td>
+      <td>0.055740</td>
+      <td>-0.108399</td>
+      <td>0.121278</td>
+      <td>0.002623</td>
+      <td>-0.104994</td>
+      <td>...</td>
+      <td>0.006937</td>
+      <td>-0.010361</td>
+      <td>-0.020757</td>
+      <td>-0.001948</td>
+      <td>-0.004260</td>
+      <td>-0.003526</td>
+      <td>0.007639</td>
+      <td>-0.015374</td>
+      <td>-0.006279</td>
+      <td>-0.001428</td>
+    </tr>
+  </tbody>
+</table>
+<p>80 rows × 80 columns</p>
+</div>
+    <div class="colab-df-buttons">
+      
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-40f9c2c7-6aff-4549-924d-c0a59aeb7355')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+      
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+    
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-40f9c2c7-6aff-4549-924d-c0a59aeb7355 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-40f9c2c7-6aff-4549-924d-c0a59aeb7355');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+  
+    </div>
+  </div>
+  </div></div>
+</div>
+</section>
+<section id="model-logistic-regression">
+<h2><strong>Model Logistic Regression</strong><a class="headerlink" href="#model-logistic-regression" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tahap 3: Klasifikasi dengan Logistic Regression</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train_svd</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test_svd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Evaluasi Model</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Accuracy:&quot;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy: 90.00%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy: 0.9
               precision    recall  f1-score   support
 
            0       1.00      0.83      0.91        12
@@ -1142,54 +1714,50 @@ weighted avg       0.92      0.90      0.90        20
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simpan TF-IDF vectorizer dan model</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;svd_tfidf.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tfidf_file</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">x_train_svd</span><span class="p">,</span> <span class="n">tfidf_file</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;logistic_regression_model.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">model_file</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">model_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pengujian">
+<h2><strong>Pengujian</strong><a class="headerlink" href="#pengujian" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">joblib</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
 
-<span class="c1"># Menyimpan model Logistic Regression</span>
-<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s1">&#39;logistic_regression_model.joblib&#39;</span><span class="p">)</span>
+<span class="c1"># Misalnya, Anda telah membuat pipeline</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;tfidf&#39;</span><span class="p">,</span> <span class="n">TfidfVectorizer</span><span class="p">()),</span>
+    <span class="p">(</span><span class="s1">&#39;svd&#39;</span><span class="p">,</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">100</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;clf&#39;</span><span class="p">,</span> <span class="n">LogisticRegression</span><span class="p">())</span>
+<span class="p">])</span>
 
-<span class="c1"># Menyimpan model TF-IDF Vectorizer</span>
-<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">tfidf</span><span class="p">,</span> <span class="s1">&#39;tfidf_model.joblib&#39;</span><span class="p">)</span>
+<span class="c1"># Setelah melatih model</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model Logistic Regression dan TF-IDF telah disimpan dengan joblib.&quot;</span><span class="p">)</span>
+<span class="c1"># Menyimpan pipeline</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="s1">&#39;svd_tfidf_pipeline.pkl&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model Logistic Regression dan TF-IDF telah disimpan dengan joblib.
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;svd_tfidf_pipeline.pkl&#39;]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menyimpan tfidf_matrix dan vectorizer menggunakan pickle</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;tfidf_vectorizer.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">tfidf</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
-<span class="c1"># Menyimpan model ke dalam file pickle</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;logistic_regression_model.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>PENGUJIAN</strong></p>
-<hr class="docutils" />
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">joblib</span>
-
-<span class="c1"># Memuat vectorizer dan model</span>
-<span class="n">tfidf</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;tfidf_vectorizer.pkl&#39;</span><span class="p">)</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;logistic_regression_model.pkl&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">joblib</span>
-
-<span class="c1"># Teks baru yang ingin diprediksi</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Teks baru yang ingin diprediksi</span>
 <span class="n">new_text_1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">Jakarta - Game horor selalu punya daya tariknya sendiri, sehingga membuat sebagian penikmatnya betah memainkannya dalam waktu yang lama. Beberapa dari mereka ada yang kecanduan dengan nuansa mencekamnya, atau penasaran dengan alur ceritanya. Namun memang tidak semua gamer bisa mengonsumsi kengerian yang diberikan para pengembang game horor. Tak sedikit dari mereka yang menghindari visual menyeramkannya, atau suara kejutan yang bisa menyiksa jantung para pemainnya. Namun memang hal itu lah yang menjadi pembeda antara game horor dengan genre lainnya. Meski tidak selalu menawarkan adegan bertarung dengan penuh gaya, genre yang satu ini punya siasat lain dalam upaya memberikan keseruan kepada para pemain. Nah dari sekian banyak game horor yang telah dirilis oleh para pengembang di luar sana, gamer sudah main apa saja? Pasti Resident Evil menjadi salah satu favorit sepanjang masa. Tapi tahukah detikers, tidak hanya seri Resident Evil yang dapat memberikan keseruan dalam bermain game horor. Banyak sekali gamer horor terbaik yang diluncurkan sepanjang tahun 2000an. Hampir semuanya bagus, dan layak dicoba. Jadi apa game horor terbaik tahun 2000an yang sudah pernah kalian mainkan? Pasti ada beberapa judul yang melekat di hati kalian, karena menjadi pemicu kecintaan terhadap genre seram ini. Di sini, detikINET sudah mengumpulkan 20 game horor terbaik tahun 2000an , yang bisa kalian coba mainkan. Itu pun kalau kalian merasa menjadi pemain paling berani. Berikut informasinya, sebagaimana dihimpun dari The Gamer, Rabu (16/10/2024). Game Horor Terbaik Tahun 2000an 1. Call Of Cthulhu: Dark Corners Of The Earth Platform: PC dan Xbox Pengembang: Headfirst Productions Penerbit: Bethesda Softworks dan 2K Games 2. The Suffering Platform: PC, PS2, dan Xbox Pengembang: Surreal Software Penerbit: Midway Games dan Zoo Digital Publishing 3. Cold Fear Platform: PC, PS2, dan Xbox Pengembang: Darkworks Penerbit: Ubisoft 4. Siren Platform: PS3 dan PS4 Pengembang: Japan Studio Penerbit: Sony Computer Entertainment 5. Martian Gothic: Unification Platform: PC dan PlayStation Pengembang: Creative Reality Penerbit: TalonSoft, Take-Two Interactive, Buka Entertainment, dan Take-Two Interactive Software Europe Ltd 6. Clive Barker&#39;s Undying Platform: PC Pengembang: DreamWorks Interactive dan Westlake Interactive Penerbit: Electronic Arts dan Aspyr 7. Penumbra: Overture Platform: PC Pengembang: Frictional Games Penerbit: Frictional Games 8. Saw: The Video Game Platform: PS3, Xbox 360, dan Microsoft Windows Pengembang: Zombie Studios Penerbit: Konami dan Brash Entertainment 9. Obscure Platform: PC. PS2, dan Xbox Pengembang: Hydravision Entertainment Penerbit: DreamCatcher Interactive 10. F.E.A.R. Platform: PC, PS3, dan Xbox 360 Pengembang: Monolith Productions Penerbit: Vivendi Universal 11. Haunting Ground Platform: PS2 dan PS3 Pengembang: Capcom Penerbit: Capcom 12. Dead Rising Platform: PC, PS4, Xbox 360, dan Xbox One Pengembang: Capcom Penerbit: Capcom 13. Condemned: Criminal Origins Platform: PC dan Xbox 360 Pengembang: Monolith Productions Penerbit: Sega 14. Fatal Frame 2: Crimson Butterfly Platform: PS2, PS3, Wii, dan Xbox Pengembang: Tecmo Penerbit: Tecmo 15. Eternal Darkness: Sanity&#39;s Requiem Platform: GameCube Pengembang: Silicon Knights Penerbit: Nintendo 16. Dead Space Platform: PC, PS3, dan Xbox 360 Pengembang: Visceral Games Penerbit: Electronic Arts 17. BioShock Platform: PC, PS3, dan Xbox 360 Pengembang: Irrational Games Penerbit: 2K Games 18. Resident Evil 4 Platform: PS4, PS3, PS2, Xbox One, Xbox 360, Switch, Wii, Nintendo GameCube, PC, Android, dan iOS Pengembang: Capcom Penerbit: Capcom 19. Resident Evil (2002) Platform: GameCube dan Wii Pengembang: Capcom Production Studio 4 Penerbit: Capcom 20. Silent Hill 2, 3, And 4 Platform: PC, PS2, PS3, Xbox, dan Xbox 360 Pengembang: Konami Penerbit: Konami (hps/fay)</span>
 <span class="s1">&#39;&#39;&#39;</span><span class="p">]</span>
@@ -1198,47 +1766,29 @@ weighted avg       0.92      0.90      0.90        20
 <span class="s1">Manchester - Paul Gascoigne menyarankan Marcus Rashford pindah ke Italia. Beberapa pemain yang redup bersama Manchester United kerap kali menemuikan sinarnya di Serie A . Marcus Rashford banyak dikritik usai tampil buruk bersama MU di awal musim ini. Ia baru mampu mengemas satu gol di Liga Inggris musim ini. Buruknya perfoma Rashford turut mempengaruhi laju MU. Setan Merah jeblok dengan berada di peringkat ke-14 dengan baru meraih delapan angka. Legenda Inggris, Paul Gascoigne, menyarankan Rashford pindah ke Serie A melihat situasi yang dihadapinya di MU. Ia menilai Rashford saat ini telah kehilangan kebahagiaan saat bermain bola. Gascoigne yakin Rashford bakal menemukan kembali kebahagian itu jika bermain Italia. Gascoigne sendiri pernah bermain di Serie A bersama Lazio pada rentang 1992-1995 usai pindah dari Tottenham Hotspur. Beberapa mantan pemain MU juga berhasil bersinar lagi usai pindah ke Serie A. Sebut saja Chris Smalling, Romelu Lukaku, dan teranyar Scott McTominay. McTominay yang banyak dikritik di MU justru jadi andalan Napoli di musim ini. &quot;Saya suka Rashford, saya pikir dia pemain yang luar biasa, tetapi dia tampaknya memperhatikan itu,&quot; kata Gascoigne kepada SportsCasting. &quot;Bahkan ketika dia mencetak gol, dia tampak tidak senang dengan hal itu, jadi ada sesuatu yang terjadi di sana.&quot; &quot;Jika itu masalahnya, pindah saja. Anda mendapatkan beberapa pemain yang pindah dan kemudian mereka menemukan sesuatu yang berbeda. Untuk Rashford, dia tampaknya tidak senang bermain di Inggris. Dan beberapa klub bagus akan datang untuknya. Pergi ke Italia, itu akan mengejutkannya,&quot; jelasnya. (pur/krs)</span>
 <span class="s1">&#39;&#39;&#39;</span><span class="p">]</span>
 
-<span class="c1"># Load the saved vectorizer and model</span>
-<span class="n">tfidf</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;tfidf_vectorizer.pkl&#39;</span><span class="p">)</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;logistic_regression_model.pkl&#39;</span><span class="p">)</span>
-
-<span class="c1"># New texts to predict</span>
+<span class="c1"># Gabungkan kedua teks menjadi satu list</span>
 <span class="n">new_text</span> <span class="o">=</span> <span class="n">new_text_1</span> <span class="o">+</span> <span class="n">new_text_2</span>
 
-<span class="c1"># Preprocess and transform using the loaded TF-IDF vectorizer</span>
-<span class="n">new_text_tfidf</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">new_text</span><span class="p">)</span>
+<span class="c1"># Melakukan prediksi dengan pipeline</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">new_text</span><span class="p">)</span>
 
-<span class="c1"># Predict using the Logistic Regression model</span>
-<span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">new_text_tfidf</span><span class="p">)</span>
-
-<span class="c1"># Map predictions to categories</span>
+<span class="c1"># Hasil prediksi</span>
 <span class="n">predicted_categories</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Games&quot;</span> <span class="k">if</span> <span class="n">prediction</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;Sepak Bola&quot;</span> <span class="k">for</span> <span class="n">prediction</span> <span class="ow">in</span> <span class="n">predictions</span><span class="p">]</span>
 
-<span class="c1"># Output the predictions</span>
+<span class="c1"># Output hasil prediksi untuk masing-masing teks</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">category</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">predicted_categories</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Prediction for text </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">category</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Prediksi untuk teks </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">category</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prediction for text 1: Games
-Prediction for text 2: Sepak Bola
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prediksi untuk teks 1: Games
+Prediksi untuk teks 2: Sepak Bola
 </pre></div>
 </div>
 </div>
 </div>
-<p>Test 1</p>
-<p>Jakarta - Dalam ranking FIFA terbaru, Jepang masih perkasa sebagai tim Asia dengan peringkat tertinggi. Pasukan Samurai Biru ada di peringkat ke-16!
-FIFA merilis ranking FIFA terbaru per September 2024 pada Jumat (19/9). Untuk di level Asia, Jepang masih menempati peringkat teratas.
-Timnas Jepang duduk di peringkat ke-16 ranking FIFA terbaru dengan 1639.6 poin. Wataru Endo dkk naik dua peringkat.
-epang mampu sapu bersih dua kemenangan di dua laga awal ronde ketiga Kualifikasi Piala Dunia 2026 Zona Asia. Jepang pesta gol atas China 7-0 dan cukur Bahrain 5-0.
-Jepang pun menjadi satu-satunya tim dengan poin sempurna sejauh ini di Grup C dengan enam poin. Mereka disusul Arab Saudi (empat poin), Bahrain (tiga poin), dan Indonesia (dua poin).</p>
-<p>Test 2</p>
-<p>Jakarta - Sekitar satu dekade lalu internet terobsesi dengan game mobile Flappy Bird yang bikin ketagihan. Setelah menghilang cukup lama, game viral ini akan kembali lagi dengan membawa sejumlah pembaruan.
-Reinkarnasi Flappy Bird dipelopori oleh sekumpulan penggemar yang tergabung dalam Flappy Bird Foundation. Mereka berhasil memperoleh hak cipta atas game ini dari Gametech, LLC, yang tidak memiliki hubungan dengan pencipta asli Flappy Bird, Dong Nguyen.
-Game Flappy Bird akan tersedia untuk Android dan iOS mulai tahun 2025,
-tapi game ini akan bisa dimainkan di platform lain sebelum tanggal tersebut.
-Tim Flappy Bird Foundation berencana menghadirkan game ini ke platform seperti desktop dan mobile web mulai musim gugur tahun ini.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1272,22 +1822,13 @@ Tim Flappy Bird Foundation berencana menghadirkan game ini ke platform seperti d
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Tugas-2.html"
+       href="Tugas-6.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></p>
+        <p class="prev-next-title">Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="Tugas-4.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Tugas 4 - Graph</strong></p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -1295,6 +1836,27 @@ Tim Flappy Bird Foundation berencana menghadirkan game ini ke platform seperti d
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#label-encoder"><strong>Label Encoder</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-data"><strong>Split Data</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf-term-frequency-inverse-document-frequency"><strong>TF-IDF (Term Frequency-Inverse Document Frequency)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduksi-dimensi-svd"><strong>Reduksi Dimensi (SVD)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-logistic-regression"><strong>Model Logistic Regression</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengujian"><strong>Pengujian</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

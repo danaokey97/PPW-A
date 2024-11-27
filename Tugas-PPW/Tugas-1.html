@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -36,10 +38,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -64,6 +67,7 @@
     <link rel="prev" title="Penambangan Web A" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -79,19 +83,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -99,7 +92,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,8 +99,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -124,7 +116,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -154,21 +147,17 @@
     
     
     <img src="../_static/logo.png" class="logo__image only-light" alt="Penambangan Web A - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Penambangan Web A - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Penambangan Web A - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -185,6 +174,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas-3.html"><strong>Tugas - 3 Modelling (Logistic Regression) dan Testing</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-4.html"><strong>Tugas 4 - Graph</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-5.html"><strong>Tugas 5 : Keyword Extraction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-6.html">Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-7.html">Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi</a></li>
 </ul>
 
     </div>
@@ -370,24 +361,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -609,7 +592,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-fef836ba-018f-46fd-bc8a-5d75992fa975" class="colab-df-container">
+  <div id="df-de532992-d158-4c71-b3cd-80daa0c8e6e4" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -637,37 +620,37 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>18 Tim yang Lolos FFWS Global Finals 2024 di B...</td>
-      <td>Jakarta - Rangkaian pertandingan di FFWS SEA 2...</td>
-      <td>Rabu, 16 Okt 2024 19:30 WIB</td>
+      <td>Asian Esports Games 2024: Timnas Indonesia Mob...</td>
+      <td>Jakarta - Indonesia berhasil meraih juara di k...</td>
+      <td>Rabu, 27 Nov 2024 21:13 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Ampun Bang Jago! Zuckerberg Klaim Pemain Handa...</td>
-      <td>Jakarta - CEO Meta Mark Zuckerberg, cukup perc...</td>
-      <td>Rabu, 16 Okt 2024 17:50 WIB</td>
+      <td>20 Game Android yang Diadaptasi dari Anime, Ad...</td>
+      <td>Jakarta - Sepertinya sederet game Android ini ...</td>
+      <td>Selasa, 26 Nov 2024 20:04 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
-      <td>Jakarta - Game horor selalu punya daya tarikny...</td>
-      <td>Rabu, 16 Okt 2024 14:20 WIB</td>
+      <td>Jadwal M6 Mobile legends, Wakil Indonesia Main...</td>
+      <td>Jakarta - Setelah fase wild card berakhir, kes...</td>
+      <td>Selasa, 26 Nov 2024 14:10 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
-      <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
-      <td>Rabu, 16 Okt 2024 12:15 WIB</td>
+      <td>Tips dan Cara Main Pokemon TCG Pocket, Pemula ...</td>
+      <td>Jakarta - Pokemon Trading Card Game (TCG) Pock...</td>
+      <td>Selasa, 26 Nov 2024 12:40 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
-      <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
-      <td>Selasa, 15 Okt 2024 17:36 WIB</td>
+      <td>Indonesia Ikut Asian Esports Games 2024 Bangko...</td>
+      <td>Jakarta - Indonesia berpartisipasi dalam Asian...</td>
+      <td>Selasa, 26 Nov 2024 09:06 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
@@ -679,37 +662,37 @@ document.write(`
     </tr>
     <tr>
       <th>95</th>
-      <td>Rating Pemain China Vs Indonesia: Thom Haye Te...</td>
-      <td>Jakarta - China vs Indonesia tuntas 2-1 di lan...</td>
-      <td>Rabu, 16 Okt 2024 12:00 WIB</td>
+      <td>Man City Vs Feyenoord: Buang Keunggulan 3 Gol,...</td>
+      <td>Manchester - Manchester City membuang keunggul...</td>
+      <td>Rabu, 27 Nov 2024 04:58 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>China Vs Indonesia: Coret Eliano Reijnders Blu...</td>
-      <td>Qingdao - Keputusan mencoret Eliano Reijnders ...</td>
-      <td>Rabu, 16 Okt 2024 11:40 WIB</td>
+      <td>Barcelona Vs Brest: 2 Gol Lewandowski Antar Ba...</td>
+      <td>Barcelona - Barcelona memetik angka penuh di p...</td>
+      <td>Rabu, 27 Nov 2024 04:55 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>Dumfries Akui Performanya Lebih Baik di Timnas...</td>
-      <td>Jakarta - Denzel Dumfries mengakui, performany...</td>
-      <td>Rabu, 16 Okt 2024 11:20 WIB</td>
+      <td>Sporting CP Vs Arsenal: Meriam London 'Meledak...</td>
+      <td>Lisbon - Arsenal memberikan kekalahan perdana ...</td>
+      <td>Rabu, 27 Nov 2024 04:50 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>Hasil Lengkap-Klasemen Kualifikasi Piala Dunia...</td>
-      <td>Jakarta - Matchday 4 di babak ketiga kualifika...</td>
-      <td>Rabu, 16 Okt 2024 11:00 WIB</td>
+      <td>Inter Vs Leipzig: Gol Bunuh Diri Bawa Nerazzur...</td>
+      <td>Milan - Inter Milan unggul 1-0 atas RB Leipzig...</td>
+      <td>Rabu, 27 Nov 2024 03:55 WIB</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>Spanyol Vs Serbia: De la Fuente Turunkan Start...</td>
-      <td>Jakarta - Pelatih Spanyol Luis de la Fuente me...</td>
-      <td>Rabu, 16 Okt 2024 10:43 WIB</td>
+      <td>Man City Vs Feyenoord: Penalti Haaland Jadi Pe...</td>
+      <td>Jakarta - Manchester City memimpin 1-0 atas Fe...</td>
+      <td>Rabu, 27 Nov 2024 03:51 WIB</td>
       <td>Sepak Bola</td>
     </tr>
   </tbody>
@@ -719,7 +702,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-fef836ba-018f-46fd-bc8a-5d75992fa975')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-de532992-d158-4c71-b3cd-80daa0c8e6e4')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -771,12 +754,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-fef836ba-018f-46fd-bc8a-5d75992fa975 button.colab-df-convert');
+        document.querySelector('#df-de532992-d158-4c71-b3cd-80daa0c8e6e4 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-fef836ba-018f-46fd-bc8a-5d75992fa975');
+        const element = document.querySelector('#df-de532992-d158-4c71-b3cd-80daa0c8e6e4');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -857,7 +840,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -921,8 +905,8 @@ By Adz Dzikry Pradana Putra
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

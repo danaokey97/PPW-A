@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -36,10 +38,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -64,6 +67,7 @@
     <link rel="prev" title="Tugas 1 : Crawling Berita" href="Tugas-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -79,19 +83,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -99,7 +92,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,8 +99,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -124,7 +116,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -154,21 +147,17 @@
     
     
     <img src="../_static/logo.png" class="logo__image only-light" alt="Penambangan Web A - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Penambangan Web A - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Penambangan Web A - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -185,6 +174,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas-3.html"><strong>Tugas - 3 Modelling (Logistic Regression) dan Testing</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-4.html"><strong>Tugas 4 - Graph</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-5.html"><strong>Tugas 5 : Keyword Extraction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-6.html">Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-7.html">Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi</a></li>
 </ul>
 
     </div>
@@ -370,24 +361,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -442,7 +425,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f439fdd6-e7fd-4cdb-9ac3-d5f1020f6587" class="colab-df-container">
+  <div id="df-2c762d11-8ae3-41ab-8a85-585dd7914076" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -470,44 +453,44 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>18 Tim yang Lolos FFWS Global Finals 2024 di B...</td>
-      <td>Jakarta - Rangkaian pertandingan di FFWS SEA 2...</td>
-      <td>Rabu, 16 Okt 2024 19:30 WIB</td>
+      <td>Asian Esports Games 2024: Timnas Indonesia Mob...</td>
+      <td>Jakarta - Indonesia berhasil meraih juara di k...</td>
+      <td>Rabu, 27 Nov 2024 21:13 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Ampun Bang Jago! Zuckerberg Klaim Pemain Handa...</td>
-      <td>Jakarta - CEO Meta Mark Zuckerberg, cukup perc...</td>
-      <td>Rabu, 16 Okt 2024 17:50 WIB</td>
+      <td>20 Game Android yang Diadaptasi dari Anime, Ad...</td>
+      <td>Jakarta - Sepertinya sederet game Android ini ...</td>
+      <td>Selasa, 26 Nov 2024 20:04 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
-      <td>Jakarta - Game horor selalu punya daya tarikny...</td>
-      <td>Rabu, 16 Okt 2024 14:20 WIB</td>
+      <td>Jadwal M6 Mobile legends, Wakil Indonesia Main...</td>
+      <td>Jakarta - Setelah fase wild card berakhir, kes...</td>
+      <td>Selasa, 26 Nov 2024 14:10 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
-      <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
-      <td>Rabu, 16 Okt 2024 12:15 WIB</td>
+      <td>Tips dan Cara Main Pokemon TCG Pocket, Pemula ...</td>
+      <td>Jakarta - Pokemon Trading Card Game (TCG) Pock...</td>
+      <td>Selasa, 26 Nov 2024 12:40 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
-      <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
-      <td>Selasa, 15 Okt 2024 17:36 WIB</td>
+      <td>Indonesia Ikut Asian Esports Games 2024 Bangko...</td>
+      <td>Jakarta - Indonesia berpartisipasi dalam Asian...</td>
+      <td>Selasa, 26 Nov 2024 09:06 WIB</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Buriram United Ungkap Alasannya Bisa Juara FFW...</td>
-      <td>Jakarta - Buriram United sukses merebut gelar ...</td>
-      <td>Selasa, 15 Okt 2024 16:33 WIB</td>
+      <td>Voin Donkey ID, Wakil Indonesia yang Lolos Gra...</td>
+      <td>Jakarta - Babak survival stage dan last chance...</td>
+      <td>Senin, 25 Nov 2024 16:15 WIB</td>
       <td>Games</td>
     </tr>
   </tbody>
@@ -516,7 +499,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-f439fdd6-e7fd-4cdb-9ac3-d5f1020f6587')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-2c762d11-8ae3-41ab-8a85-585dd7914076')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -568,12 +551,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-f439fdd6-e7fd-4cdb-9ac3-d5f1020f6587 button.colab-df-convert');
+        document.querySelector('#df-2c762d11-8ae3-41ab-8a85-585dd7914076 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-f439fdd6-e7fd-4cdb-9ac3-d5f1020f6587');
+        const element = document.querySelector('#df-2c762d11-8ae3-41ab-8a85-585dd7914076');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -650,7 +633,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ed0c25a4-2a0e-4392-9abb-bf96ac4bebbf" class="colab-df-container">
+  <div id="df-37ed45aa-f4b9-44d0-83ab-d5d3be7e5208" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -679,51 +662,51 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>18 Tim yang Lolos FFWS Global Finals 2024 di B...</td>
-      <td>Jakarta - Rangkaian pertandingan di FFWS SEA 2...</td>
-      <td>Rabu, 16 Okt 2024 19:30 WIB</td>
+      <td>Asian Esports Games 2024: Timnas Indonesia Mob...</td>
+      <td>Jakarta - Indonesia berhasil meraih juara di k...</td>
+      <td>Rabu, 27 Nov 2024 21:13 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Rangkaian pertandingan di FFWS SEA  F...</td>
+      <td>Jakarta  Indonesia berhasil meraih juara di ko...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Ampun Bang Jago! Zuckerberg Klaim Pemain Handa...</td>
-      <td>Jakarta - CEO Meta Mark Zuckerberg, cukup perc...</td>
-      <td>Rabu, 16 Okt 2024 17:50 WIB</td>
+      <td>20 Game Android yang Diadaptasi dari Anime, Ad...</td>
+      <td>Jakarta - Sepertinya sederet game Android ini ...</td>
+      <td>Selasa, 26 Nov 2024 20:04 WIB</td>
       <td>Games</td>
-      <td>Jakarta  CEO Meta Mark Zuckerberg cukup percay...</td>
+      <td>Jakarta  Sepertinya sederet game Android ini a...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
-      <td>Jakarta - Game horor selalu punya daya tarikny...</td>
-      <td>Rabu, 16 Okt 2024 14:20 WIB</td>
+      <td>Jadwal M6 Mobile legends, Wakil Indonesia Main...</td>
+      <td>Jakarta - Setelah fase wild card berakhir, kes...</td>
+      <td>Selasa, 26 Nov 2024 14:10 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Game horor selalu punya daya tariknya...</td>
+      <td>Jakarta  Setelah fase wild card berakhir keser...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
-      <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
-      <td>Rabu, 16 Okt 2024 12:15 WIB</td>
+      <td>Tips dan Cara Main Pokemon TCG Pocket, Pemula ...</td>
+      <td>Jakarta - Pokemon Trading Card Game (TCG) Pock...</td>
+      <td>Selasa, 26 Nov 2024 12:40 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Ternyata cara dapat skin Zhou Yu Hono...</td>
+      <td>Jakarta  Pokemon Trading Card Game TCG Pocket ...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
-      <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
-      <td>Selasa, 15 Okt 2024 17:36 WIB</td>
+      <td>Indonesia Ikut Asian Esports Games 2024 Bangko...</td>
+      <td>Jakarta - Indonesia berpartisipasi dalam Asian...</td>
+      <td>Selasa, 26 Nov 2024 09:06 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Tampil di depan ribuan pendukungnya t...</td>
+      <td>Jakarta  Indonesia berpartisipasi dalam Asian ...</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Buriram United Ungkap Alasannya Bisa Juara FFW...</td>
-      <td>Jakarta - Buriram United sukses merebut gelar ...</td>
-      <td>Selasa, 15 Okt 2024 16:33 WIB</td>
+      <td>Voin Donkey ID, Wakil Indonesia yang Lolos Gra...</td>
+      <td>Jakarta - Babak survival stage dan last chance...</td>
+      <td>Senin, 25 Nov 2024 16:15 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Buriram United sukses merebut gelar j...</td>
+      <td>Jakarta  Babak survival stage dan last chance ...</td>
     </tr>
   </tbody>
 </table>
@@ -731,7 +714,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-ed0c25a4-2a0e-4392-9abb-bf96ac4bebbf')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-37ed45aa-f4b9-44d0-83ab-d5d3be7e5208')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -783,12 +766,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-ed0c25a4-2a0e-4392-9abb-bf96ac4bebbf button.colab-df-convert');
+        document.querySelector('#df-37ed45aa-f4b9-44d0-83ab-d5d3be7e5208 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-ed0c25a4-2a0e-4392-9abb-bf96ac4bebbf');
+        const element = document.querySelector('#df-37ed45aa-f4b9-44d0-83ab-d5d3be7e5208');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -831,7 +814,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f85afa09-a194-4416-aec5-2f9dfae69154" class="colab-df-container">
+  <div id="df-377f07d5-dbea-442d-84e9-8221640e9bde" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -861,57 +844,57 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>18 Tim yang Lolos FFWS Global Finals 2024 di B...</td>
-      <td>Jakarta - Rangkaian pertandingan di FFWS SEA 2...</td>
-      <td>Rabu, 16 Okt 2024 19:30 WIB</td>
+      <td>Asian Esports Games 2024: Timnas Indonesia Mob...</td>
+      <td>Jakarta - Indonesia berhasil meraih juara di k...</td>
+      <td>Rabu, 27 Nov 2024 21:13 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Rangkaian pertandingan di FFWS SEA  F...</td>
-      <td>jakarta  rangkaian pertandingan di ffws sea  f...</td>
+      <td>Jakarta  Indonesia berhasil meraih juara di ko...</td>
+      <td>jakarta  indonesia berhasil meraih juara di ko...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Ampun Bang Jago! Zuckerberg Klaim Pemain Handa...</td>
-      <td>Jakarta - CEO Meta Mark Zuckerberg, cukup perc...</td>
-      <td>Rabu, 16 Okt 2024 17:50 WIB</td>
+      <td>20 Game Android yang Diadaptasi dari Anime, Ad...</td>
+      <td>Jakarta - Sepertinya sederet game Android ini ...</td>
+      <td>Selasa, 26 Nov 2024 20:04 WIB</td>
       <td>Games</td>
-      <td>Jakarta  CEO Meta Mark Zuckerberg cukup percay...</td>
-      <td>jakarta  ceo meta mark zuckerberg cukup percay...</td>
+      <td>Jakarta  Sepertinya sederet game Android ini a...</td>
+      <td>jakarta  sepertinya sederet game android ini a...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
-      <td>Jakarta - Game horor selalu punya daya tarikny...</td>
-      <td>Rabu, 16 Okt 2024 14:20 WIB</td>
+      <td>Jadwal M6 Mobile legends, Wakil Indonesia Main...</td>
+      <td>Jakarta - Setelah fase wild card berakhir, kes...</td>
+      <td>Selasa, 26 Nov 2024 14:10 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Game horor selalu punya daya tariknya...</td>
-      <td>jakarta  game horor selalu punya daya tariknya...</td>
+      <td>Jakarta  Setelah fase wild card berakhir keser...</td>
+      <td>jakarta  setelah fase wild card berakhir keser...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
-      <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
-      <td>Rabu, 16 Okt 2024 12:15 WIB</td>
+      <td>Tips dan Cara Main Pokemon TCG Pocket, Pemula ...</td>
+      <td>Jakarta - Pokemon Trading Card Game (TCG) Pock...</td>
+      <td>Selasa, 26 Nov 2024 12:40 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Ternyata cara dapat skin Zhou Yu Hono...</td>
-      <td>jakarta  ternyata cara dapat skin zhou yu hono...</td>
+      <td>Jakarta  Pokemon Trading Card Game TCG Pocket ...</td>
+      <td>jakarta  pokemon trading card game tcg pocket ...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
-      <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
-      <td>Selasa, 15 Okt 2024 17:36 WIB</td>
+      <td>Indonesia Ikut Asian Esports Games 2024 Bangko...</td>
+      <td>Jakarta - Indonesia berpartisipasi dalam Asian...</td>
+      <td>Selasa, 26 Nov 2024 09:06 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Tampil di depan ribuan pendukungnya t...</td>
-      <td>jakarta  tampil di depan ribuan pendukungnya t...</td>
+      <td>Jakarta  Indonesia berpartisipasi dalam Asian ...</td>
+      <td>jakarta  indonesia berpartisipasi dalam asian ...</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Buriram United Ungkap Alasannya Bisa Juara FFW...</td>
-      <td>Jakarta - Buriram United sukses merebut gelar ...</td>
-      <td>Selasa, 15 Okt 2024 16:33 WIB</td>
+      <td>Voin Donkey ID, Wakil Indonesia yang Lolos Gra...</td>
+      <td>Jakarta - Babak survival stage dan last chance...</td>
+      <td>Senin, 25 Nov 2024 16:15 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Buriram United sukses merebut gelar j...</td>
-      <td>jakarta  buriram united sukses merebut gelar j...</td>
+      <td>Jakarta  Babak survival stage dan last chance ...</td>
+      <td>jakarta  babak survival stage dan last chance ...</td>
     </tr>
   </tbody>
 </table>
@@ -919,7 +902,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-f85afa09-a194-4416-aec5-2f9dfae69154')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-377f07d5-dbea-442d-84e9-8221640e9bde')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -971,12 +954,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-f85afa09-a194-4416-aec5-2f9dfae69154 button.colab-df-convert');
+        document.querySelector('#df-377f07d5-dbea-442d-84e9-8221640e9bde button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-f85afa09-a194-4416-aec5-2f9dfae69154');
+        const element = document.querySelector('#df-377f07d5-dbea-442d-84e9-8221640e9bde');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1018,7 +1001,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-aeea88a0-4699-4e34-b30d-b531e1fd95f8" class="colab-df-container">
+  <div id="df-795ff40e-77db-4b88-8a38-7571e46d8ea7" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1049,63 +1032,63 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>18 Tim yang Lolos FFWS Global Finals 2024 di B...</td>
-      <td>Jakarta - Rangkaian pertandingan di FFWS SEA 2...</td>
-      <td>Rabu, 16 Okt 2024 19:30 WIB</td>
+      <td>Asian Esports Games 2024: Timnas Indonesia Mob...</td>
+      <td>Jakarta - Indonesia berhasil meraih juara di k...</td>
+      <td>Rabu, 27 Nov 2024 21:13 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Rangkaian pertandingan di FFWS SEA  F...</td>
-      <td>jakarta  rangkaian pertandingan di ffws sea  f...</td>
-      <td>[jakarta, rangkaian, pertandingan, di, ffws, s...</td>
+      <td>Jakarta  Indonesia berhasil meraih juara di ko...</td>
+      <td>jakarta  indonesia berhasil meraih juara di ko...</td>
+      <td>[jakarta, indonesia, berhasil, meraih, juara, ...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Ampun Bang Jago! Zuckerberg Klaim Pemain Handa...</td>
-      <td>Jakarta - CEO Meta Mark Zuckerberg, cukup perc...</td>
-      <td>Rabu, 16 Okt 2024 17:50 WIB</td>
+      <td>20 Game Android yang Diadaptasi dari Anime, Ad...</td>
+      <td>Jakarta - Sepertinya sederet game Android ini ...</td>
+      <td>Selasa, 26 Nov 2024 20:04 WIB</td>
       <td>Games</td>
-      <td>Jakarta  CEO Meta Mark Zuckerberg cukup percay...</td>
-      <td>jakarta  ceo meta mark zuckerberg cukup percay...</td>
-      <td>[jakarta, ceo, meta, mark, zuckerberg, cukup, ...</td>
+      <td>Jakarta  Sepertinya sederet game Android ini a...</td>
+      <td>jakarta  sepertinya sederet game android ini a...</td>
+      <td>[jakarta, sepertinya, sederet, game, android, ...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
-      <td>Jakarta - Game horor selalu punya daya tarikny...</td>
-      <td>Rabu, 16 Okt 2024 14:20 WIB</td>
+      <td>Jadwal M6 Mobile legends, Wakil Indonesia Main...</td>
+      <td>Jakarta - Setelah fase wild card berakhir, kes...</td>
+      <td>Selasa, 26 Nov 2024 14:10 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Game horor selalu punya daya tariknya...</td>
-      <td>jakarta  game horor selalu punya daya tariknya...</td>
-      <td>[jakarta, game, horor, selalu, punya, daya, ta...</td>
+      <td>Jakarta  Setelah fase wild card berakhir keser...</td>
+      <td>jakarta  setelah fase wild card berakhir keser...</td>
+      <td>[jakarta, setelah, fase, wild, card, berakhir,...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
-      <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
-      <td>Rabu, 16 Okt 2024 12:15 WIB</td>
+      <td>Tips dan Cara Main Pokemon TCG Pocket, Pemula ...</td>
+      <td>Jakarta - Pokemon Trading Card Game (TCG) Pock...</td>
+      <td>Selasa, 26 Nov 2024 12:40 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Ternyata cara dapat skin Zhou Yu Hono...</td>
-      <td>jakarta  ternyata cara dapat skin zhou yu hono...</td>
-      <td>[jakarta, ternyata, cara, dapat, skin, zhou, y...</td>
+      <td>Jakarta  Pokemon Trading Card Game TCG Pocket ...</td>
+      <td>jakarta  pokemon trading card game tcg pocket ...</td>
+      <td>[jakarta, pokemon, trading, card, game, tcg, p...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
-      <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
-      <td>Selasa, 15 Okt 2024 17:36 WIB</td>
+      <td>Indonesia Ikut Asian Esports Games 2024 Bangko...</td>
+      <td>Jakarta - Indonesia berpartisipasi dalam Asian...</td>
+      <td>Selasa, 26 Nov 2024 09:06 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Tampil di depan ribuan pendukungnya t...</td>
-      <td>jakarta  tampil di depan ribuan pendukungnya t...</td>
-      <td>[jakarta, tampil, di, depan, ribuan, pendukung...</td>
+      <td>Jakarta  Indonesia berpartisipasi dalam Asian ...</td>
+      <td>jakarta  indonesia berpartisipasi dalam asian ...</td>
+      <td>[jakarta, indonesia, berpartisipasi, dalam, as...</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Buriram United Ungkap Alasannya Bisa Juara FFW...</td>
-      <td>Jakarta - Buriram United sukses merebut gelar ...</td>
-      <td>Selasa, 15 Okt 2024 16:33 WIB</td>
+      <td>Voin Donkey ID, Wakil Indonesia yang Lolos Gra...</td>
+      <td>Jakarta - Babak survival stage dan last chance...</td>
+      <td>Senin, 25 Nov 2024 16:15 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Buriram United sukses merebut gelar j...</td>
-      <td>jakarta  buriram united sukses merebut gelar j...</td>
-      <td>[jakarta, buriram, united, sukses, merebut, ge...</td>
+      <td>Jakarta  Babak survival stage dan last chance ...</td>
+      <td>jakarta  babak survival stage dan last chance ...</td>
+      <td>[jakarta, babak, survival, stage, dan, last, c...</td>
     </tr>
   </tbody>
 </table>
@@ -1113,7 +1096,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-aeea88a0-4699-4e34-b30d-b531e1fd95f8')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-795ff40e-77db-4b88-8a38-7571e46d8ea7')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1165,12 +1148,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-aeea88a0-4699-4e34-b30d-b531e1fd95f8 button.colab-df-convert');
+        document.querySelector('#df-795ff40e-77db-4b88-8a38-7571e46d8ea7 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-aeea88a0-4699-4e34-b30d-b531e1fd95f8');
+        const element = document.querySelector('#df-795ff40e-77db-4b88-8a38-7571e46d8ea7');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1225,7 +1208,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-9e06c96b-923d-4e38-b583-8e90d965f3c8" class="colab-df-container">
+  <div id="df-117d5836-47b8-4304-88ad-ab9b23a7ec65" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1257,69 +1240,69 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>18 Tim yang Lolos FFWS Global Finals 2024 di B...</td>
-      <td>Jakarta - Rangkaian pertandingan di FFWS SEA 2...</td>
-      <td>Rabu, 16 Okt 2024 19:30 WIB</td>
+      <td>Asian Esports Games 2024: Timnas Indonesia Mob...</td>
+      <td>Jakarta - Indonesia berhasil meraih juara di k...</td>
+      <td>Rabu, 27 Nov 2024 21:13 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Rangkaian pertandingan di FFWS SEA  F...</td>
-      <td>jakarta  rangkaian pertandingan di ffws sea  f...</td>
-      <td>[jakarta, rangkaian, pertandingan, di, ffws, s...</td>
-      <td>jakarta rangkaian pertandingan ffws sea fall s...</td>
+      <td>Jakarta  Indonesia berhasil meraih juara di ko...</td>
+      <td>jakarta  indonesia berhasil meraih juara di ko...</td>
+      <td>[jakarta, indonesia, berhasil, meraih, juara, ...</td>
+      <td>jakarta indonesia berhasil meraih juara kompet...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Ampun Bang Jago! Zuckerberg Klaim Pemain Handa...</td>
-      <td>Jakarta - CEO Meta Mark Zuckerberg, cukup perc...</td>
-      <td>Rabu, 16 Okt 2024 17:50 WIB</td>
+      <td>20 Game Android yang Diadaptasi dari Anime, Ad...</td>
+      <td>Jakarta - Sepertinya sederet game Android ini ...</td>
+      <td>Selasa, 26 Nov 2024 20:04 WIB</td>
       <td>Games</td>
-      <td>Jakarta  CEO Meta Mark Zuckerberg cukup percay...</td>
-      <td>jakarta  ceo meta mark zuckerberg cukup percay...</td>
-      <td>[jakarta, ceo, meta, mark, zuckerberg, cukup, ...</td>
-      <td>jakarta ceo meta mark zuckerberg percaya kemam...</td>
+      <td>Jakarta  Sepertinya sederet game Android ini a...</td>
+      <td>jakarta  sepertinya sederet game android ini a...</td>
+      <td>[jakarta, sepertinya, sederet, game, android, ...</td>
+      <td>jakarta sederet game android favorit wibu deh ...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>20 Game Horor Terbaik Tahun 2000an, Udah Perna...</td>
-      <td>Jakarta - Game horor selalu punya daya tarikny...</td>
-      <td>Rabu, 16 Okt 2024 14:20 WIB</td>
+      <td>Jadwal M6 Mobile legends, Wakil Indonesia Main...</td>
+      <td>Jakarta - Setelah fase wild card berakhir, kes...</td>
+      <td>Selasa, 26 Nov 2024 14:10 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Game horor selalu punya daya tariknya...</td>
-      <td>jakarta  game horor selalu punya daya tariknya...</td>
-      <td>[jakarta, game, horor, selalu, punya, daya, ta...</td>
-      <td>jakarta game horor daya tariknya penikmatnya b...</td>
+      <td>Jakarta  Setelah fase wild card berakhir keser...</td>
+      <td>jakarta  setelah fase wild card berakhir keser...</td>
+      <td>[jakarta, setelah, fase, wild, card, berakhir,...</td>
+      <td>jakarta fase wild card keseruan m mobile legen...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Begini Cara Dapat Skin Zhou Yu HOK Gratis, Gam...</td>
-      <td>Jakarta - Ternyata cara dapat skin Zhou Yu Hon...</td>
-      <td>Rabu, 16 Okt 2024 12:15 WIB</td>
+      <td>Tips dan Cara Main Pokemon TCG Pocket, Pemula ...</td>
+      <td>Jakarta - Pokemon Trading Card Game (TCG) Pock...</td>
+      <td>Selasa, 26 Nov 2024 12:40 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Ternyata cara dapat skin Zhou Yu Hono...</td>
-      <td>jakarta  ternyata cara dapat skin zhou yu hono...</td>
-      <td>[jakarta, ternyata, cara, dapat, skin, zhou, y...</td>
-      <td>jakarta skin zhou yu honor of kings hok gratis...</td>
+      <td>Jakarta  Pokemon Trading Card Game TCG Pocket ...</td>
+      <td>jakarta  pokemon trading card game tcg pocket ...</td>
+      <td>[jakarta, pokemon, trading, card, game, tcg, p...</td>
+      <td>jakarta pokemon trading card game tcg pocket s...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Gagal Juara FFWS SEA 2024 Fall, Wakil RI: Kita...</td>
-      <td>Jakarta - Tampil di depan ribuan pendukungnya,...</td>
-      <td>Selasa, 15 Okt 2024 17:36 WIB</td>
+      <td>Indonesia Ikut Asian Esports Games 2024 Bangko...</td>
+      <td>Jakarta - Indonesia berpartisipasi dalam Asian...</td>
+      <td>Selasa, 26 Nov 2024 09:06 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Tampil di depan ribuan pendukungnya t...</td>
-      <td>jakarta  tampil di depan ribuan pendukungnya t...</td>
-      <td>[jakarta, tampil, di, depan, ribuan, pendukung...</td>
-      <td>jakarta tampil ribuan pendukungnya wakil indon...</td>
+      <td>Jakarta  Indonesia berpartisipasi dalam Asian ...</td>
+      <td>jakarta  indonesia berpartisipasi dalam asian ...</td>
+      <td>[jakarta, indonesia, berpartisipasi, dalam, as...</td>
+      <td>jakarta indonesia berpartisipasi asian esports...</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Buriram United Ungkap Alasannya Bisa Juara FFW...</td>
-      <td>Jakarta - Buriram United sukses merebut gelar ...</td>
-      <td>Selasa, 15 Okt 2024 16:33 WIB</td>
+      <td>Voin Donkey ID, Wakil Indonesia yang Lolos Gra...</td>
+      <td>Jakarta - Babak survival stage dan last chance...</td>
+      <td>Senin, 25 Nov 2024 16:15 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Buriram United sukses merebut gelar j...</td>
-      <td>jakarta  buriram united sukses merebut gelar j...</td>
-      <td>[jakarta, buriram, united, sukses, merebut, ge...</td>
-      <td>jakarta buriram united sukses merebut gelar ju...</td>
+      <td>Jakarta  Babak survival stage dan last chance ...</td>
+      <td>jakarta  babak survival stage dan last chance ...</td>
+      <td>[jakarta, babak, survival, stage, dan, last, c...</td>
+      <td>jakarta babak survival stage last chance pmgc ...</td>
     </tr>
   </tbody>
 </table>
@@ -1327,7 +1310,7 @@ document.write(`
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-9e06c96b-923d-4e38-b583-8e90d965f3c8')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-117d5836-47b8-4304-88ad-ab9b23a7ec65')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1379,12 +1362,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-9e06c96b-923d-4e38-b583-8e90d965f3c8 button.colab-df-convert');
+        document.querySelector('#df-117d5836-47b8-4304-88ad-ab9b23a7ec65 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-9e06c96b-923d-4e38-b583-8e90d965f3c8');
+        const element = document.querySelector('#df-117d5836-47b8-4304-88ad-ab9b23a7ec65');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1456,7 +1439,7 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c92398fc-feb3-41e7-aa1c-13d61bdaef18" class="colab-df-container">
+  <div id="df-47a65405-bfef-4513-9c60-ea917d2ed2a0" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1476,26 +1459,26 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
     <tr style="text-align: right;">
       <th></th>
       <th>aaa</th>
-      <th>abaaax</th>
-      <th>abaay</th>
-      <th>abdulla</th>
-      <th>abduweli</th>
-      <th>abduwelli</th>
-      <th>about</th>
+      <th>abdullah</th>
       <th>absen</th>
-      <th>abu</th>
       <th>ac</th>
+      <th>acara</th>
+      <th>acaranya</th>
+      <th>access</th>
+      <th>accessibility</th>
+      <th>ace</th>
+      <th>acer</th>
       <th>...</th>
-      <th>zero</th>
-      <th>zhang</th>
-      <th>zhou</th>
+      <th>zhejiang</th>
+      <th>zheng</th>
+      <th>zielinski</th>
+      <th>zmjjkk</th>
       <th>zombie</th>
+      <th>zombienya</th>
+      <th>zombies</th>
       <th>zona</th>
       <th>zone</th>
-      <th>zoo</th>
-      <th>zubimendi</th>
-      <th>zuckerberg</th>
-      <th>zwolle</th>
+      <th>zywoo</th>
     </tr>
   </thead>
   <tbody>
@@ -1503,10 +1486,10 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <th>0</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1514,23 +1497,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>1</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1538,23 +1521,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.555878</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.052132</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1562,23 +1545,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.025206</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.025206</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1586,23 +1569,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.463359</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>4</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1610,23 +1593,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>5</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1634,23 +1617,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>6</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1658,23 +1641,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>7</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1682,23 +1665,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>8</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1706,23 +1689,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>9</th>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.025573</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1730,23 +1713,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
   </tbody>
 </table>
-<p>10 rows × 4290 columns</p>
+<p>10 rows × 4682 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-c92398fc-feb3-41e7-aa1c-13d61bdaef18')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-47a65405-bfef-4513-9c60-ea917d2ed2a0')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1798,12 +1781,12 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-c92398fc-feb3-41e7-aa1c-13d61bdaef18 button.colab-df-convert');
+        document.querySelector('#df-47a65405-bfef-4513-9c60-ea917d2ed2a0 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-c92398fc-feb3-41e7-aa1c-13d61bdaef18');
+        const element = document.querySelector('#df-47a65405-bfef-4513-9c60-ea917d2ed2a0');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1843,7 +1826,7 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah kolom: 4290
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah kolom: 4682
 </pre></div>
 </div>
 </div>
@@ -1888,7 +1871,7 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7042c19a-c76a-44d7-8313-5e685ad5cf73" class="colab-df-container">
+  <div id="df-77c03304-88bf-4e0f-bb40-ac1332a9a334" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1908,26 +1891,26 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
     <tr style="text-align: right;">
       <th></th>
       <th>aaa</th>
-      <th>abaaax</th>
-      <th>abaay</th>
-      <th>abdulla</th>
-      <th>abduweli</th>
-      <th>abduwelli</th>
-      <th>about</th>
+      <th>abdullah</th>
       <th>absen</th>
-      <th>abu</th>
       <th>ac</th>
+      <th>acara</th>
+      <th>acaranya</th>
+      <th>access</th>
+      <th>accessibility</th>
+      <th>ace</th>
+      <th>acer</th>
       <th>...</th>
-      <th>zero</th>
-      <th>zhang</th>
-      <th>zhou</th>
+      <th>zhejiang</th>
+      <th>zheng</th>
+      <th>zielinski</th>
+      <th>zmjjkk</th>
       <th>zombie</th>
+      <th>zombienya</th>
+      <th>zombies</th>
       <th>zona</th>
       <th>zone</th>
-      <th>zoo</th>
-      <th>zubimendi</th>
-      <th>zuckerberg</th>
-      <th>zwolle</th>
+      <th>zywoo</th>
     </tr>
   </thead>
   <tbody>
@@ -1935,10 +1918,10 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <th>0</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1946,23 +1929,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>1</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1970,23 +1953,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.555878</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.052132</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1994,23 +1977,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.025206</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.025206</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -2018,23 +2001,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.463359</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>4</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -2042,23 +2025,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>5</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -2066,23 +2049,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>6</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -2090,23 +2073,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>7</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -2114,23 +2097,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>8</th>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -2138,23 +2121,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>9</th>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.025573</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -2162,23 +2145,23 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
   </tbody>
 </table>
-<p>10 rows × 4290 columns</p>
+<p>10 rows × 4682 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-7042c19a-c76a-44d7-8313-5e685ad5cf73')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-77c03304-88bf-4e0f-bb40-ac1332a9a334')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -2230,12 +2213,12 @@ yaitu <strong>TF</strong> dan <strong>IDF</strong>.</p>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-7042c19a-c76a-44d7-8313-5e685ad5cf73 button.colab-df-convert');
+        document.querySelector('#df-77c03304-88bf-4e0f-bb40-ac1332a9a334 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-7042c19a-c76a-44d7-8313-5e685ad5cf73');
+        const element = document.querySelector('#df-77c03304-88bf-4e0f-bb40-ac1332a9a334');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -2358,8 +2341,8 @@ By Adz Dzikry Pradana Putra
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

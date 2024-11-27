@@ -1,0 +1,69 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Menentukan cluster untuk setiap data berdasarkan keanggotaan tertinggi
+cluster_labels = np.argmax(u, axis=0)
+
+# Menambahkan hasil klasterisasi ke dalam DataFrame
+df['Cluster'] = cluster_labels
+
+# Menampilkan jumlah data pada setiap cluster
+cluster_counts = df['Cluster'].value_counts()
+print("Jumlah data pada setiap cluster:")
+print(cluster_counts)
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+[0;32m<ipython-input-11-6aaf5f8232c2>[0m in [0;36m<cell line: 5>[0;34m()[0m
+[1;32m      3[0m [0;34m[0m[0m
+[1;32m      4[0m [0;31m# Menambahkan hasil klasterisasi ke dalam DataFrame[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 5[0;31m [0mdf[0m[0;34m[[0m[0;34m'Cluster'[0m[0;34m][0m [0;34m=[0m [0mcluster_labels[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      6[0m [0;34m[0m[0m
+[1;32m      7[0m [0;31m# Menampilkan jumlah data pada setiap cluster[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/core/frame.py[0m in [0;36m__setitem__[0;34m(self, key, value)[0m
+[1;32m   4309[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   4310[0m             [0;31m# set column[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 4311[0;31m             [0mself[0m[0;34m.[0m[0m_set_item[0m[0;34m([0m[0mkey[0m[0;34m,[0m [0mvalue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   4312[0m [0;34m[0m[0m
+[1;32m   4313[0m     [0;32mdef[0m [0m_setitem_slice[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mkey[0m[0;34m:[0m [0mslice[0m[0;34m,[0m [0mvalue[0m[0;34m)[0m [0;34m->[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/core/frame.py[0m in [0;36m_set_item[0;34m(self, key, value)[0m
+[1;32m   4522[0m         [0mensure[0m [0mhomogeneity[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   4523[0m         """
+[0;32m-> 4524[0;31m         [0mvalue[0m[0;34m,[0m [0mrefs[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_sanitize_column[0m[0;34m([0m[0mvalue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   4525[0m [0;34m[0m[0m
+[1;32m   4526[0m         if (
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/core/frame.py[0m in [0;36m_sanitize_column[0;34m(self, value)[0m
+[1;32m   5264[0m [0;34m[0m[0m
+[1;32m   5265[0m         [0;32mif[0m [0mis_list_like[0m[0;34m([0m[0mvalue[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 5266[0;31m             [0mcom[0m[0;34m.[0m[0mrequire_length_match[0m[0;34m([0m[0mvalue[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0mindex[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   5267[0m         [0marr[0m [0;34m=[0m [0msanitize_array[0m[0;34m([0m[0mvalue[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0mindex[0m[0;34m,[0m [0mcopy[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m [0mallow_2d[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   5268[0m         if (
+
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/core/common.py[0m in [0;36mrequire_length_match[0;34m(data, index)[0m
+[1;32m    571[0m     """
+[1;32m    572[0m     [0;32mif[0m [0mlen[0m[0;34m([0m[0mdata[0m[0;34m)[0m [0;34m!=[0m [0mlen[0m[0;34m([0m[0mindex[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 573[0;31m         raise ValueError(
+[0m[1;32m    574[0m             [0;34m"Length of values "[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    575[0m             [0;34mf"({len(data)}) "[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mValueError[0m: Length of values (2) does not match length of index (100)
+
