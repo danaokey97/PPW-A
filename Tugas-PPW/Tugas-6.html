@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD) &#8212; Penambangan Web A</title>
+    <title>&lt;no title&gt; &#8212; Penambangan Web A</title>
   
   
   
@@ -168,14 +168,17 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Tugas-1.html"><strong>Tugas 1 : Crawling Berita</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-2.html"><strong>Tugas 2 - Pre-Processing Data dan TF-IDF</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-3.html"><strong>Tugas - 3 Modelling (Logistic Regression) dan Testing</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-4.html"><strong>Tugas 4 - Graph</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-5.html"><strong>Tugas 5 : Keyword Extraction</strong></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas-7.html">Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-7.html"><strong>Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-Deploy.html"><strong>Tugas Deploy</strong></a></li>
+
+
+
 </ul>
 
     </div>
@@ -371,7 +374,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -382,11 +387,19 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)</h1>
+    <h1><no title></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -396,8 +409,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-6-sistem-pencarian-dokumen-dengan-penerapan-singular-value-decomposition-svd">
-<h1>Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)<a class="headerlink" href="#tugas-6-sistem-pencarian-dokumen-dengan-penerapan-singular-value-decomposition-svd" title="Link to this heading">#</a></h1>
+  <p>#<strong>Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)</strong></p>
 <ul class="simple">
 <li><p>membuat sistem pencarian dokumen</p></li>
 <li><p>reduksi dimensi SVD</p></li>
@@ -443,7 +455,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-237c08a5-ab1b-4a9e-811c-034318148c75" class="colab-df-container">
+  <div id="df-c7ce3a75-99b9-4a64-93f0-009fa450c2a8" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -541,58 +553,58 @@
     </tr>
     <tr>
       <th>95</th>
-      <td>Man City Vs Feyenoord: Buang Keunggulan 3 Gol,...</td>
-      <td>Manchester - Manchester City membuang keunggul...</td>
-      <td>Rabu, 27 Nov 2024 04:58 WIB</td>
+      <td>Presiden Real Madrid Kena Semprot Wartawan Nam...</td>
+      <td>Windhoek - Presiden Real Madrid , Florentino P...</td>
+      <td>Rabu, 27 Nov 2024 07:20 WIB</td>
       <td>Sepak Bola</td>
-      <td>Manchester  Manchester City membuang keunggula...</td>
-      <td>manchester  manchester city membuang keunggula...</td>
-      <td>['manchester', 'manchester', 'city', 'membuang...</td>
-      <td>manchester manchester city membuang keunggulan...</td>
+      <td>Windhoek  Presiden Real Madrid  Florentino Per...</td>
+      <td>windhoek  presiden real madrid  florentino per...</td>
+      <td>['windhoek', 'presiden', 'real', 'madrid', 'fl...</td>
+      <td>windhoek presiden real madrid florentino perez...</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>Barcelona Vs Brest: 2 Gol Lewandowski Antar Ba...</td>
-      <td>Barcelona - Barcelona memetik angka penuh di p...</td>
-      <td>Rabu, 27 Nov 2024 04:55 WIB</td>
+      <td>Lewandowski Lewati 100 Gol, Masuk Daftar Elite...</td>
+      <td>Barcelona - Robert Lewandowski mengukir toreha...</td>
+      <td>Rabu, 27 Nov 2024 07:00 WIB</td>
       <td>Sepak Bola</td>
-      <td>Barcelona  Barcelona memetik angka penuh di pe...</td>
-      <td>barcelona  barcelona memetik angka penuh di pe...</td>
-      <td>['barcelona', 'barcelona', 'memetik', 'angka',...</td>
-      <td>barcelona barcelona memetik angka penuh pertan...</td>
+      <td>Barcelona  Robert Lewandowski mengukir torehan...</td>
+      <td>barcelona  robert lewandowski mengukir torehan...</td>
+      <td>['barcelona', 'robert', 'lewandowski', 'menguk...</td>
+      <td>barcelona robert lewandowski mengukir torehan ...</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>Sporting CP Vs Arsenal: Meriam London 'Meledak...</td>
-      <td>Lisbon - Arsenal memberikan kekalahan perdana ...</td>
-      <td>Rabu, 27 Nov 2024 04:50 WIB</td>
+      <td>Man City Sedang Rapuh-rapuhnya</td>
+      <td>Manchester - Tren negatif belakangan ini membu...</td>
+      <td>Rabu, 27 Nov 2024 06:40 WIB</td>
       <td>Sepak Bola</td>
-      <td>Lisbon  Arsenal memberikan kekalahan perdana b...</td>
-      <td>lisbon  arsenal memberikan kekalahan perdana b...</td>
-      <td>['lisbon', 'arsenal', 'memberikan', 'kekalahan...</td>
-      <td>lisbon arsenal kekalahan perdana sporting cp l...</td>
+      <td>Manchester  Tren negatif belakangan ini membua...</td>
+      <td>manchester  tren negatif belakangan ini membua...</td>
+      <td>['manchester', 'tren', 'negatif', 'belakangan'...</td>
+      <td>manchester tren negatif manchester city rapuh ...</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>Inter Vs Leipzig: Gol Bunuh Diri Bawa Nerazzur...</td>
-      <td>Milan - Inter Milan unggul 1-0 atas RB Leipzig...</td>
-      <td>Rabu, 27 Nov 2024 03:55 WIB</td>
+      <td>Javier Mascherano Resmi Jadi Pelatih Baru Inte...</td>
+      <td>Miami - Javier Mascherano akhirnya diumumkan s...</td>
+      <td>Rabu, 27 Nov 2024 06:20 WIB</td>
       <td>Sepak Bola</td>
-      <td>Milan  Inter Milan unggul  atas RB Leipzig saa...</td>
-      <td>milan  inter milan unggul  atas rb leipzig saa...</td>
-      <td>['milan', 'inter', 'milan', 'unggul', 'atas', ...</td>
-      <td>milan inter milan unggul rb leipzig turun minu...</td>
+      <td>Miami  Javier Mascherano akhirnya diumumkan se...</td>
+      <td>miami  javier mascherano akhirnya diumumkan se...</td>
+      <td>['miami', 'javier', 'mascherano', 'akhirnya', ...</td>
+      <td>miami javier mascherano diumumkan pelatih inte...</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>Man City Vs Feyenoord: Penalti Haaland Jadi Pe...</td>
-      <td>Jakarta - Manchester City memimpin 1-0 atas Fe...</td>
-      <td>Rabu, 27 Nov 2024 03:51 WIB</td>
+      <td>Hasil Liga Champions: Arsenal Berpesta, Man Ci...</td>
+      <td>Jakarta - Lima tim berpesta tiga gol atau lebi...</td>
+      <td>Rabu, 27 Nov 2024 06:00 WIB</td>
       <td>Sepak Bola</td>
-      <td>Jakarta  Manchester City memimpin  atas Feyeno...</td>
-      <td>jakarta  manchester city memimpin  atas feyeno...</td>
-      <td>['jakarta', 'manchester', 'city', 'memimpin', ...</td>
-      <td>jakarta manchester city memimpin feyenoord bab...</td>
+      <td>Jakarta  Lima tim berpesta tiga gol atau lebih...</td>
+      <td>jakarta  lima tim berpesta tiga gol atau lebih...</td>
+      <td>['jakarta', 'lima', 'tim', 'berpesta', 'tiga',...</td>
+      <td>jakarta tim berpesta gol liga champions malam ...</td>
     </tr>
   </tbody>
 </table>
@@ -601,7 +613,7 @@
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-237c08a5-ab1b-4a9e-811c-034318148c75')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-c7ce3a75-99b9-4a64-93f0-009fa450c2a8')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -653,12 +665,12 @@
 
     <script>
       const buttonEl =
-        document.querySelector('#df-237c08a5-ab1b-4a9e-811c-034318148c75 button.colab-df-convert');
+        document.querySelector('#df-c7ce3a75-99b9-4a64-93f0-009fa450c2a8 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-237c08a5-ab1b-4a9e-811c-034318148c75');
+        const element = document.querySelector('#df-c7ce3a75-99b9-4a64-93f0-009fa450c2a8');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -711,7 +723,7 @@
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-eea6fd39-08fa-47a9-93e5-e8765c16c56d" class="colab-df-container">
+  <div id="df-202afb4c-337a-4428-8af5-94b1c9695f95" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -741,9 +753,9 @@
       <th>ace</th>
       <th>acer</th>
       <th>...</th>
+      <th>zero</th>
       <th>zhejiang</th>
       <th>zheng</th>
-      <th>zielinski</th>
       <th>zmjjkk</th>
       <th>zombie</th>
       <th>zombienya</th>
@@ -759,8 +771,8 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -769,7 +781,7 @@
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -783,8 +795,8 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -793,7 +805,7 @@
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -807,9 +819,9 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.052132</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.051998</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -817,7 +829,7 @@
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -831,8 +843,8 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -841,7 +853,7 @@
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -855,8 +867,8 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -865,7 +877,7 @@
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -903,8 +915,8 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.058778</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -913,7 +925,7 @@
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -927,8 +939,8 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -937,7 +949,7 @@
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -951,8 +963,8 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -961,7 +973,7 @@
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -975,8 +987,8 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -985,7 +997,7 @@
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.090076</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -999,8 +1011,8 @@
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.109784</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1009,7 +1021,7 @@
       <td>...</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -1020,12 +1032,12 @@
     </tr>
   </tbody>
 </table>
-<p>100 rows × 4682 columns</p>
+<p>100 rows × 4555 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-eea6fd39-08fa-47a9-93e5-e8765c16c56d')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-202afb4c-337a-4428-8af5-94b1c9695f95')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1077,12 +1089,12 @@
 
     <script>
       const buttonEl =
-        document.querySelector('#df-eea6fd39-08fa-47a9-93e5-e8765c16c56d button.colab-df-convert');
+        document.querySelector('#df-202afb4c-337a-4428-8af5-94b1c9695f95 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-eea6fd39-08fa-47a9-93e5-e8765c16c56d');
+        const element = document.querySelector('#df-202afb4c-337a-4428-8af5-94b1c9695f95');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1127,7 +1139,7 @@
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-47146a80-4f8c-46f1-af0d-03564ec3c077" class="colab-df-container">
+  <div id="df-718dd9c5-dd48-4d9a-9469-85b9624a577c" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1172,122 +1184,122 @@
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.434855</td>
-      <td>-0.442743</td>
-      <td>-0.199010</td>
-      <td>-0.060286</td>
-      <td>-0.150929</td>
-      <td>0.052709</td>
-      <td>0.136610</td>
-      <td>0.081996</td>
-      <td>-0.255560</td>
-      <td>0.010223</td>
+      <td>0.515696</td>
+      <td>-0.366333</td>
+      <td>-0.165540</td>
+      <td>-0.080047</td>
+      <td>-0.125619</td>
+      <td>0.052463</td>
+      <td>0.129996</td>
+      <td>-0.269270</td>
+      <td>0.035258</td>
+      <td>0.043638</td>
       <td>...</td>
-      <td>0.010368</td>
-      <td>0.061606</td>
-      <td>0.048465</td>
-      <td>-0.075978</td>
-      <td>-0.020268</td>
-      <td>0.009883</td>
-      <td>-0.003391</td>
-      <td>0.016339</td>
-      <td>0.011709</td>
+      <td>0.043599</td>
+      <td>-0.050875</td>
+      <td>0.001719</td>
+      <td>0.090014</td>
+      <td>0.044075</td>
+      <td>-0.060940</td>
+      <td>-0.033976</td>
+      <td>0.004906</td>
+      <td>0.020435</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.120760</td>
-      <td>-0.092183</td>
-      <td>-0.108184</td>
-      <td>0.133496</td>
-      <td>-0.005079</td>
-      <td>0.368847</td>
-      <td>-0.128487</td>
-      <td>-0.071651</td>
-      <td>0.031169</td>
-      <td>0.001073</td>
+      <td>0.136962</td>
+      <td>-0.070804</td>
+      <td>-0.099038</td>
+      <td>0.137902</td>
+      <td>-0.046452</td>
+      <td>0.368247</td>
+      <td>-0.138926</td>
+      <td>0.050786</td>
+      <td>-0.000436</td>
+      <td>-0.061570</td>
       <td>...</td>
-      <td>-0.006504</td>
-      <td>-0.002823</td>
-      <td>0.006766</td>
-      <td>-0.001572</td>
-      <td>0.007418</td>
-      <td>0.002019</td>
-      <td>0.003624</td>
-      <td>0.000887</td>
-      <td>-0.002315</td>
+      <td>0.011029</td>
+      <td>-0.014116</td>
+      <td>-0.005224</td>
+      <td>-0.000177</td>
+      <td>0.007665</td>
+      <td>-0.002542</td>
+      <td>0.007767</td>
+      <td>0.003740</td>
+      <td>-0.001061</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.247462</td>
-      <td>-0.221958</td>
-      <td>-0.146930</td>
-      <td>-0.121143</td>
-      <td>0.019231</td>
-      <td>-0.196802</td>
-      <td>-0.191146</td>
-      <td>-0.110679</td>
-      <td>0.224323</td>
-      <td>0.040767</td>
+      <td>0.292376</td>
+      <td>-0.159340</td>
+      <td>-0.145395</td>
+      <td>-0.118527</td>
+      <td>0.038410</td>
+      <td>-0.189626</td>
+      <td>-0.203434</td>
+      <td>0.236464</td>
+      <td>-0.026897</td>
+      <td>-0.108368</td>
       <td>...</td>
-      <td>0.063213</td>
-      <td>0.014165</td>
-      <td>-0.036527</td>
-      <td>0.001748</td>
-      <td>-0.029189</td>
-      <td>0.008387</td>
-      <td>-0.003663</td>
-      <td>0.012922</td>
-      <td>0.001853</td>
+      <td>0.040509</td>
+      <td>0.043222</td>
+      <td>0.054316</td>
+      <td>0.009724</td>
+      <td>-0.038956</td>
+      <td>0.004823</td>
+      <td>-0.029898</td>
+      <td>0.004404</td>
+      <td>0.011276</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.072905</td>
-      <td>-0.050311</td>
-      <td>-0.042212</td>
-      <td>0.102334</td>
-      <td>0.027026</td>
-      <td>0.169213</td>
-      <td>-0.047651</td>
-      <td>-0.035359</td>
-      <td>0.026554</td>
-      <td>0.004016</td>
+      <td>0.083314</td>
+      <td>-0.030386</td>
+      <td>-0.038356</td>
+      <td>0.108800</td>
+      <td>0.001403</td>
+      <td>0.172016</td>
+      <td>-0.051719</td>
+      <td>0.036191</td>
+      <td>0.003596</td>
+      <td>-0.079157</td>
       <td>...</td>
-      <td>-0.000017</td>
-      <td>0.004721</td>
-      <td>0.002367</td>
-      <td>0.002690</td>
-      <td>0.002838</td>
-      <td>-0.004501</td>
-      <td>-0.003329</td>
-      <td>-0.000973</td>
-      <td>-0.000264</td>
+      <td>-0.007671</td>
+      <td>-0.003372</td>
+      <td>0.000457</td>
+      <td>0.005926</td>
+      <td>0.002031</td>
+      <td>0.002375</td>
+      <td>0.003047</td>
+      <td>-0.005508</td>
+      <td>-0.001377</td>
       <td>Games</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.330359</td>
-      <td>-0.341971</td>
-      <td>-0.118170</td>
-      <td>-0.094965</td>
-      <td>-0.114243</td>
-      <td>-0.120133</td>
-      <td>-0.136216</td>
-      <td>-0.023206</td>
-      <td>-0.234618</td>
-      <td>0.000481</td>
+      <td>0.394678</td>
+      <td>-0.281982</td>
+      <td>-0.096999</td>
+      <td>-0.111983</td>
+      <td>-0.079805</td>
+      <td>-0.114089</td>
+      <td>-0.154712</td>
+      <td>-0.220340</td>
+      <td>0.031498</td>
+      <td>0.048242</td>
       <td>...</td>
-      <td>0.003906</td>
-      <td>-0.041793</td>
-      <td>-0.024648</td>
-      <td>0.011717</td>
-      <td>-0.002349</td>
-      <td>-0.004279</td>
-      <td>0.001184</td>
-      <td>0.006343</td>
-      <td>0.007915</td>
+      <td>-0.011119</td>
+      <td>-0.011276</td>
+      <td>0.014928</td>
+      <td>-0.052589</td>
+      <td>-0.019499</td>
+      <td>0.005920</td>
+      <td>0.000306</td>
+      <td>-0.002220</td>
+      <td>0.009919</td>
       <td>Games</td>
     </tr>
     <tr>
@@ -1316,122 +1328,122 @@
     </tr>
     <tr>
       <th>95</th>
-      <td>0.481791</td>
-      <td>0.510674</td>
-      <td>-0.052698</td>
-      <td>0.089138</td>
-      <td>-0.278394</td>
-      <td>-0.030604</td>
-      <td>0.039303</td>
-      <td>-0.108951</td>
-      <td>-0.004291</td>
-      <td>-0.100918</td>
+      <td>0.066366</td>
+      <td>0.055528</td>
+      <td>-0.034185</td>
+      <td>-0.006368</td>
+      <td>0.054171</td>
+      <td>0.025241</td>
+      <td>-0.002038</td>
+      <td>0.002604</td>
+      <td>-0.066425</td>
+      <td>0.040207</td>
       <td>...</td>
-      <td>0.026743</td>
-      <td>-0.013671</td>
-      <td>-0.003262</td>
-      <td>-0.010723</td>
-      <td>-0.024041</td>
-      <td>-0.091876</td>
-      <td>0.119784</td>
-      <td>0.173027</td>
-      <td>-0.179648</td>
+      <td>0.002943</td>
+      <td>0.009897</td>
+      <td>-0.001415</td>
+      <td>-0.009538</td>
+      <td>0.003057</td>
+      <td>0.003391</td>
+      <td>0.000247</td>
+      <td>0.000926</td>
+      <td>0.002137</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>0.163319</td>
-      <td>0.104920</td>
-      <td>-0.010015</td>
-      <td>-0.000549</td>
-      <td>0.122249</td>
-      <td>0.000765</td>
-      <td>0.132476</td>
-      <td>-0.273521</td>
-      <td>-0.050954</td>
-      <td>0.008290</td>
+      <td>0.257494</td>
+      <td>0.239724</td>
+      <td>0.028383</td>
+      <td>0.011830</td>
+      <td>0.043249</td>
+      <td>0.028198</td>
+      <td>0.046405</td>
+      <td>0.063838</td>
+      <td>0.376882</td>
+      <td>-0.275177</td>
       <td>...</td>
-      <td>-0.018846</td>
-      <td>0.013784</td>
-      <td>-0.001379</td>
-      <td>-0.005885</td>
-      <td>-0.000995</td>
-      <td>0.003105</td>
-      <td>0.002605</td>
-      <td>-0.006050</td>
-      <td>0.007491</td>
+      <td>0.014772</td>
+      <td>-0.004032</td>
+      <td>-0.023059</td>
+      <td>-0.005353</td>
+      <td>-0.004692</td>
+      <td>0.018808</td>
+      <td>0.002940</td>
+      <td>-0.004061</td>
+      <td>0.000248</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>0.254034</td>
-      <td>0.188041</td>
-      <td>0.005895</td>
-      <td>-0.008431</td>
-      <td>0.082320</td>
-      <td>-0.009200</td>
-      <td>0.161736</td>
-      <td>-0.377594</td>
-      <td>-0.091080</td>
-      <td>0.609459</td>
+      <td>0.327308</td>
+      <td>0.486957</td>
+      <td>-0.015966</td>
+      <td>0.054716</td>
+      <td>-0.377934</td>
+      <td>-0.037565</td>
+      <td>-0.005767</td>
+      <td>-0.022402</td>
+      <td>-0.013509</td>
+      <td>-0.099457</td>
       <td>...</td>
-      <td>-0.010965</td>
-      <td>-0.059657</td>
-      <td>-0.013616</td>
-      <td>0.041221</td>
-      <td>-0.016521</td>
-      <td>0.011111</td>
-      <td>-0.021602</td>
-      <td>-0.014748</td>
-      <td>0.019798</td>
+      <td>-0.061942</td>
+      <td>-0.014689</td>
+      <td>-0.014548</td>
+      <td>-0.037035</td>
+      <td>-0.025095</td>
+      <td>0.031275</td>
+      <td>-0.009696</td>
+      <td>0.005398</td>
+      <td>0.001318</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>0.190093</td>
-      <td>0.137437</td>
-      <td>-0.020372</td>
-      <td>-0.029478</td>
-      <td>0.152740</td>
-      <td>-0.020587</td>
-      <td>0.241930</td>
-      <td>-0.546690</td>
-      <td>-0.128935</td>
-      <td>-0.489389</td>
+      <td>0.097016</td>
+      <td>0.068862</td>
+      <td>-0.019463</td>
+      <td>-0.014911</td>
+      <td>0.069858</td>
+      <td>0.018357</td>
+      <td>0.007552</td>
+      <td>-0.015617</td>
+      <td>0.071737</td>
+      <td>-0.091185</td>
       <td>...</td>
-      <td>-0.039072</td>
-      <td>-0.002050</td>
-      <td>0.007835</td>
-      <td>0.000338</td>
-      <td>0.014783</td>
-      <td>0.146209</td>
-      <td>-0.193401</td>
-      <td>0.052131</td>
-      <td>-0.105954</td>
+      <td>-0.020362</td>
+      <td>-0.020618</td>
+      <td>-0.011536</td>
+      <td>0.005355</td>
+      <td>-0.001878</td>
+      <td>-0.006345</td>
+      <td>0.001251</td>
+      <td>-0.000041</td>
+      <td>0.000509</td>
       <td>Sepak Bola</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>0.355465</td>
-      <td>0.414702</td>
-      <td>-0.084356</td>
-      <td>0.078701</td>
-      <td>-0.293536</td>
-      <td>-0.040590</td>
-      <td>-0.005676</td>
-      <td>-0.052446</td>
-      <td>0.004806</td>
-      <td>-0.138071</td>
+      <td>0.318091</td>
+      <td>0.415100</td>
+      <td>-0.101474</td>
+      <td>-0.015917</td>
+      <td>-0.035705</td>
+      <td>-0.025761</td>
+      <td>0.031125</td>
+      <td>0.035285</td>
+      <td>0.372383</td>
+      <td>0.110127</td>
       <td>...</td>
-      <td>-0.007119</td>
-      <td>0.015598</td>
-      <td>0.007657</td>
-      <td>-0.006526</td>
-      <td>0.021786</td>
-      <td>0.065832</td>
-      <td>-0.087002</td>
-      <td>-0.137132</td>
-      <td>0.148130</td>
+      <td>-0.096307</td>
+      <td>-0.105119</td>
+      <td>-0.080525</td>
+      <td>0.018916</td>
+      <td>-0.001215</td>
+      <td>0.001800</td>
+      <td>0.002732</td>
+      <td>-0.005266</td>
+      <td>0.005386</td>
       <td>Sepak Bola</td>
     </tr>
   </tbody>
@@ -1441,7 +1453,7 @@
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-47146a80-4f8c-46f1-af0d-03564ec3c077')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-718dd9c5-dd48-4d9a-9469-85b9624a577c')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1493,12 +1505,12 @@
 
     <script>
       const buttonEl =
-        document.querySelector('#df-47146a80-4f8c-46f1-af0d-03564ec3c077 button.colab-df-convert');
+        document.querySelector('#df-718dd9c5-dd48-4d9a-9469-85b9624a577c button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-47146a80-4f8c-46f1-af0d-03564ec3c077');
+        const element = document.querySelector('#df-718dd9c5-dd48-4d9a-9469-85b9624a577c');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1617,7 +1629,6 @@
 </div>
 </div>
 </div>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1663,7 +1674,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi</p>
+        <p class="prev-next-title"><strong>Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1673,6 +1684,22 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
