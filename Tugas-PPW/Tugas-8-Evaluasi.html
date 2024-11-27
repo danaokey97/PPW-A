@@ -177,7 +177,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas-6.html"><strong>Tugas 6 : Sistem pencarian dokumen dengan penerapan Singular Value Decomposition (SVD)</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-7.html"><strong>Tugas 7 : Klasifikasi Berita Metode Logistic Regression dengan reduksi dimensi</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas - 8 Clustering menggunakan Fuzzy C Means</strong></a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="Tugas-Deploy.html"><strong>Tugas Deploy</strong></a></li>
 </ul>
 
@@ -397,10 +396,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Tugas - 8 Clustering menggunakan Fuzzy C Means</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering">Clustering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering">Clustering</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -467,7 +464,7 @@ Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /usr/local/lib/pytho
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-38bffc76-fcee-42c6-8253-97af60a339a9" class="colab-df-container">
+  <div id="df-f5ac9080-057f-49b2-b796-72d9ef191a11" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -558,7 +555,7 @@ Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /usr/local/lib/pytho
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-38bffc76-fcee-42c6-8253-97af60a339a9')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f5ac9080-057f-49b2-b796-72d9ef191a11')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -610,12 +607,12 @@ Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /usr/local/lib/pytho
 
     <script>
       const buttonEl =
-        document.querySelector('#df-38bffc76-fcee-42c6-8253-97af60a339a9 button.colab-df-convert');
+        document.querySelector('#df-f5ac9080-057f-49b2-b796-72d9ef191a11 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-38bffc76-fcee-42c6-8253-97af60a339a9');
+        const element = document.querySelector('#df-f5ac9080-057f-49b2-b796-72d9ef191a11');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -671,7 +668,7 @@ Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /usr/local/lib/pytho
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100, 4555)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100, 4580)
 </pre></div>
 </div>
 </div>
@@ -731,266 +728,264 @@ Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /usr/local/lib/pytho
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=2: Silhouette=0.959623377971847, ARI=0.0, NMI=0.018639764244343528
-Iterasi dengan n_components=3: Silhouette=0.9481256889261658, ARI=0.002427096100870114, NMI=0.0513556720154113
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=2: Silhouette=0.9595247791972165, ARI=0.0, NMI=0.018639764244343528
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=4: Silhouette=0.9296619705234909, ARI=0.002427096100870114, NMI=0.0513556720154113
-Iterasi dengan n_components=5: Silhouette=0.9112122587555929, ARI=0.008096346523631212, NMI=0.08068918390116896
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=3: Silhouette=0.9479811150981223, ARI=0.002427096100870114, NMI=0.0513556720154113
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=6: Silhouette=0.878141276426421, ARI=0.008096346523631212, NMI=0.08068918390116896
-Iterasi dengan n_components=7: Silhouette=0.8626354908186867, ARI=0.008096346523631212, NMI=0.08068918390116896
-Iterasi dengan n_components=8: Silhouette=0.8348974546361019, ARI=0.02269374787246114, NMI=0.1212746751286823
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=4: Silhouette=0.9293261376667723, ARI=0.002427096100870114, NMI=0.0513556720154113
+Iterasi dengan n_components=5: Silhouette=0.9101574255876987, ARI=0.008096346523631212, NMI=0.08068918390116896
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=9: Silhouette=0.7948098411551276, ARI=0.0364963503649635, NMI=0.14708219223672478
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=6: Silhouette=0.8719832493795577, ARI=0.008096346523631212, NMI=0.08068918390116896
+Iterasi dengan n_components=7: Silhouette=0.8493769598798722, ARI=0.012148896880163282, NMI=0.09456435533426642
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=10: Silhouette=0.6676863279697177, ARI=0.08528784648187633, NMI=0.21020079396118754
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=8: Silhouette=0.8329456985117986, ARI=0.01701445012943135, NMI=0.10806496399729751
+Iterasi dengan n_components=9: Silhouette=0.8060835227126902, ARI=0.02269374787246114, NMI=0.1212746751286823
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=11: Silhouette=0.24126025555234473, ARI=0.6363799604956006, NMI=0.5541718004161501
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=10: Silhouette=0.7025385961316765, ARI=0.052993146457920554, NMI=0.12642709342764596
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=12: Silhouette=0.14827638911142216, ARI=0.7026007738649165, NMI=0.6009721799981695
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=11: Silhouette=0.6731792729064501, ARI=0.07336810802905475, NMI=0.1504535458478044
+Iterasi dengan n_components=12: Silhouette=0.4994569230176695, ARI=0.22437045965403785, NMI=0.2803083176482318
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=13: Silhouette=0.2044621342174633, ARI=0.7369525201115061, NMI=0.6425925571552905
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=13: Silhouette=0.5096174245418266, ARI=0.22437045965403785, NMI=0.2803083176482318
+Iterasi dengan n_components=14: Silhouette=0.47664117127683275, ARI=0.22437045965403785, NMI=0.2803083176482318
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=14: Silhouette=0.15275686020347456, ARI=0.2843977160022693, NMI=0.22335453837072453
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=15: Silhouette=0.42455813774029727, ARI=0.3079630444346678, NMI=0.3887540945806343
+Iterasi dengan n_components=16: Silhouette=0.20961666704359913, ARI=0.7026396121386246, NMI=0.6300279203045595
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=15: Silhouette=0.1604958484029235, ARI=0.7025959183673469, NMI=0.5978208097977278
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=17: Silhouette=0.19211037914766993, ARI=0.8080682750429576, NMI=0.7265356414540421
+Iterasi dengan n_components=18: Silhouette=0.24124654792522965, ARI=0.5430750584576962, NMI=0.4644224376637692
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=16: Silhouette=0.21594305454436274, ARI=0.8080808080808081, NMI=0.7610260716417302
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=19: Silhouette=0.18568840781689896, ARI=0.7721128416103438, NMI=0.6917588737329793
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=17: Silhouette=0.18168891553351313, ARI=0.9208012930401136, NMI=0.8782063702756283
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=20: Silhouette=0.1859082123357241, ARI=0.7369525201115061, NMI=0.6425925571552905
+Iterasi dengan n_components=21: Silhouette=0.16294695884685112, ARI=0.7369439308410987, NMI=0.6349910030198423
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=18: Silhouette=0.2014702896071928, ARI=0.8448427857772554, NMI=0.7961285220549096
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=22: Silhouette=0.17372194263398077, ARI=0.7721128416103438, NMI=0.6917588737329793
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=19: Silhouette=0.17311695273167643, ARI=0.8448351863643042, NMI=0.7648442977525683
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=23: Silhouette=0.17686269028037663, ARI=0.6690692994951206, NMI=0.5697389043881019
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=20: Silhouette=0.16732111837866728, ARI=0.8080682750429576, NMI=0.7265356414540421
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=24: Silhouette=0.13481842779734976, ARI=0.8824127248460211, NMI=0.8079616479391557
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=21: Silhouette=0.16525556041473158, ARI=0.9208012930401136, NMI=0.8782063702756283
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=25: Silhouette=0.1337889719409927, ARI=0.8080620079101718, NMI=0.7149460394223505
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=22: Silhouette=0.17653262090985844, ARI=0.8448427857772554, NMI=0.7961285220549096
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=26: Silhouette=0.1381692461861696, ARI=0.8080620079101718, NMI=0.7149460394223505
+Iterasi dengan n_components=27: Silhouette=0.11848936529132692, ARI=0.8448326530612245, NMI=0.7577078109175857
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=23: Silhouette=0.1516740937791143, ARI=0.8080682750429576, NMI=0.7265356414540421
-Iterasi dengan n_components=24: Silhouette=0.1392796355006612, ARI=0.9599960816486464, NMI=0.9291252238549075
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=28: Silhouette=0.12422368272738378, ARI=0.6690584936388014, NMI=0.564205452925309
+Iterasi dengan n_components=29: Silhouette=0.12132966273289231, ARI=0.7720979591836735, NMI=0.6725550808455241
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=25: Silhouette=0.12763906183367965, ARI=0.9208012930401136, NMI=0.8782063702756283
-Iterasi dengan n_components=26: Silhouette=0.13256105832319426, ARI=0.8448351863643042, NMI=0.7648442977525683
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=30: Silhouette=0.11511820050413131, ARI=0.8448351863643042, NMI=0.7648442977525683
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=27: Silhouette=0.11691788352822333, ARI=0.9208, NMI=0.8585594574581795
-Iterasi dengan n_components=28: Silhouette=0.1296084868220783, ARI=0.7721128416103438, NMI=0.6917588737329793
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=31: Silhouette=0.11641843427713472, ARI=0.7369439308410987, NMI=0.6349910030198423
+Iterasi dengan n_components=32: Silhouette=0.10564686453850496, ARI=0.8080620079101718, NMI=0.7149460394223505
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=29: Silhouette=0.11940705196184798, ARI=0.9208012930401136, NMI=0.8782063702756283
-Iterasi dengan n_components=30: Silhouette=0.11065227901103691, ARI=0.8824127248460211, NMI=0.8079616479391557
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=33: Silhouette=0.1054129553767598, ARI=0.8080620079101718, NMI=0.7149460394223505
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=31: Silhouette=0.1097041680162471, ARI=0.8448326530612245, NMI=0.7577078109175857
-Iterasi dengan n_components=32: Silhouette=0.11511936847718865, ARI=0.8080620079101718, NMI=0.7149460394223505
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=34: Silhouette=0.09770041434854373, ARI=0.7369439308410987, NMI=0.6349910030198423
+Iterasi dengan n_components=35: Silhouette=0.11255903730423372, ARI=0.7026153394064061, NMI=0.6109637147284563
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=33: Silhouette=0.11824509864413614, ARI=0.8448351863643042, NMI=0.7648442977525683
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=36: Silhouette=0.0912330267834593, ARI=0.8448326530612245, NMI=0.7577078109175857
+Iterasi dengan n_components=37: Silhouette=0.09415254428539066, ARI=0.7369439308410987, NMI=0.6349910030198423
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=34: Silhouette=0.11612129500406658, ARI=0.8448351863643042, NMI=0.7648442977525683
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=38: Silhouette=0.09621282315248754, ARI=0.7720979591836735, NMI=0.6725550808455241
+Iterasi dengan n_components=39: Silhouette=0.0896183579136697, ARI=0.7026007738649165, NMI=0.6009721799981695
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=35: Silhouette=0.11435966021530097, ARI=0.8080620079101718, NMI=0.7149460394223505
-Iterasi dengan n_components=36: Silhouette=0.09506529362753272, ARI=0.8448326530612245, NMI=0.7577078109175857
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=40: Silhouette=0.08921043203121658, ARI=0.6690584936388014, NMI=0.5642054529253091
+Iterasi dengan n_components=41: Silhouette=0.07786650238338852, ARI=0.6690692994951206, NMI=0.5697389043881019
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=37: Silhouette=0.11588305261538796, ARI=0.7721128416103438, NMI=0.6917588737329793
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=42: Silhouette=0.08776061085096622, ARI=0.7025959183673469, NMI=0.5978208097977278
+Iterasi dengan n_components=43: Silhouette=0.08008175818504024, ARI=0.6690584936388014, NMI=0.5642054529253091
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=38: Silhouette=0.1167957304302996, ARI=0.7721128416103438, NMI=0.6917588737329793
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=44: Silhouette=0.0867297438842715, ARI=0.5732897959183674, NMI=0.47063913471263574
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=39: Silhouette=0.1069979381645728, ARI=0.7721016799725718, NMI=0.6770006327837454
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=45: Silhouette=0.09460125729630846, ARI=0.5732897959183674, NMI=0.47063913471263574
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=40: Silhouette=0.09582682188469295, ARI=0.8080620079101718, NMI=0.7149460394223505
-Iterasi dengan n_components=41: Silhouette=0.10349559712457988, ARI=0.6363502791654423, NMI=0.5407862117028416
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=46: Silhouette=0.07646225619125424, ARI=0.6690584936388014, NMI=0.5642054529253091
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=42: Silhouette=0.10051289841114634, ARI=0.7721016799725718, NMI=0.6770006327837454
-Iterasi dengan n_components=43: Silhouette=0.08873787669786953, ARI=0.7720979591836735, NMI=0.6725550808455241
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=47: Silhouette=0.06029243601140564, ARI=0.6363502791654423, NMI=0.5407862117028416
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=44: Silhouette=0.09316902717971293, ARI=0.7721016799725718, NMI=0.6770006327837454
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=48: Silhouette=0.08662838393262014, ARI=0.6363324680413381, NMI=0.5333833942150725
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=45: Silhouette=0.09871144823191118, ARI=0.5732967625018367, NMI=0.47250107612143855
-Iterasi dengan n_components=46: Silhouette=0.07701647436119412, ARI=0.7369439308410987, NMI=0.6349910030198423
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=49: Silhouette=0.06639213228773098, ARI=0.6690584936388014, NMI=0.5642054529253091
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=47: Silhouette=0.07357851054521139, ARI=0.6363265306122449, NMI=0.5310044064107192
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=50: Silhouette=0.06988866842485995, ARI=0.6044056963032804, NMI=0.5006054392285263
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=48: Silhouette=0.08484746107571148, ARI=0.7026007738649165, NMI=0.6009721799981695
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=51: Silhouette=0.06279839202105877, ARI=0.4847980212325664, NMI=0.3904935986852873
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=49: Silhouette=0.09351500266607068, ARI=0.6044186131938011, NMI=0.5048484896887586
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=52: Silhouette=0.08537469393623139, ARI=0.5134936572464123, NMI=0.41725117676350326
+Iterasi dengan n_components=53: Silhouette=0.07461074090252735, ARI=0.4847980212325664, NMI=0.3904935986852873
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=50: Silhouette=0.08287871407818692, ARI=0.6363324680413381, NMI=0.5333833942150725
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=54: Silhouette=0.07981219119939077, ARI=0.42984314349737346, NMI=0.3425675669167147
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=51: Silhouette=0.07717236633938387, ARI=0.7369439308410987, NMI=0.6349910030198423
-Iterasi dengan n_components=52: Silhouette=0.0916572293051237, ARI=0.5430004612075475, NMI=0.44632888749472316
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=55: Silhouette=0.06841495626913957, ARI=0.3781209056289566, NMI=0.29875197511813195
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=53: Silhouette=0.09000865796888034, ARI=0.6690692994951206, NMI=0.5697389043881019
-Iterasi dengan n_components=54: Silhouette=0.08484724474197657, ARI=0.6363502791654423, NMI=0.5407862117028416
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=56: Silhouette=0.07840802525643731, ARI=0.5430004612075475, NMI=0.44632888749472316
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=55: Silhouette=0.08367103614392624, ARI=0.6690692994951206, NMI=0.5697389043881019
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=57: Silhouette=0.07036982834506798, ARI=0.5429855388345354, NMI=0.44297551540683705
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=56: Silhouette=0.09605832541376005, ARI=0.5135174845724361, NMI=0.4218168453401451
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=58: Silhouette=0.09181563085719337, ARI=0.48484848484848486, NMI=0.3987532145992851
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=57: Silhouette=0.08234009385832004, ARI=0.6044444444444445, NMI=0.5137532911122106
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=59: Silhouette=0.0771765852377085, ARI=0.4569231522750649, NMI=0.3668993933811547
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=58: Silhouette=0.09070266037546107, ARI=0.6044444444444445, NMI=0.5137532911122106
-Iterasi dengan n_components=59: Silhouette=0.07503354941762813, ARI=0.6363502791654423, NMI=0.5407862117028416
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=60: Silhouette=0.1065158130959709, ARI=0.28444444444444444, NMI=0.22582638531252477
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=60: Silhouette=0.08527327234227927, ARI=0.5733524869815048, NMI=0.4883691052528023
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=61: Silhouette=0.05923807830857365, ARI=0.4569142857142857, NMI=0.3656904453594348
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=61: Silhouette=0.09638613103582928, ARI=0.5135571915963368, NMI=0.42977137131885146
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=62: Silhouette=0.0690845672382618, ARI=0.3296313076273158, NMI=0.25870096797707953
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=62: Silhouette=0.10422252998614066, ARI=0.42995482536145835, NMI=0.356324324338513
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=63: Silhouette=0.058589470459643044, ARI=0.4035755102040816, NMI=0.31992295427172107
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=63: Silhouette=0.087291138713513, ARI=0.4036631352127851, NMI=0.329100323955614
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=64: Silhouette=0.0584188817406479, ARI=0.35346938775510206, NMI=0.27807190511263813
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=64: Silhouette=0.06504593869065114, ARI=0.4847980212325664, NMI=0.3904935986852873
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=65: Silhouette=0.05115555796356846, ARI=0.4847980212325664, NMI=0.3904935986852873
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=65: Silhouette=0.07194003729943571, ARI=0.5135174845724361, NMI=0.4218168453401451
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=66: Silhouette=0.04569224255821434, ARI=0.4569142857142857, NMI=0.3656904453594348
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=66: Silhouette=0.05373160172132353, ARI=0.4847980212325664, NMI=0.3904935986852873
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=67: Silhouette=0.06147317057018303, ARI=0.37814121113918264, NMI=0.30055354064448236
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=67: Silhouette=0.062423548024268624, ARI=0.6044444444444445, NMI=0.5137532911122106
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=68: Silhouette=0.0430312212920998, ARI=0.4847980212325664, NMI=0.3904935986852873
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=68: Silhouette=0.062633160611053, ARI=0.5135174845724361, NMI=0.4218168453401451
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=69: Silhouette=0.056111591819946335, ARI=0.42986176018023825, NMI=0.3447660573350479
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=69: Silhouette=0.05069831358218156, ARI=0.4848148435363599, NMI=0.3931934722666315
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=70: Silhouette=0.041576305048357805, ARI=0.42984314349737346, NMI=0.3425675669167147
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=70: Silhouette=0.06446336221060064, ARI=0.48484848484848486, NMI=0.3987532145992851
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=71: Silhouette=0.05828128111267489, ARI=0.45694975022039375, NMI=0.37059031163178163
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=71: Silhouette=0.0613584526127352, ARI=0.45694975022039375, NMI=0.37059031163178163
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=72: Silhouette=0.044992129089645054, ARI=0.4569231522750649, NMI=0.3668993933811547
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=72: Silhouette=0.06376802923841689, ARI=0.5135571915963368, NMI=0.42977137131885146
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=73: Silhouette=0.03997231270545418, ARI=0.4035755102040816, NMI=0.31992295427172107
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=73: Silhouette=0.058188891496965205, ARI=0.5135571915963368, NMI=0.42977137131885146
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=74: Silhouette=0.03801382183598658, ARI=0.4569231522750649, NMI=0.3668993933811547
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=74: Silhouette=0.0496307423926023, ARI=0.5135174845724361, NMI=0.4218168453401451
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=75: Silhouette=0.052803668420092015, ARI=0.3535116074052307, NMI=0.28135366840352244
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=75: Silhouette=0.05592811907340196, ARI=0.48484848484848486, NMI=0.3987532145992851
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=76: Silhouette=0.040189982394698426, ARI=0.3534799431846011, NMI=0.2788842425598499
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=76: Silhouette=0.05012926073365062, ARI=0.5135174845724361, NMI=0.4218168453401451
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=77: Silhouette=0.05220845965952274, ARI=0.3296969696969697, NMI=0.2631973627486307
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=77: Silhouette=0.0594645345659411, ARI=0.484898938579631, NMI=0.4075321044719671
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=78: Silhouette=0.04531055928838509, ARI=0.3535116074052307, NMI=0.28135366840352244
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=78: Silhouette=0.05417578928813185, ARI=0.484898938579631, NMI=0.4075321044719671
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=79: Silhouette=0.04125572176096286, ARI=0.32965319641319296, NMI=0.26018095459477675
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=79: Silhouette=0.05266252840627603, ARI=0.484898938579631, NMI=0.4075321044719671
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=80: Silhouette=0.04926766547235704, ARI=0.3296969696969697, NMI=0.2631973627486307
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=80: Silhouette=0.05207812143496884, ARI=0.484898938579631, NMI=0.4075321044719671
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=81: Silhouette=0.03940523384615988, ARI=0.37814121113918264, NMI=0.30055354064448236
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=81: Silhouette=0.052063311706171414, ARI=0.484898938579631, NMI=0.4075321044719671
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=82: Silhouette=0.034839769154946264, ARI=0.3534799431846011, NMI=0.2788842425598499
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=82: Silhouette=0.04725416299519023, ARI=0.5430303030303031, NMI=0.4532839480340868
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=83: Silhouette=0.039125833072046486, ARI=0.4036144578313253, NMI=0.32392379834363044
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=83: Silhouette=0.05633111020438404, ARI=0.4570561159533836, NMI=0.386427522941435
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=84: Silhouette=0.042871441162797265, ARI=0.3781818181818182, NMI=0.3042340369904945
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=84: Silhouette=0.0542978818414541, ARI=0.4570561159533836, NMI=0.386427522941435
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=85: Silhouette=0.03835214718583723, ARI=0.45694975022039375, NMI=0.37059031163178163
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=85: Silhouette=0.05093954071138376, ARI=0.5734012339633728, NMI=0.5040175340948666
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=86: Silhouette=0.03941279990706528, ARI=0.3781818181818182, NMI=0.3042340369904945
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=86: Silhouette=0.04583221807619132, ARI=0.6044831849956539, NMI=0.5283779304228372
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=87: Silhouette=0.04003553296960376, ARI=0.3781818181818182, NMI=0.3042340369904945
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=87: Silhouette=0.0528991632402686, ARI=0.484966194849866, NMI=0.4201950629936393
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=88: Silhouette=0.04352888079817806, ARI=0.4036631352127851, NMI=0.329100323955614
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=88: Silhouette=0.046901982664660814, ARI=0.484898938579631, NMI=0.4075321044719671
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=89: Silhouette=0.03928707869869628, ARI=0.3781818181818182, NMI=0.3042340369904945
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=89: Silhouette=0.047953168447403834, ARI=0.4570561159533836, NMI=0.386427522941435
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=90: Silhouette=0.03823646462569569, ARI=0.3781818181818182, NMI=0.3042340369904945
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=90: Silhouette=0.04677092047732731, ARI=0.4570561159533836, NMI=0.386427522941435
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=91: Silhouette=0.03989847283958728, ARI=0.3296969696969697, NMI=0.2631973627486307
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=91: Silhouette=0.05123897535534496, ARI=0.4300292556338517, NMI=0.366342121474841
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=92: Silhouette=0.027292373992736395, ARI=0.28437434949245105, NMI=0.22213960068646946
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=92: Silhouette=0.04472669766762217, ARI=0.42995482536145835, NMI=0.356324324338513
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=93: Silhouette=0.03145801784689935, ARI=0.26296713523044524, NMI=0.20550722361410448
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=93: Silhouette=0.052875925912258495, ARI=0.4300292556338517, NMI=0.366342121474841
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=94: Silhouette=0.027247065223163544, ARI=0.28437434949245105, NMI=0.22213960068646946
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=94: Silhouette=0.03853219326579578, ARI=0.4298989898989899, NMI=0.3492721107165225
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=95: Silhouette=0.029263860688981992, ARI=0.30660723906548465, NMI=0.24050017325584555
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=95: Silhouette=0.03805649351194397, ARI=0.4298989898989899, NMI=0.3492721107165225
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=96: Silhouette=0.024358740795553686, ARI=0.42984314349737346, NMI=0.3425675669167147
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=96: Silhouette=0.03301475277002538, ARI=0.5733176608874523, NMI=0.4782391721952393
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=97: Silhouette=0.03583980003948056, ARI=0.5430303030303031, NMI=0.4532839480340868
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=97: Silhouette=0.041452287782162214, ARI=0.6044831849956539, NMI=0.5283779304228372
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=98: Silhouette=0.07682350756990183, ARI=0.2635442666275143, NMI=0.23592563379881334
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=98: Silhouette=0.09007424239508817, ARI=0.28521458361361496, NMI=0.27753402924773746
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=99: Silhouette=0.05235542982899608, ARI=0.09347762217216728, NMI=0.07807778062805182
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iterasi dengan n_components=99: Silhouette=0.04220180497638892, ARI=0.038882019514464454, NMI=0.036191778422235275
 </pre></div>
 </div>
 </div>
@@ -1010,9 +1005,9 @@ Iterasi dengan n_components=59: Silhouette=0.07503354941762813, ARI=0.6363502791
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Best Silhouette Score is achieved by n_components=2 with score: 0.959623377971847
-Best ARI is achieved by n_components=24 with score: 0.9599960816486464
-Best NMI is achieved by n_components=24 with score: 0.9291252238549075
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Best Silhouette Score is achieved by n_components=2 with score: 0.9595247791972165
+Best ARI is achieved by n_components=24 with score: 0.8824127248460211
+Best NMI is achieved by n_components=24 with score: 0.8079616479391557
 </pre></div>
 </div>
 </div>
@@ -1031,107 +1026,107 @@ Best NMI is achieved by n_components=24 with score: 0.9291252238549075
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Best n_components: 2 with silhouette score: 0.959623377971847
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Best n_components: 2 with silhouette score: 0.9595247791972165
 
 All results (sorted by silhouette score):
-n_components=2: Silhouette Score={&#39;silhouette&#39;: 0.959623377971847, &#39;ari&#39;: 0.0, &#39;nmi&#39;: 0.018639764244343528}
-n_components=3: Silhouette Score={&#39;silhouette&#39;: 0.9481256889261658, &#39;ari&#39;: 0.002427096100870114, &#39;nmi&#39;: 0.0513556720154113}
-n_components=4: Silhouette Score={&#39;silhouette&#39;: 0.9296619705234909, &#39;ari&#39;: 0.002427096100870114, &#39;nmi&#39;: 0.0513556720154113}
-n_components=5: Silhouette Score={&#39;silhouette&#39;: 0.9112122587555929, &#39;ari&#39;: 0.008096346523631212, &#39;nmi&#39;: 0.08068918390116896}
-n_components=6: Silhouette Score={&#39;silhouette&#39;: 0.878141276426421, &#39;ari&#39;: 0.008096346523631212, &#39;nmi&#39;: 0.08068918390116896}
-n_components=7: Silhouette Score={&#39;silhouette&#39;: 0.8626354908186867, &#39;ari&#39;: 0.008096346523631212, &#39;nmi&#39;: 0.08068918390116896}
-n_components=8: Silhouette Score={&#39;silhouette&#39;: 0.8348974546361019, &#39;ari&#39;: 0.02269374787246114, &#39;nmi&#39;: 0.1212746751286823}
-n_components=9: Silhouette Score={&#39;silhouette&#39;: 0.7948098411551276, &#39;ari&#39;: 0.0364963503649635, &#39;nmi&#39;: 0.14708219223672478}
-n_components=10: Silhouette Score={&#39;silhouette&#39;: 0.6676863279697177, &#39;ari&#39;: 0.08528784648187633, &#39;nmi&#39;: 0.21020079396118754}
-n_components=11: Silhouette Score={&#39;silhouette&#39;: 0.24126025555234473, &#39;ari&#39;: 0.6363799604956006, &#39;nmi&#39;: 0.5541718004161501}
-n_components=16: Silhouette Score={&#39;silhouette&#39;: 0.21594305454436274, &#39;ari&#39;: 0.8080808080808081, &#39;nmi&#39;: 0.7610260716417302}
-n_components=13: Silhouette Score={&#39;silhouette&#39;: 0.2044621342174633, &#39;ari&#39;: 0.7369525201115061, &#39;nmi&#39;: 0.6425925571552905}
-n_components=18: Silhouette Score={&#39;silhouette&#39;: 0.2014702896071928, &#39;ari&#39;: 0.8448427857772554, &#39;nmi&#39;: 0.7961285220549096}
-n_components=17: Silhouette Score={&#39;silhouette&#39;: 0.18168891553351313, &#39;ari&#39;: 0.9208012930401136, &#39;nmi&#39;: 0.8782063702756283}
-n_components=22: Silhouette Score={&#39;silhouette&#39;: 0.17653262090985844, &#39;ari&#39;: 0.8448427857772554, &#39;nmi&#39;: 0.7961285220549096}
-n_components=19: Silhouette Score={&#39;silhouette&#39;: 0.17311695273167643, &#39;ari&#39;: 0.8448351863643042, &#39;nmi&#39;: 0.7648442977525683}
-n_components=20: Silhouette Score={&#39;silhouette&#39;: 0.16732111837866728, &#39;ari&#39;: 0.8080682750429576, &#39;nmi&#39;: 0.7265356414540421}
-n_components=21: Silhouette Score={&#39;silhouette&#39;: 0.16525556041473158, &#39;ari&#39;: 0.9208012930401136, &#39;nmi&#39;: 0.8782063702756283}
-n_components=15: Silhouette Score={&#39;silhouette&#39;: 0.1604958484029235, &#39;ari&#39;: 0.7025959183673469, &#39;nmi&#39;: 0.5978208097977278}
-n_components=14: Silhouette Score={&#39;silhouette&#39;: 0.15275686020347456, &#39;ari&#39;: 0.2843977160022693, &#39;nmi&#39;: 0.22335453837072453}
-n_components=23: Silhouette Score={&#39;silhouette&#39;: 0.1516740937791143, &#39;ari&#39;: 0.8080682750429576, &#39;nmi&#39;: 0.7265356414540421}
-n_components=12: Silhouette Score={&#39;silhouette&#39;: 0.14827638911142216, &#39;ari&#39;: 0.7026007738649165, &#39;nmi&#39;: 0.6009721799981695}
-n_components=24: Silhouette Score={&#39;silhouette&#39;: 0.1392796355006612, &#39;ari&#39;: 0.9599960816486464, &#39;nmi&#39;: 0.9291252238549075}
-n_components=26: Silhouette Score={&#39;silhouette&#39;: 0.13256105832319426, &#39;ari&#39;: 0.8448351863643042, &#39;nmi&#39;: 0.7648442977525683}
-n_components=28: Silhouette Score={&#39;silhouette&#39;: 0.1296084868220783, &#39;ari&#39;: 0.7721128416103438, &#39;nmi&#39;: 0.6917588737329793}
-n_components=25: Silhouette Score={&#39;silhouette&#39;: 0.12763906183367965, &#39;ari&#39;: 0.9208012930401136, &#39;nmi&#39;: 0.8782063702756283}
-n_components=29: Silhouette Score={&#39;silhouette&#39;: 0.11940705196184798, &#39;ari&#39;: 0.9208012930401136, &#39;nmi&#39;: 0.8782063702756283}
-n_components=33: Silhouette Score={&#39;silhouette&#39;: 0.11824509864413614, &#39;ari&#39;: 0.8448351863643042, &#39;nmi&#39;: 0.7648442977525683}
-n_components=27: Silhouette Score={&#39;silhouette&#39;: 0.11691788352822333, &#39;ari&#39;: 0.9208, &#39;nmi&#39;: 0.8585594574581795}
-n_components=38: Silhouette Score={&#39;silhouette&#39;: 0.1167957304302996, &#39;ari&#39;: 0.7721128416103438, &#39;nmi&#39;: 0.6917588737329793}
-n_components=34: Silhouette Score={&#39;silhouette&#39;: 0.11612129500406658, &#39;ari&#39;: 0.8448351863643042, &#39;nmi&#39;: 0.7648442977525683}
-n_components=37: Silhouette Score={&#39;silhouette&#39;: 0.11588305261538796, &#39;ari&#39;: 0.7721128416103438, &#39;nmi&#39;: 0.6917588737329793}
-n_components=32: Silhouette Score={&#39;silhouette&#39;: 0.11511936847718865, &#39;ari&#39;: 0.8080620079101718, &#39;nmi&#39;: 0.7149460394223505}
-n_components=35: Silhouette Score={&#39;silhouette&#39;: 0.11435966021530097, &#39;ari&#39;: 0.8080620079101718, &#39;nmi&#39;: 0.7149460394223505}
-n_components=30: Silhouette Score={&#39;silhouette&#39;: 0.11065227901103691, &#39;ari&#39;: 0.8824127248460211, &#39;nmi&#39;: 0.8079616479391557}
-n_components=31: Silhouette Score={&#39;silhouette&#39;: 0.1097041680162471, &#39;ari&#39;: 0.8448326530612245, &#39;nmi&#39;: 0.7577078109175857}
-n_components=39: Silhouette Score={&#39;silhouette&#39;: 0.1069979381645728, &#39;ari&#39;: 0.7721016799725718, &#39;nmi&#39;: 0.6770006327837454}
-n_components=62: Silhouette Score={&#39;silhouette&#39;: 0.10422252998614066, &#39;ari&#39;: 0.42995482536145835, &#39;nmi&#39;: 0.356324324338513}
-n_components=41: Silhouette Score={&#39;silhouette&#39;: 0.10349559712457988, &#39;ari&#39;: 0.6363502791654423, &#39;nmi&#39;: 0.5407862117028416}
-n_components=42: Silhouette Score={&#39;silhouette&#39;: 0.10051289841114634, &#39;ari&#39;: 0.7721016799725718, &#39;nmi&#39;: 0.6770006327837454}
-n_components=45: Silhouette Score={&#39;silhouette&#39;: 0.09871144823191118, &#39;ari&#39;: 0.5732967625018367, &#39;nmi&#39;: 0.47250107612143855}
-n_components=61: Silhouette Score={&#39;silhouette&#39;: 0.09638613103582928, &#39;ari&#39;: 0.5135571915963368, &#39;nmi&#39;: 0.42977137131885146}
-n_components=56: Silhouette Score={&#39;silhouette&#39;: 0.09605832541376005, &#39;ari&#39;: 0.5135174845724361, &#39;nmi&#39;: 0.4218168453401451}
-n_components=40: Silhouette Score={&#39;silhouette&#39;: 0.09582682188469295, &#39;ari&#39;: 0.8080620079101718, &#39;nmi&#39;: 0.7149460394223505}
-n_components=36: Silhouette Score={&#39;silhouette&#39;: 0.09506529362753272, &#39;ari&#39;: 0.8448326530612245, &#39;nmi&#39;: 0.7577078109175857}
-n_components=49: Silhouette Score={&#39;silhouette&#39;: 0.09351500266607068, &#39;ari&#39;: 0.6044186131938011, &#39;nmi&#39;: 0.5048484896887586}
-n_components=44: Silhouette Score={&#39;silhouette&#39;: 0.09316902717971293, &#39;ari&#39;: 0.7721016799725718, &#39;nmi&#39;: 0.6770006327837454}
-n_components=52: Silhouette Score={&#39;silhouette&#39;: 0.0916572293051237, &#39;ari&#39;: 0.5430004612075475, &#39;nmi&#39;: 0.44632888749472316}
-n_components=58: Silhouette Score={&#39;silhouette&#39;: 0.09070266037546107, &#39;ari&#39;: 0.6044444444444445, &#39;nmi&#39;: 0.5137532911122106}
-n_components=98: Silhouette Score={&#39;silhouette&#39;: 0.09007424239508817, &#39;ari&#39;: 0.28521458361361496, &#39;nmi&#39;: 0.27753402924773746}
-n_components=53: Silhouette Score={&#39;silhouette&#39;: 0.09000865796888034, &#39;ari&#39;: 0.6690692994951206, &#39;nmi&#39;: 0.5697389043881019}
-n_components=43: Silhouette Score={&#39;silhouette&#39;: 0.08873787669786953, &#39;ari&#39;: 0.7720979591836735, &#39;nmi&#39;: 0.6725550808455241}
-n_components=63: Silhouette Score={&#39;silhouette&#39;: 0.087291138713513, &#39;ari&#39;: 0.4036631352127851, &#39;nmi&#39;: 0.329100323955614}
-n_components=60: Silhouette Score={&#39;silhouette&#39;: 0.08527327234227927, &#39;ari&#39;: 0.5733524869815048, &#39;nmi&#39;: 0.4883691052528023}
-n_components=48: Silhouette Score={&#39;silhouette&#39;: 0.08484746107571148, &#39;ari&#39;: 0.7026007738649165, &#39;nmi&#39;: 0.6009721799981695}
-n_components=54: Silhouette Score={&#39;silhouette&#39;: 0.08484724474197657, &#39;ari&#39;: 0.6363502791654423, &#39;nmi&#39;: 0.5407862117028416}
-n_components=55: Silhouette Score={&#39;silhouette&#39;: 0.08367103614392624, &#39;ari&#39;: 0.6690692994951206, &#39;nmi&#39;: 0.5697389043881019}
-n_components=50: Silhouette Score={&#39;silhouette&#39;: 0.08287871407818692, &#39;ari&#39;: 0.6363324680413381, &#39;nmi&#39;: 0.5333833942150725}
-n_components=57: Silhouette Score={&#39;silhouette&#39;: 0.08234009385832004, &#39;ari&#39;: 0.6044444444444445, &#39;nmi&#39;: 0.5137532911122106}
-n_components=51: Silhouette Score={&#39;silhouette&#39;: 0.07717236633938387, &#39;ari&#39;: 0.7369439308410987, &#39;nmi&#39;: 0.6349910030198423}
-n_components=46: Silhouette Score={&#39;silhouette&#39;: 0.07701647436119412, &#39;ari&#39;: 0.7369439308410987, &#39;nmi&#39;: 0.6349910030198423}
-n_components=59: Silhouette Score={&#39;silhouette&#39;: 0.07503354941762813, &#39;ari&#39;: 0.6363502791654423, &#39;nmi&#39;: 0.5407862117028416}
-n_components=47: Silhouette Score={&#39;silhouette&#39;: 0.07357851054521139, &#39;ari&#39;: 0.6363265306122449, &#39;nmi&#39;: 0.5310044064107192}
-n_components=65: Silhouette Score={&#39;silhouette&#39;: 0.07194003729943571, &#39;ari&#39;: 0.5135174845724361, &#39;nmi&#39;: 0.4218168453401451}
-n_components=64: Silhouette Score={&#39;silhouette&#39;: 0.06504593869065114, &#39;ari&#39;: 0.4847980212325664, &#39;nmi&#39;: 0.3904935986852873}
-n_components=70: Silhouette Score={&#39;silhouette&#39;: 0.06446336221060064, &#39;ari&#39;: 0.48484848484848486, &#39;nmi&#39;: 0.3987532145992851}
-n_components=72: Silhouette Score={&#39;silhouette&#39;: 0.06376802923841689, &#39;ari&#39;: 0.5135571915963368, &#39;nmi&#39;: 0.42977137131885146}
-n_components=68: Silhouette Score={&#39;silhouette&#39;: 0.062633160611053, &#39;ari&#39;: 0.5135174845724361, &#39;nmi&#39;: 0.4218168453401451}
-n_components=67: Silhouette Score={&#39;silhouette&#39;: 0.062423548024268624, &#39;ari&#39;: 0.6044444444444445, &#39;nmi&#39;: 0.5137532911122106}
-n_components=71: Silhouette Score={&#39;silhouette&#39;: 0.0613584526127352, &#39;ari&#39;: 0.45694975022039375, &#39;nmi&#39;: 0.37059031163178163}
-n_components=77: Silhouette Score={&#39;silhouette&#39;: 0.0594645345659411, &#39;ari&#39;: 0.484898938579631, &#39;nmi&#39;: 0.4075321044719671}
-n_components=73: Silhouette Score={&#39;silhouette&#39;: 0.058188891496965205, &#39;ari&#39;: 0.5135571915963368, &#39;nmi&#39;: 0.42977137131885146}
-n_components=83: Silhouette Score={&#39;silhouette&#39;: 0.05633111020438404, &#39;ari&#39;: 0.4570561159533836, &#39;nmi&#39;: 0.386427522941435}
-n_components=75: Silhouette Score={&#39;silhouette&#39;: 0.05592811907340196, &#39;ari&#39;: 0.48484848484848486, &#39;nmi&#39;: 0.3987532145992851}
-n_components=84: Silhouette Score={&#39;silhouette&#39;: 0.0542978818414541, &#39;ari&#39;: 0.4570561159533836, &#39;nmi&#39;: 0.386427522941435}
-n_components=78: Silhouette Score={&#39;silhouette&#39;: 0.05417578928813185, &#39;ari&#39;: 0.484898938579631, &#39;nmi&#39;: 0.4075321044719671}
-n_components=66: Silhouette Score={&#39;silhouette&#39;: 0.05373160172132353, &#39;ari&#39;: 0.4847980212325664, &#39;nmi&#39;: 0.3904935986852873}
-n_components=87: Silhouette Score={&#39;silhouette&#39;: 0.0528991632402686, &#39;ari&#39;: 0.484966194849866, &#39;nmi&#39;: 0.4201950629936393}
-n_components=93: Silhouette Score={&#39;silhouette&#39;: 0.052875925912258495, &#39;ari&#39;: 0.4300292556338517, &#39;nmi&#39;: 0.366342121474841}
-n_components=79: Silhouette Score={&#39;silhouette&#39;: 0.05266252840627603, &#39;ari&#39;: 0.484898938579631, &#39;nmi&#39;: 0.4075321044719671}
-n_components=99: Silhouette Score={&#39;silhouette&#39;: 0.05235542982899608, &#39;ari&#39;: 0.09347762217216728, &#39;nmi&#39;: 0.07807778062805182}
-n_components=80: Silhouette Score={&#39;silhouette&#39;: 0.05207812143496884, &#39;ari&#39;: 0.484898938579631, &#39;nmi&#39;: 0.4075321044719671}
-n_components=81: Silhouette Score={&#39;silhouette&#39;: 0.052063311706171414, &#39;ari&#39;: 0.484898938579631, &#39;nmi&#39;: 0.4075321044719671}
-n_components=91: Silhouette Score={&#39;silhouette&#39;: 0.05123897535534496, &#39;ari&#39;: 0.4300292556338517, &#39;nmi&#39;: 0.366342121474841}
-n_components=85: Silhouette Score={&#39;silhouette&#39;: 0.05093954071138376, &#39;ari&#39;: 0.5734012339633728, &#39;nmi&#39;: 0.5040175340948666}
-n_components=69: Silhouette Score={&#39;silhouette&#39;: 0.05069831358218156, &#39;ari&#39;: 0.4848148435363599, &#39;nmi&#39;: 0.3931934722666315}
-n_components=76: Silhouette Score={&#39;silhouette&#39;: 0.05012926073365062, &#39;ari&#39;: 0.5135174845724361, &#39;nmi&#39;: 0.4218168453401451}
-n_components=74: Silhouette Score={&#39;silhouette&#39;: 0.0496307423926023, &#39;ari&#39;: 0.5135174845724361, &#39;nmi&#39;: 0.4218168453401451}
-n_components=89: Silhouette Score={&#39;silhouette&#39;: 0.047953168447403834, &#39;ari&#39;: 0.4570561159533836, &#39;nmi&#39;: 0.386427522941435}
-n_components=82: Silhouette Score={&#39;silhouette&#39;: 0.04725416299519023, &#39;ari&#39;: 0.5430303030303031, &#39;nmi&#39;: 0.4532839480340868}
-n_components=88: Silhouette Score={&#39;silhouette&#39;: 0.046901982664660814, &#39;ari&#39;: 0.484898938579631, &#39;nmi&#39;: 0.4075321044719671}
-n_components=90: Silhouette Score={&#39;silhouette&#39;: 0.04677092047732731, &#39;ari&#39;: 0.4570561159533836, &#39;nmi&#39;: 0.386427522941435}
-n_components=86: Silhouette Score={&#39;silhouette&#39;: 0.04583221807619132, &#39;ari&#39;: 0.6044831849956539, &#39;nmi&#39;: 0.5283779304228372}
-n_components=92: Silhouette Score={&#39;silhouette&#39;: 0.04472669766762217, &#39;ari&#39;: 0.42995482536145835, &#39;nmi&#39;: 0.356324324338513}
-n_components=97: Silhouette Score={&#39;silhouette&#39;: 0.041452287782162214, &#39;ari&#39;: 0.6044831849956539, &#39;nmi&#39;: 0.5283779304228372}
-n_components=94: Silhouette Score={&#39;silhouette&#39;: 0.03853219326579578, &#39;ari&#39;: 0.4298989898989899, &#39;nmi&#39;: 0.3492721107165225}
-n_components=95: Silhouette Score={&#39;silhouette&#39;: 0.03805649351194397, &#39;ari&#39;: 0.4298989898989899, &#39;nmi&#39;: 0.3492721107165225}
-n_components=96: Silhouette Score={&#39;silhouette&#39;: 0.03301475277002538, &#39;ari&#39;: 0.5733176608874523, &#39;nmi&#39;: 0.4782391721952393}
+n_components=2: Silhouette Score={&#39;silhouette&#39;: 0.9595247791972165, &#39;ari&#39;: 0.0, &#39;nmi&#39;: 0.018639764244343528}
+n_components=3: Silhouette Score={&#39;silhouette&#39;: 0.9479811150981223, &#39;ari&#39;: 0.002427096100870114, &#39;nmi&#39;: 0.0513556720154113}
+n_components=4: Silhouette Score={&#39;silhouette&#39;: 0.9293261376667723, &#39;ari&#39;: 0.002427096100870114, &#39;nmi&#39;: 0.0513556720154113}
+n_components=5: Silhouette Score={&#39;silhouette&#39;: 0.9101574255876987, &#39;ari&#39;: 0.008096346523631212, &#39;nmi&#39;: 0.08068918390116896}
+n_components=6: Silhouette Score={&#39;silhouette&#39;: 0.8719832493795577, &#39;ari&#39;: 0.008096346523631212, &#39;nmi&#39;: 0.08068918390116896}
+n_components=7: Silhouette Score={&#39;silhouette&#39;: 0.8493769598798722, &#39;ari&#39;: 0.012148896880163282, &#39;nmi&#39;: 0.09456435533426642}
+n_components=8: Silhouette Score={&#39;silhouette&#39;: 0.8329456985117986, &#39;ari&#39;: 0.01701445012943135, &#39;nmi&#39;: 0.10806496399729751}
+n_components=9: Silhouette Score={&#39;silhouette&#39;: 0.8060835227126902, &#39;ari&#39;: 0.02269374787246114, &#39;nmi&#39;: 0.1212746751286823}
+n_components=10: Silhouette Score={&#39;silhouette&#39;: 0.7025385961316765, &#39;ari&#39;: 0.052993146457920554, &#39;nmi&#39;: 0.12642709342764596}
+n_components=11: Silhouette Score={&#39;silhouette&#39;: 0.6731792729064501, &#39;ari&#39;: 0.07336810802905475, &#39;nmi&#39;: 0.1504535458478044}
+n_components=13: Silhouette Score={&#39;silhouette&#39;: 0.5096174245418266, &#39;ari&#39;: 0.22437045965403785, &#39;nmi&#39;: 0.2803083176482318}
+n_components=12: Silhouette Score={&#39;silhouette&#39;: 0.4994569230176695, &#39;ari&#39;: 0.22437045965403785, &#39;nmi&#39;: 0.2803083176482318}
+n_components=14: Silhouette Score={&#39;silhouette&#39;: 0.47664117127683275, &#39;ari&#39;: 0.22437045965403785, &#39;nmi&#39;: 0.2803083176482318}
+n_components=15: Silhouette Score={&#39;silhouette&#39;: 0.42455813774029727, &#39;ari&#39;: 0.3079630444346678, &#39;nmi&#39;: 0.3887540945806343}
+n_components=18: Silhouette Score={&#39;silhouette&#39;: 0.24124654792522965, &#39;ari&#39;: 0.5430750584576962, &#39;nmi&#39;: 0.4644224376637692}
+n_components=16: Silhouette Score={&#39;silhouette&#39;: 0.20961666704359913, &#39;ari&#39;: 0.7026396121386246, &#39;nmi&#39;: 0.6300279203045595}
+n_components=17: Silhouette Score={&#39;silhouette&#39;: 0.19211037914766993, &#39;ari&#39;: 0.8080682750429576, &#39;nmi&#39;: 0.7265356414540421}
+n_components=20: Silhouette Score={&#39;silhouette&#39;: 0.1859082123357241, &#39;ari&#39;: 0.7369525201115061, &#39;nmi&#39;: 0.6425925571552905}
+n_components=19: Silhouette Score={&#39;silhouette&#39;: 0.18568840781689896, &#39;ari&#39;: 0.7721128416103438, &#39;nmi&#39;: 0.6917588737329793}
+n_components=23: Silhouette Score={&#39;silhouette&#39;: 0.17686269028037663, &#39;ari&#39;: 0.6690692994951206, &#39;nmi&#39;: 0.5697389043881019}
+n_components=22: Silhouette Score={&#39;silhouette&#39;: 0.17372194263398077, &#39;ari&#39;: 0.7721128416103438, &#39;nmi&#39;: 0.6917588737329793}
+n_components=21: Silhouette Score={&#39;silhouette&#39;: 0.16294695884685112, &#39;ari&#39;: 0.7369439308410987, &#39;nmi&#39;: 0.6349910030198423}
+n_components=26: Silhouette Score={&#39;silhouette&#39;: 0.1381692461861696, &#39;ari&#39;: 0.8080620079101718, &#39;nmi&#39;: 0.7149460394223505}
+n_components=24: Silhouette Score={&#39;silhouette&#39;: 0.13481842779734976, &#39;ari&#39;: 0.8824127248460211, &#39;nmi&#39;: 0.8079616479391557}
+n_components=25: Silhouette Score={&#39;silhouette&#39;: 0.1337889719409927, &#39;ari&#39;: 0.8080620079101718, &#39;nmi&#39;: 0.7149460394223505}
+n_components=28: Silhouette Score={&#39;silhouette&#39;: 0.12422368272738378, &#39;ari&#39;: 0.6690584936388014, &#39;nmi&#39;: 0.564205452925309}
+n_components=29: Silhouette Score={&#39;silhouette&#39;: 0.12132966273289231, &#39;ari&#39;: 0.7720979591836735, &#39;nmi&#39;: 0.6725550808455241}
+n_components=27: Silhouette Score={&#39;silhouette&#39;: 0.11848936529132692, &#39;ari&#39;: 0.8448326530612245, &#39;nmi&#39;: 0.7577078109175857}
+n_components=31: Silhouette Score={&#39;silhouette&#39;: 0.11641843427713472, &#39;ari&#39;: 0.7369439308410987, &#39;nmi&#39;: 0.6349910030198423}
+n_components=30: Silhouette Score={&#39;silhouette&#39;: 0.11511820050413131, &#39;ari&#39;: 0.8448351863643042, &#39;nmi&#39;: 0.7648442977525683}
+n_components=35: Silhouette Score={&#39;silhouette&#39;: 0.11255903730423372, &#39;ari&#39;: 0.7026153394064061, &#39;nmi&#39;: 0.6109637147284563}
+n_components=60: Silhouette Score={&#39;silhouette&#39;: 0.1065158130959709, &#39;ari&#39;: 0.28444444444444444, &#39;nmi&#39;: 0.22582638531252477}
+n_components=32: Silhouette Score={&#39;silhouette&#39;: 0.10564686453850496, &#39;ari&#39;: 0.8080620079101718, &#39;nmi&#39;: 0.7149460394223505}
+n_components=33: Silhouette Score={&#39;silhouette&#39;: 0.1054129553767598, &#39;ari&#39;: 0.8080620079101718, &#39;nmi&#39;: 0.7149460394223505}
+n_components=34: Silhouette Score={&#39;silhouette&#39;: 0.09770041434854373, &#39;ari&#39;: 0.7369439308410987, &#39;nmi&#39;: 0.6349910030198423}
+n_components=38: Silhouette Score={&#39;silhouette&#39;: 0.09621282315248754, &#39;ari&#39;: 0.7720979591836735, &#39;nmi&#39;: 0.6725550808455241}
+n_components=45: Silhouette Score={&#39;silhouette&#39;: 0.09460125729630846, &#39;ari&#39;: 0.5732897959183674, &#39;nmi&#39;: 0.47063913471263574}
+n_components=37: Silhouette Score={&#39;silhouette&#39;: 0.09415254428539066, &#39;ari&#39;: 0.7369439308410987, &#39;nmi&#39;: 0.6349910030198423}
+n_components=58: Silhouette Score={&#39;silhouette&#39;: 0.09181563085719337, &#39;ari&#39;: 0.48484848484848486, &#39;nmi&#39;: 0.3987532145992851}
+n_components=36: Silhouette Score={&#39;silhouette&#39;: 0.0912330267834593, &#39;ari&#39;: 0.8448326530612245, &#39;nmi&#39;: 0.7577078109175857}
+n_components=39: Silhouette Score={&#39;silhouette&#39;: 0.0896183579136697, &#39;ari&#39;: 0.7026007738649165, &#39;nmi&#39;: 0.6009721799981695}
+n_components=40: Silhouette Score={&#39;silhouette&#39;: 0.08921043203121658, &#39;ari&#39;: 0.6690584936388014, &#39;nmi&#39;: 0.5642054529253091}
+n_components=42: Silhouette Score={&#39;silhouette&#39;: 0.08776061085096622, &#39;ari&#39;: 0.7025959183673469, &#39;nmi&#39;: 0.5978208097977278}
+n_components=44: Silhouette Score={&#39;silhouette&#39;: 0.0867297438842715, &#39;ari&#39;: 0.5732897959183674, &#39;nmi&#39;: 0.47063913471263574}
+n_components=48: Silhouette Score={&#39;silhouette&#39;: 0.08662838393262014, &#39;ari&#39;: 0.6363324680413381, &#39;nmi&#39;: 0.5333833942150725}
+n_components=52: Silhouette Score={&#39;silhouette&#39;: 0.08537469393623139, &#39;ari&#39;: 0.5134936572464123, &#39;nmi&#39;: 0.41725117676350326}
+n_components=43: Silhouette Score={&#39;silhouette&#39;: 0.08008175818504024, &#39;ari&#39;: 0.6690584936388014, &#39;nmi&#39;: 0.5642054529253091}
+n_components=54: Silhouette Score={&#39;silhouette&#39;: 0.07981219119939077, &#39;ari&#39;: 0.42984314349737346, &#39;nmi&#39;: 0.3425675669167147}
+n_components=56: Silhouette Score={&#39;silhouette&#39;: 0.07840802525643731, &#39;ari&#39;: 0.5430004612075475, &#39;nmi&#39;: 0.44632888749472316}
+n_components=41: Silhouette Score={&#39;silhouette&#39;: 0.07786650238338852, &#39;ari&#39;: 0.6690692994951206, &#39;nmi&#39;: 0.5697389043881019}
+n_components=59: Silhouette Score={&#39;silhouette&#39;: 0.0771765852377085, &#39;ari&#39;: 0.4569231522750649, &#39;nmi&#39;: 0.3668993933811547}
+n_components=98: Silhouette Score={&#39;silhouette&#39;: 0.07682350756990183, &#39;ari&#39;: 0.2635442666275143, &#39;nmi&#39;: 0.23592563379881334}
+n_components=46: Silhouette Score={&#39;silhouette&#39;: 0.07646225619125424, &#39;ari&#39;: 0.6690584936388014, &#39;nmi&#39;: 0.5642054529253091}
+n_components=53: Silhouette Score={&#39;silhouette&#39;: 0.07461074090252735, &#39;ari&#39;: 0.4847980212325664, &#39;nmi&#39;: 0.3904935986852873}
+n_components=57: Silhouette Score={&#39;silhouette&#39;: 0.07036982834506798, &#39;ari&#39;: 0.5429855388345354, &#39;nmi&#39;: 0.44297551540683705}
+n_components=50: Silhouette Score={&#39;silhouette&#39;: 0.06988866842485995, &#39;ari&#39;: 0.6044056963032804, &#39;nmi&#39;: 0.5006054392285263}
+n_components=62: Silhouette Score={&#39;silhouette&#39;: 0.0690845672382618, &#39;ari&#39;: 0.3296313076273158, &#39;nmi&#39;: 0.25870096797707953}
+n_components=55: Silhouette Score={&#39;silhouette&#39;: 0.06841495626913957, &#39;ari&#39;: 0.3781209056289566, &#39;nmi&#39;: 0.29875197511813195}
+n_components=49: Silhouette Score={&#39;silhouette&#39;: 0.06639213228773098, &#39;ari&#39;: 0.6690584936388014, &#39;nmi&#39;: 0.5642054529253091}
+n_components=51: Silhouette Score={&#39;silhouette&#39;: 0.06279839202105877, &#39;ari&#39;: 0.4847980212325664, &#39;nmi&#39;: 0.3904935986852873}
+n_components=67: Silhouette Score={&#39;silhouette&#39;: 0.06147317057018303, &#39;ari&#39;: 0.37814121113918264, &#39;nmi&#39;: 0.30055354064448236}
+n_components=47: Silhouette Score={&#39;silhouette&#39;: 0.06029243601140564, &#39;ari&#39;: 0.6363502791654423, &#39;nmi&#39;: 0.5407862117028416}
+n_components=61: Silhouette Score={&#39;silhouette&#39;: 0.05923807830857365, &#39;ari&#39;: 0.4569142857142857, &#39;nmi&#39;: 0.3656904453594348}
+n_components=63: Silhouette Score={&#39;silhouette&#39;: 0.058589470459643044, &#39;ari&#39;: 0.4035755102040816, &#39;nmi&#39;: 0.31992295427172107}
+n_components=64: Silhouette Score={&#39;silhouette&#39;: 0.0584188817406479, &#39;ari&#39;: 0.35346938775510206, &#39;nmi&#39;: 0.27807190511263813}
+n_components=71: Silhouette Score={&#39;silhouette&#39;: 0.05828128111267489, &#39;ari&#39;: 0.45694975022039375, &#39;nmi&#39;: 0.37059031163178163}
+n_components=69: Silhouette Score={&#39;silhouette&#39;: 0.056111591819946335, &#39;ari&#39;: 0.42986176018023825, &#39;nmi&#39;: 0.3447660573350479}
+n_components=75: Silhouette Score={&#39;silhouette&#39;: 0.052803668420092015, &#39;ari&#39;: 0.3535116074052307, &#39;nmi&#39;: 0.28135366840352244}
+n_components=77: Silhouette Score={&#39;silhouette&#39;: 0.05220845965952274, &#39;ari&#39;: 0.3296969696969697, &#39;nmi&#39;: 0.2631973627486307}
+n_components=65: Silhouette Score={&#39;silhouette&#39;: 0.05115555796356846, &#39;ari&#39;: 0.4847980212325664, &#39;nmi&#39;: 0.3904935986852873}
+n_components=80: Silhouette Score={&#39;silhouette&#39;: 0.04926766547235704, &#39;ari&#39;: 0.3296969696969697, &#39;nmi&#39;: 0.2631973627486307}
+n_components=66: Silhouette Score={&#39;silhouette&#39;: 0.04569224255821434, &#39;ari&#39;: 0.4569142857142857, &#39;nmi&#39;: 0.3656904453594348}
+n_components=78: Silhouette Score={&#39;silhouette&#39;: 0.04531055928838509, &#39;ari&#39;: 0.3535116074052307, &#39;nmi&#39;: 0.28135366840352244}
+n_components=72: Silhouette Score={&#39;silhouette&#39;: 0.044992129089645054, &#39;ari&#39;: 0.4569231522750649, &#39;nmi&#39;: 0.3668993933811547}
+n_components=88: Silhouette Score={&#39;silhouette&#39;: 0.04352888079817806, &#39;ari&#39;: 0.4036631352127851, &#39;nmi&#39;: 0.329100323955614}
+n_components=68: Silhouette Score={&#39;silhouette&#39;: 0.0430312212920998, &#39;ari&#39;: 0.4847980212325664, &#39;nmi&#39;: 0.3904935986852873}
+n_components=84: Silhouette Score={&#39;silhouette&#39;: 0.042871441162797265, &#39;ari&#39;: 0.3781818181818182, &#39;nmi&#39;: 0.3042340369904945}
+n_components=99: Silhouette Score={&#39;silhouette&#39;: 0.04220180497638892, &#39;ari&#39;: 0.038882019514464454, &#39;nmi&#39;: 0.036191778422235275}
+n_components=70: Silhouette Score={&#39;silhouette&#39;: 0.041576305048357805, &#39;ari&#39;: 0.42984314349737346, &#39;nmi&#39;: 0.3425675669167147}
+n_components=79: Silhouette Score={&#39;silhouette&#39;: 0.04125572176096286, &#39;ari&#39;: 0.32965319641319296, &#39;nmi&#39;: 0.26018095459477675}
+n_components=76: Silhouette Score={&#39;silhouette&#39;: 0.040189982394698426, &#39;ari&#39;: 0.3534799431846011, &#39;nmi&#39;: 0.2788842425598499}
+n_components=87: Silhouette Score={&#39;silhouette&#39;: 0.04003553296960376, &#39;ari&#39;: 0.3781818181818182, &#39;nmi&#39;: 0.3042340369904945}
+n_components=73: Silhouette Score={&#39;silhouette&#39;: 0.03997231270545418, &#39;ari&#39;: 0.4035755102040816, &#39;nmi&#39;: 0.31992295427172107}
+n_components=91: Silhouette Score={&#39;silhouette&#39;: 0.03989847283958728, &#39;ari&#39;: 0.3296969696969697, &#39;nmi&#39;: 0.2631973627486307}
+n_components=86: Silhouette Score={&#39;silhouette&#39;: 0.03941279990706528, &#39;ari&#39;: 0.3781818181818182, &#39;nmi&#39;: 0.3042340369904945}
+n_components=81: Silhouette Score={&#39;silhouette&#39;: 0.03940523384615988, &#39;ari&#39;: 0.37814121113918264, &#39;nmi&#39;: 0.30055354064448236}
+n_components=89: Silhouette Score={&#39;silhouette&#39;: 0.03928707869869628, &#39;ari&#39;: 0.3781818181818182, &#39;nmi&#39;: 0.3042340369904945}
+n_components=83: Silhouette Score={&#39;silhouette&#39;: 0.039125833072046486, &#39;ari&#39;: 0.4036144578313253, &#39;nmi&#39;: 0.32392379834363044}
+n_components=85: Silhouette Score={&#39;silhouette&#39;: 0.03835214718583723, &#39;ari&#39;: 0.45694975022039375, &#39;nmi&#39;: 0.37059031163178163}
+n_components=90: Silhouette Score={&#39;silhouette&#39;: 0.03823646462569569, &#39;ari&#39;: 0.3781818181818182, &#39;nmi&#39;: 0.3042340369904945}
+n_components=74: Silhouette Score={&#39;silhouette&#39;: 0.03801382183598658, &#39;ari&#39;: 0.4569231522750649, &#39;nmi&#39;: 0.3668993933811547}
+n_components=97: Silhouette Score={&#39;silhouette&#39;: 0.03583980003948056, &#39;ari&#39;: 0.5430303030303031, &#39;nmi&#39;: 0.4532839480340868}
+n_components=82: Silhouette Score={&#39;silhouette&#39;: 0.034839769154946264, &#39;ari&#39;: 0.3534799431846011, &#39;nmi&#39;: 0.2788842425598499}
+n_components=93: Silhouette Score={&#39;silhouette&#39;: 0.03145801784689935, &#39;ari&#39;: 0.26296713523044524, &#39;nmi&#39;: 0.20550722361410448}
+n_components=95: Silhouette Score={&#39;silhouette&#39;: 0.029263860688981992, &#39;ari&#39;: 0.30660723906548465, &#39;nmi&#39;: 0.24050017325584555}
+n_components=92: Silhouette Score={&#39;silhouette&#39;: 0.027292373992736395, &#39;ari&#39;: 0.28437434949245105, &#39;nmi&#39;: 0.22213960068646946}
+n_components=94: Silhouette Score={&#39;silhouette&#39;: 0.027247065223163544, &#39;ari&#39;: 0.28437434949245105, &#39;nmi&#39;: 0.22213960068646946}
+n_components=96: Silhouette Score={&#39;silhouette&#39;: 0.024358740795553686, &#39;ari&#39;: 0.42984314349737346, &#39;nmi&#39;: 0.3425675669167147}
 </pre></div>
 </div>
 </div>
@@ -1179,12 +1174,11 @@ n_components=96: Silhouette Score={&#39;silhouette&#39;: 0.03301475277002538, &#
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3ac14cb3818117d50c46eb60f2da8b75951c9667bb54645472c254c4b244124c.png" src="../_images/3ac14cb3818117d50c46eb60f2da8b75951c9667bb54645472c254c4b244124c.png" />
+<img alt="../_images/406596170fabe1c7dad91191853766f2e49276a3dbae9391e1b7e4991bec19a2.png" src="../_images/406596170fabe1c7dad91191853766f2e49276a3dbae9391e1b7e4991bec19a2.png" />
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="clustering">
-<h1>Clustering<a class="headerlink" href="#clustering" title="Link to this heading">#</a></h1>
+<section id="clustering">
+<h2>Clustering<a class="headerlink" href="#clustering" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fcmeans</span> <span class="kn">import</span> <span class="n">FCM</span>
@@ -1254,15 +1248,15 @@ n_components=96: Silhouette Score={&#39;silhouette&#39;: 0.03301475277002538, &#
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Silhouette Score: 0.1276
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Silhouette Score: 0.1338
 Jumlah data pada setiap cluster:
 Cluster
-1    52
-0    48
+1    51
+0    49
 Name: count, dtype: int64
 </pre></div>
 </div>
-<img alt="../_images/a5800891e95e893c24335244412097a56243bc6b1ad119fe25b1dc05d05650fc.png" src="../_images/a5800891e95e893c24335244412097a56243bc6b1ad119fe25b1dc05d05650fc.png" />
+<img alt="../_images/0fedaca5980a608e9f895f866b60d57a76be9e76502f4b5f558ccec9bca149fc.png" src="../_images/0fedaca5980a608e9f895f866b60d57a76be9e76502f4b5f558ccec9bca149fc.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1312,8 +1306,8 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anggota Cluster 0: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
-Anggota Cluster 1: [14, 33, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anggota Cluster 0: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47, 48, 49, 50, 71]
+Anggota Cluster 1: [14, 33, 45, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
 </pre></div>
 </div>
 </div>
@@ -1350,10 +1344,10 @@ Anggota Cluster 1: [14, 33, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cc3505cf34daa81e1714bcf1dd104ee2d5643f06f7f1c797e00e8cf45fc5bdbc.png" src="../_images/cc3505cf34daa81e1714bcf1dd104ee2d5643f06f7f1c797e00e8cf45fc5bdbc.png" />
+<img alt="../_images/8bd2770d24d7c09e5aacb2c2e307eb92ed4bad81502b8e6c072d412c4b9f9ded.png" src="../_images/8bd2770d24d7c09e5aacb2c2e307eb92ed4bad81502b8e6c072d412c4b9f9ded.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion Matrix (Contingency Matrix):
-[[48  2]
- [ 0 50]]
+[[47  3]
+ [ 2 48]]
 </pre></div>
 </div>
 </div>
@@ -1375,7 +1369,7 @@ Anggota Cluster 1: [14, 33, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Silhouette Score: 0.1276
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Silhouette Score: 0.1338
 </pre></div>
 </div>
 </div>
@@ -1492,11 +1486,12 @@ Anggota Cluster 1: [14, 33, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Teks baru ini diprediksi ke dalam cluster: Games
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Teks baru ini diprediksi ke dalam cluster: Sepak bola
 </pre></div>
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1564,10 +1559,8 @@ Anggota Cluster 1: [14, 33, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Tugas - 8 Clustering menggunakan Fuzzy C Means</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering">Clustering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering">Clustering</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

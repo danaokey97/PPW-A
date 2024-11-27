@@ -63,7 +63,7 @@ for idx, distance in zip(indices, distances):
 [nltk_data] Downloading package stopwords to /root/nltk_data...
 [nltk_data]   Package stopwords is already up-to-date!
 [nltk_data] Downloading package punkt to /root/nltk_data...
-[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data]   Package punkt is already up-to-date!
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
