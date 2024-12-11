@@ -423,19 +423,34 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-fuzzy in /usr/local/lib/python3.10/dist-packages (0.5.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting scikit-fuzzy
+  Downloading scikit_fuzzy-0.5.0-py2.py3-none-any.whl.metadata (2.6 kB)
+Downloading scikit_fuzzy-0.5.0-py2.py3-none-any.whl (920 kB)
+?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/920.8 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+   ━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">102.4/920.8 kB</span> <span class=" -Color -Color-Red">2.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━ <span class=" -Color -Color-Green">696.3/920.8 kB</span> <span class=" -Color -Color-Red">10.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">920.8/920.8 kB</span> <span class=" -Color -Color-Red">10.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: scikit-fuzzy
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed scikit-fuzzy-0.5.0
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: fuzzy-c-means in /usr/local/lib/python3.10/dist-packages (1.7.2)
 Requirement already satisfied: joblib&lt;2.0.0,&gt;=1.2.0 in /usr/local/lib/python3.10/dist-packages (from fuzzy-c-means) (1.4.2)
 Requirement already satisfied: numpy&lt;2.0.0,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from fuzzy-c-means) (1.26.4)
-Requirement already satisfied: pydantic&lt;3.0.0,&gt;=2.6.4 in /usr/local/lib/python3.10/dist-packages (from fuzzy-c-means) (2.9.2)
+Requirement already satisfied: pydantic&lt;3.0.0,&gt;=2.6.4 in /usr/local/lib/python3.10/dist-packages (from fuzzy-c-means) (2.10.3)
 Requirement already satisfied: tabulate&lt;0.9.0,&gt;=0.8.9 in /usr/local/lib/python3.10/dist-packages (from fuzzy-c-means) (0.8.10)
 Requirement already satisfied: tqdm&lt;5.0.0,&gt;=4.64.1 in /usr/local/lib/python3.10/dist-packages (from fuzzy-c-means) (4.66.6)
 Requirement already satisfied: typer&lt;0.10.0,&gt;=0.9.0 in /usr/local/lib/python3.10/dist-packages (from fuzzy-c-means) (0.9.4)
 Requirement already satisfied: annotated-types&gt;=0.6.0 in /usr/local/lib/python3.10/dist-packages (from pydantic&lt;3.0.0,&gt;=2.6.4-&gt;fuzzy-c-means) (0.7.0)
-Requirement already satisfied: pydantic-core==2.23.4 in /usr/local/lib/python3.10/dist-packages (from pydantic&lt;3.0.0,&gt;=2.6.4-&gt;fuzzy-c-means) (2.23.4)
-Requirement already satisfied: typing-extensions&gt;=4.6.1 in /usr/local/lib/python3.10/dist-packages (from pydantic&lt;3.0.0,&gt;=2.6.4-&gt;fuzzy-c-means) (4.12.2)
+Requirement already satisfied: pydantic-core==2.27.1 in /usr/local/lib/python3.10/dist-packages (from pydantic&lt;3.0.0,&gt;=2.6.4-&gt;fuzzy-c-means) (2.27.1)
+Requirement already satisfied: typing-extensions&gt;=4.12.2 in /usr/local/lib/python3.10/dist-packages (from pydantic&lt;3.0.0,&gt;=2.6.4-&gt;fuzzy-c-means) (4.12.2)
 Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /usr/local/lib/python3.10/dist-packages (from typer&lt;0.10.0,&gt;=0.9.0-&gt;fuzzy-c-means) (8.1.7)
 </pre></div>
 </div>
@@ -480,7 +495,7 @@ Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /usr/local/lib/pytho
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-1fef9b35-803c-4ba2-8148-47a17482f055" class="colab-df-container">
+  <div id="df-8af8412e-3d05-4f00-bcb9-8d96e8247f62" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -512,58 +527,58 @@ Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /usr/local/lib/pytho
   <tbody>
     <tr>
       <th>0</th>
-      <td>Daftar Game PS4, PS5, Xbox, Nintendo Switch, d...</td>
-      <td>Jakarta - Meskipun 2024 segera berakhir, tapi ...</td>
-      <td>Rabu, 04 Des 2024 22:06 WIB</td>
+      <td>Jadwal FIFAe World Cup 2024 eFootball: Indones...</td>
+      <td>Jakarta - Timnas eFootball Indonesia akan kemb...</td>
+      <td>Rabu, 11 Des 2024 14:15 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Meskipun  segera berakhir tapi sedere...</td>
-      <td>jakarta  meskipun  segera berakhir tapi sedere...</td>
-      <td>['jakarta', 'meskipun', 'segera', 'berakhir', ...</td>
-      <td>jakarta sederet studio game berhenti merilis k...</td>
+      <td>Jakarta  Timnas eFootball Indonesia akan kemba...</td>
+      <td>jakarta  timnas efootball indonesia akan kemba...</td>
+      <td>['jakarta', 'timnas', 'efootball', 'indonesia'...</td>
+      <td>jakarta timnas efootball indonesia bertanding ...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Asyik, Lionel Messi Bakal Cosplay Jadi Captain...</td>
-      <td>Jakarta - Konami resmi mengumumkan kerja sama ...</td>
-      <td>Rabu, 04 Des 2024 16:38 WIB</td>
+      <td>Jadwal M6 Mobile Legends Knockout Stage Hari I...</td>
+      <td>Jakarta - Babak knockout stage M6 Mobile Legen...</td>
+      <td>Rabu, 11 Des 2024 09:09 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Konami resmi mengumumkan kerja sama t...</td>
-      <td>jakarta  konami resmi mengumumkan kerja sama t...</td>
-      <td>['jakarta', 'konami', 'resmi', 'mengumumkan', ...</td>
-      <td>jakarta konami resmi mengumumkan kerja terbaru...</td>
+      <td>Jakarta  Babak knockout stage M Mobile Legends...</td>
+      <td>jakarta  babak knockout stage m mobile legends...</td>
+      <td>['jakarta', 'babak', 'knockout', 'stage', 'm',...</td>
+      <td>jakarta babak knockout stage m mobile legends ...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Rayakan Ultah ke-30, PlayStation Diskon Game P...</td>
-      <td>Jakarta - Dalam rangka merayakan hari ulang ta...</td>
-      <td>Rabu, 04 Des 2024 14:34 WIB</td>
+      <td>Hasil FIFAe World Cup 2024 eFootball Konsol: T...</td>
+      <td>Jakarta - Timnas eFootball Indonesia tampil ge...</td>
+      <td>Selasa, 10 Des 2024 20:02 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Dalam rangka merayakan hari ulang tah...</td>
-      <td>jakarta  dalam rangka merayakan hari ulang tah...</td>
-      <td>['jakarta', 'dalam', 'rangka', 'merayakan', 'h...</td>
-      <td>jakarta rangka merayakan ulang sony playstatio...</td>
+      <td>Jakarta  Timnas eFootball Indonesia tampil gem...</td>
+      <td>jakarta  timnas efootball indonesia tampil gem...</td>
+      <td>['jakarta', 'timnas', 'efootball', 'indonesia'...</td>
+      <td>jakarta timnas efootball indonesia tampil gemi...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Jadwal M6 Mobile Legends Hari Ini: Team Liquid...</td>
-      <td>Jakarta - Tiga pertandingan akan berlangsung h...</td>
-      <td>Rabu, 04 Des 2024 10:45 WIB</td>
+      <td>Jadwal Timnas eFootball RI di FIFAe World Cup ...</td>
+      <td>Jakarta - Timnas eFootball Indonesia akan main...</td>
+      <td>Selasa, 10 Des 2024 14:31 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Tiga pertandingan akan berlangsung ha...</td>
-      <td>jakarta  tiga pertandingan akan berlangsung ha...</td>
-      <td>['jakarta', 'tiga', 'pertandingan', 'akan', 'b...</td>
-      <td>jakarta pertandingan lanjutan babak swiss stag...</td>
+      <td>Jakarta  Timnas eFootball Indonesia akan main ...</td>
+      <td>jakarta  timnas efootball indonesia akan main ...</td>
+      <td>['jakarta', 'timnas', 'efootball', 'indonesia'...</td>
+      <td>jakarta timnas efootball indonesia main selasa...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Animasi Ikonik PSX Diboyong ke PS5</td>
-      <td>Jakarta - Sony merilis pembaruan menarik untuk...</td>
-      <td>Rabu, 04 Des 2024 06:15 WIB</td>
+      <td>Jadwal M6 Mobile Legends Knockout Stage: RRQ d...</td>
+      <td>Jakarta - Dua wakil Indonesia di kompetisi M6 ...</td>
+      <td>Selasa, 10 Des 2024 13:34 WIB</td>
       <td>Games</td>
-      <td>Jakarta  Sony merilis pembaruan menarik untuk ...</td>
-      <td>jakarta  sony merilis pembaruan menarik untuk ...</td>
-      <td>['jakarta', 'sony', 'merilis', 'pembaruan', 'm...</td>
-      <td>jakarta sony merilis pembaruan menarik playsta...</td>
+      <td>Jakarta  Dua wakil Indonesia di kompetisi M Mo...</td>
+      <td>jakarta  dua wakil indonesia di kompetisi m mo...</td>
+      <td>['jakarta', 'dua', 'wakil', 'indonesia', 'di',...</td>
+      <td>jakarta wakil indonesia kompetisi m mobile leg...</td>
     </tr>
   </tbody>
 </table>
@@ -571,7 +586,7 @@ Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /usr/local/lib/pytho
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-1fef9b35-803c-4ba2-8148-47a17482f055')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-8af8412e-3d05-4f00-bcb9-8d96e8247f62')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -623,12 +638,12 @@ Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /usr/local/lib/pytho
 
     <script>
       const buttonEl =
-        document.querySelector('#df-1fef9b35-803c-4ba2-8148-47a17482f055 button.colab-df-convert');
+        document.querySelector('#df-8af8412e-3d05-4f00-bcb9-8d96e8247f62 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-1fef9b35-803c-4ba2-8148-47a17482f055');
+        const element = document.querySelector('#df-8af8412e-3d05-4f00-bcb9-8d96e8247f62');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
